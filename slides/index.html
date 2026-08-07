@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Career Academy — 事業計画書（初版 / 社内ディスカッション用）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="viewport">
+  <div class="stage" id="stage">
+
+  <!-- ============ 01 TITLE ============ -->
+  <section class="slide title-slide" data-title="タイトル">
+    <div class="title-mark"><span class="dot"></span>AI CAREER ACADEMY</div>
+    <h1>AIを学ぶ、で終わらせない。<br>AIで成果を出す人材を、輩出する。</h1>
+    <p class="sub">大学生向け AI実務教育 × 実践インターン × AI就活支援 × 新卒紹介</p>
+    <div class="title-meta">
+      <div><b>事業計画書</b><br>初版 / 社内ディスカッション用</div>
+      <div><b>2026年8月</b><br>UNARI株式会社</div>
+      <div><b>収益モデル</b><br>学生課金 × 企業課金の両面</div>
+    </div>
+  </section>
+
+  <!-- ============ 02 EXEC SUMMARY ============ -->
+  <section class="slide" data-title="エグゼクティブサマリー">
+    <p class="eyebrow">Executive Summary</p>
+    <h2>「AIを触れる学生」は増えた。<br>「AIで成果を出せる学生」は、まだいない。</h2>
+    <p class="lead">この“深さのギャップ”が、我々の事業機会である。</p>
+    <div class="body">
+      <div class="statrow" style="margin-bottom:26px">
+        <div class="stat">
+          <div class="stat-v is-accent">339<span class="u">万人</span></div>
+          <div class="stat-l">2040年のAI利活用人材の<b>不足</b>数<br><span class="stat-s">同年、事務職は437万人が余剰</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-v">84.9<span class="u">%</span></div>
+          <div class="stat-l">27卒が就活で生成AIを利用<br><span class="stat-s">24卒は23.7%。3年で3.6倍</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-v">3.0<span class="u">%</span></div>
+          <div class="stat-l">3か月以上の長期インターン参加率<br><span class="stat-s">＝97%が実務経験ゼロで社会に出る</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-v">1,602<span class="u">億円</span></div>
+          <div class="stat-l">新卒採用支援サービス市場<br><span class="stat-s">2026年度予測 / 人材紹介業は+12%成長</span></div>
+        </div>
+      </div>
+      <div class="grid g3">
+        <div class="card card--soft">
+          <h3>市場の断層</h3>
+          <p>企業の生成AI導入の懸念1位は<b>「効果的な活用方法がわからない」</b>。ツールはあるが、使いこなす人がいない。</p>
+        </div>
+        <div class="card card--soft">
+          <h3>解決策</h3>
+          <p>大学生に<b>企業実務のAIケーススタディを3〜12か月</b>。成果物とインターン経験を持たせて就活に送り出す。</p>
+        </div>
+        <div class="card card--accent">
+          <h3>収益</h3>
+          <p>学生から<b>受講料30万円</b>、企業から<b>紹介手数料</b>。学生1人あたり売上 約60万円を想定。</p>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：経済産業省「2040年の就業構造推計（改訂版）」2026年3月／マイナビ「2027年卒 大学生キャリア意向調査」／リクルート就職白書2023／矢野経済研究所「新卒採用支援サービス市場に関する調査（2026年）」</p>
+    </div>
+  </section>
+
+  <!-- ============ 03 VISION ============ -->
+  <section class="slide slide--dark section-slide slide--center" data-title="Vision">
+    <div class="section-num">01 — VISION</div>
+    <h2>「ガクチカ」を、<br>実績に置き換える。</h2>
+    <p class="lead">留学した。サークルの代表をやった。バイトを頑張った。<br>
+    ——それらが評価されてきたのは、他に測る物差しがなかったからだ。</p>
+    <div class="quote" style="max-width:800px;margin-top:22px">
+      「AIを勉強しました」ではなく、<br>
+      「請求書照合を半分の工数にするツールを作りました」と言える学生を、毎年輩出する。
+    </div>
+  </section>
+
+  <!-- ============ 04 WHY NOW 1 ============ -->
+  <section class="slide" data-title="なぜ今か① 人材の需給が逆転する">
+    <p class="eyebrow">Why Now — 01</p>
+    <h2>2040年、事務職は437万人余り、<br>AI人材は339万人足りない。</h2>
+    <p class="lead">経済産業省の公式推計。労働市場の需要構造そのものが入れ替わる。</p>
+    <div class="body">
+      <div class="diverge" style="margin-top:6px">
+        <div class="dv">
+          <div class="side l"><div class="bar l" style="--w:78%"><span class="n">＋437万人 余剰</span></div></div>
+          <div class="side" style="padding-left:16px"><span class="dv-label">事務従事者</span><span style="font-size:11.5px;color:var(--muted);margin-left:10px">需要1,039万人 / 供給1,476万人</span></div>
+        </div>
+        <div class="dv">
+          <div class="side l" style="justify-content:flex-end;padding-right:16px"><span class="dv-label" style="color:var(--accent)">AI・ロボット等利活用人材</span></div>
+          <div class="side"><div class="bar r" style="--w:61%"><span class="n">−339万人 不足</span></div></div>
+        </div>
+      </div>
+      <div class="grid g3" style="margin-top:34px">
+        <div class="card">
+          <div class="stat-v" style="font-size:34px">3.3<span class="u">倍</span></div>
+          <div class="stat-l">2040年のAI人材需要は、2022年の就業者数（236万人）の約3.3倍</div>
+        </div>
+        <div class="card">
+          <div class="stat-v" style="font-size:34px">124<span class="u">万人</span></div>
+          <div class="stat-l">大卒・院卒 <b>理系</b>の不足数</div>
+        </div>
+        <div class="card card--accent">
+          <div class="stat-v is-accent" style="font-size:34px">76<span class="u">万人</span></div>
+          <div class="stat-l">大卒・院卒 <b>文系</b>の<b>余剰</b>数<br><span class="stat-s">＝本事業の中核ターゲット。文系こそAIで武装する必要がある</span></div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：経済産業省「2040年の就業構造推計（改訂版）」2026年3月 ／ meti.go.jp　※2025年5月公表の初版（326万人不足）から更新された最新値</p>
+    </div>
+  </section>
+
+  <!-- ============ 05 WHY NOW 2 ============ -->
+  <section class="slide" data-title="なぜ今か② 企業は使い方がわからない">
+    <p class="eyebrow">Why Now — 02</p>
+    <h2>企業はAIを買った。<br>だが、使いこなす人がいない。</h2>
+    <div class="body">
+      <div class="split-52" style="margin-top:8px">
+        <div>
+          <div class="vbars" style="height:214px">
+            <div class="vbar">
+              <div class="col" style="--h:60%"><span class="v">49.7%</span></div>
+              <div class="k">生成AIの活用<b>方針</b>あり<br><span style="font-size:10.5px;color:var(--muted)">（推進＋検討／2024年度）</span></div>
+            </div>
+            <div class="vbar">
+              <div class="col is-a" style="--h:21%"><span class="v">17.3%</span></div>
+              <div class="k">実際に<b>業務利用中</b><br><span style="font-size:10.5px;color:var(--muted)">（2024年8月時点）</span></div>
+            </div>
+            <div class="vbar">
+              <div class="col" style="--h:30%"><span class="v">25.2%</span></div>
+              <div class="k">業務活用を<b>推進中</b><br><span style="font-size:10.5px;color:var(--muted)">（2025年7-8月時点）</span></div>
+            </div>
+          </div>
+          <p style="margin-top:20px;font-size:13.5px">意欲と実行の間に、<strong>約3倍の落差</strong>がある。</p>
+        </div>
+        <div>
+          <div class="card card--ink" style="margin-bottom:14px">
+            <h3 style="font-size:16px;margin-bottom:10px">企業が生成AI導入時に感じる懸念 第1位</h3>
+            <div class="big-line" style="font-size:26px;color:#fff">「効果的な活用方法が<br>わからない」</div>
+            <p style="margin-top:12px;font-size:12px">総務省「令和7年版 情報通信白書」</p>
+          </div>
+          <ul class="ul">
+            <li>生成AI推進を進めない理由 1位「<strong>推進するための専門人材がいない</strong>」<strong>55.1%</strong>（東京商工リサーチ）</li>
+            <li>DX推進人材が「不足」している企業 <strong>85.1%</strong>（IPA「DX動向2025」）</li>
+            <li>生成AI活用の課題に「リテラシー・スキル不足」<strong>70.3%</strong>（NRI）</li>
+          </ul>
+          <div class="card card--accent" style="margin-top:14px;padding:14px 18px">
+            <p style="font-size:13.5px;color:var(--accent-ink);font-weight:600;margin:0">
+              企業の課題は「ツール」ではなく「人」。<br>ここに、育成済みの人材を供給する。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：総務省「令和7年版 情報通信白書」（活用方針49.7%は「積極的に推進」＋「活用を検討」の合計であり導入率ではない）／帝国データバンク「生成AIの活用状況に関する企業アンケート」2024年8月, n=4,705／東京商工リサーチ 2025年／IPA「DX動向2025」／野村総合研究所「ユーザー企業のIT活用実態調査2025」</p>
+    </div>
+  </section>
+
+  <!-- ============ 06 WHY NOW 3 ============ -->
+  <section class="slide" data-title="なぜ今か③ 学生のAI利用は常態化した">
+    <p class="eyebrow">Why Now — 03</p>
+    <h2>就活でのAI利用は、3年で23.7%→84.9%。<br>もう「使うか」の勝負ではない。</h2>
+    <div class="body">
+      <div class="split-64" style="margin-top:14px">
+        <div>
+          <div class="vbars" style="height:236px">
+            <div class="vbar"><div class="col" style="--h:24%"><span class="v">23.7%</span></div><div class="k">24卒</div></div>
+            <div class="vbar"><div class="col" style="--h:60%"><span class="v">60.2%</span></div><div class="k">25卒</div></div>
+            <div class="vbar"><div class="col" style="--h:67%"><span class="v">66.6%</span></div><div class="k">26卒</div></div>
+            <div class="vbar"><div class="col is-a" style="--h:85%"><span class="v">84.9%</span></div><div class="k">27卒</div></div>
+          </div>
+          <p style="margin-top:16px;font-size:12.5px;color:var(--ink-3)">就職活動で生成AIを利用した学生の割合（マイナビ 大学生キャリア意向調査・年次比較）</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom:14px">ただし、使われ方は「浅い」</h3>
+          <div class="hbars">
+            <div class="hbar is-a"><span class="k">ES推敲</span><div class="track"><div class="fill" style="--w:72%"></div></div><span class="v">71.8%</span></div>
+            <div class="hbar"><span class="k">AIへの相談</span><div class="track"><div class="fill" style="--w:48%"></div></div><span class="v">47.6%</span></div>
+            <div class="hbar"><span class="k">面接対策</span><div class="track"><div class="fill" style="--w:38%"></div></div><span class="v">38.4%</span></div>
+            <div class="hbar"><span class="k">業務でAIで成果</span><div class="track"><div class="fill" style="--w:1.5%"></div></div><span class="v">ほぼ0</span></div>
+          </div>
+          <div class="card card--soft" style="margin-top:20px">
+            <p style="font-size:13.5px;color:var(--ink-2)">
+              利用理由の1位は「<b>作業時間の短縮</b>」54.3%。<br>
+              つまり全員が<b>「文章を速く書く道具」</b>として使っている。<br><br>
+              <b class="accent">AIで“実務の成果”を出している学生は、まだほぼ存在しない。</b></p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：マイナビ「2027年卒 大学生キャリア意向調査（4月）」2026年4月, n=1,258 ／「2026年卒」2025年4月, n=1,385 ほか年次シリーズ。※「業務でAIで成果」は該当調査項目が存在しないことを示す当社の定性的表現</p>
+    </div>
+  </section>
+
+  <!-- ============ 07 PROBLEM ============ -->
+  <section class="slide slide--soft" data-title="市場課題：3つの断層">
+    <p class="eyebrow">Problem</p>
+    <h2>3者すべてが、同じ断層の前で止まっている。</h2>
+    <div class="body">
+      <div class="grid g3" style="margin-top:20px">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M2 14l10 5 10-5"/></svg></div>
+          <h3>学生</h3>
+          <p style="margin-bottom:12px">AIは使えるが、それは「ESを速く書く」ため。就活は依然として時間を食い、学業・バイトを圧迫する。そして<b>97%は実務経験ゼロ</b>のまま社会に出る。</p>
+          <div class="tags">
+            <span class="tag">実務経験なし</span><span class="tag">成果物なし</span><span class="tag">差別化できない</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>企業</h3>
+          <p style="margin-bottom:12px">生成AIを入れたが「使い方がわからない」。採用充足率は<b>69.7%と4年連続低下</b>。一方で1人あたり教育研修費は<b>年36,036円</b>しかなく、入社後に育てる余力がない。</p>
+          <div class="tags">
+            <span class="tag">採用難</span><span class="tag">育成予算なし</span><span class="tag">AI人材不足</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3>既存サービス</h3>
+          <p style="margin-bottom:12px">就活塾は<b>AI実務を教えない</b>。AIスクールは<b>社会人向け</b>で、主要8社中7社に学生向けプランがない。しかもAidemy Premiumは2026年6月に撤退、TechAcademyは申込停止中。</p>
+          <div class="tags">
+            <span class="tag tag--a">交点が空白</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--ink" style="margin-top:22px;padding:22px 26px">
+        <div class="big-line" style="font-size:24px">
+          「AIを触れる学生」と「AIで業務を改善できる人材」の間にある断層。<br>
+          <span style="color:#a5a0ff">これを埋める事業者が、まだいない。</span>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：リクルート就職白書2023（長期インターン参加率3.0%）／マイナビ「2026年卒 企業新卒内定状況調査」（充足率69.7%）／産労総合研究所「2025年度 教育研修費用の実態調査」／各スクール公式サイト（2026年8月7日確認）</p>
+    </div>
+  </section>
+
+  <!-- ============ 08 PROBLEM 2 ============ -->
+  <section class="slide" data-title="市場課題：就活生が抱える負担">
+    <p class="eyebrow">Problem — 就活の実像</p>
+    <h2>就活生が「大変」と答えた項目の上位5つのうち、<br>4つはAIで支援できる。</h2>
+    <div class="body">
+      <div class="split-64" style="margin-top:16px">
+        <div>
+          <div class="hbars">
+            <div class="hbar is-a"><span class="k">エントリーシート</span><div class="track"><div class="fill" style="--w:57%"></div></div><span class="v">56.7%</span></div>
+            <div class="hbar is-a"><span class="k">自己分析</span><div class="track"><div class="fill" style="--w:54%"></div></div><span class="v">54.0%</span></div>
+            <div class="hbar is-a"><span class="k">就職情報の収集</span><div class="track"><div class="fill" style="--w:51%"></div></div><span class="v">50.7%</span></div>
+            <div class="hbar"><span class="k">モチベーション維持</span><div class="track"><div class="fill" style="--w:45%"></div></div><span class="v">45.1%</span></div>
+            <div class="hbar is-a"><span class="k">企業研究</span><div class="track"><div class="fill" style="--w:45%"></div></div><span class="v">44.8%</span></div>
+            <div class="hbar is-a"><span class="k">個人面接</span><div class="track"><div class="fill" style="--w:44%"></div></div><span class="v">43.9%</span></div>
+            <div class="hbar is-a"><span class="k">業界研究</span><div class="track"><div class="fill" style="--w:41%"></div></div><span class="v">41.4%</span></div>
+          </div>
+          <p style="margin-top:14px;font-size:11.5px;color:var(--muted)">■ AIで直接支援できる領域（当社判定）　■ 支援が難しい領域</p>
+        </div>
+        <div>
+          <div class="kv"><span class="k">エントリー社数</span><span class="v">19.2社</span></div>
+          <div class="kv"><span class="k">ES提出社数</span><span class="v">10.7社</span></div>
+          <div class="kv"><span class="k">面接経験者（3月時点）</span><span class="v">約8割</span></div>
+          <div class="kv"><span class="k">就活費用</span><span class="v">84,434円</span></div>
+          <div class="kv"><span class="k">就活の軸が未確定（7月時点）</span><span class="v">約2割</span></div>
+          <div class="card card--soft" style="margin-top:20px">
+            <p style="font-size:13px">
+              3月解禁からわずか2か月で<b>エントリーは23.4社</b>まで積み上がる。<br><br>
+              この期間、学生は学業とアルバイトを犠牲にしている。<b>時間こそが、就活の最大のコスト</b>である。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：キャリタス就活2023 学生モニター調査（ディスコ、2022年10月）※調査年次に留意 ／ キャリタス就活 学生モニター2027（2026年4月1日時点, n=1,057）／ リクルート就職みらい研究所「就職活動費用」（25卒・2024年6月時点）／ リクルートマネジメントソリューションズ</p>
+    </div>
+  </section>
+
+  <!-- ============ 09 SOLUTION ============ -->
+  <section class="slide slide--dark section-slide slide--center" data-title="Solution">
+    <div class="section-num">02 — SOLUTION</div>
+    <h2>AI Career Academy</h2>
+    <p class="lead">大学生の3〜12か月を使って、<br>
+    <strong>企業の実務をAIで改善できる状態</strong>まで引き上げ、<br>
+    成果物・インターン経験ごと、企業に届ける。</p>
+    <div class="pill-row" style="margin-top:26px">
+      <span class="pill is-a">AI実務教育</span>
+      <span class="pill is-a">ケーススタディ</span>
+      <span class="pill is-a">Vibe Coding</span>
+      <span class="pill is-a">企業インターン</span>
+      <span class="pill is-a">AI就活</span>
+      <span class="pill is-a">新卒紹介</span>
+    </div>
+  </section>
+
+  <!-- ============ 10 SERVICE OVERVIEW ============ -->
+  <section class="slide" data-title="サービス概要：5フェーズ一気通貫">
+    <p class="eyebrow">Service Overview</p>
+    <h2>教育で終わらない。就職の出口まで、一本の線で繋ぐ。</h2>
+    <p class="lead">既存プレイヤーはこのどこか1区間しか担っていない。我々は全区間を担う。</p>
+    <div class="body">
+      <div class="flow" style="margin-top:10px">
+        <div class="step">
+          <div class="n">PHASE 1</div>
+          <h3>AI基礎</h3>
+          <p>生成AI／LLMの原理、プロンプト設計、主要ツールの使い分け。「なぜそう動くか」から入る。</p>
+          <p style="margin-top:8px;color:var(--muted);font-size:10.5px">2週間</p>
+        </div>
+        <div class="step is-a">
+          <div class="n">PHASE 2</div>
+          <h3>実務ケーススタディ</h3>
+          <p>バックオフィス・営業・マーケ・人事・CSの実業務を、AIで効率化する演習を20〜30本。</p>
+          <p style="margin-top:8px;color:#c9c6ff;font-size:10.5px">6週間</p>
+        </div>
+        <div class="step is-a">
+          <div class="n">PHASE 3</div>
+          <h3>Vibe Coding</h3>
+          <p>Claude Code等で毎週1本アプリを作る。コードが書けなくても、動くものを出す。</p>
+          <p style="margin-top:8px;color:#c9c6ff;font-size:10.5px">6週間</p>
+        </div>
+        <div class="step">
+          <div class="n">PHASE 4</div>
+          <h3>企業インターン</h3>
+          <p>提携企業の実案件でAI業務改善を実践。成果レポートがそのまま実績になる。</p>
+          <p style="margin-top:8px;color:var(--muted);font-size:10.5px">3か月〜</p>
+        </div>
+        <div class="step">
+          <div class="n">PHASE 5</div>
+          <h3>AI就活</h3>
+          <p>自己分析から面接PDCAまでAIで高速化。同時に企業へ紹介する。</p>
+          <p style="margin-top:8px;color:var(--muted);font-size:10.5px">就活期</p>
+        </div>
+      </div>
+      <div class="grid g3" style="margin-top:26px">
+        <div class="card card--soft">
+          <h3>ターゲット</h3>
+          <p>大学2〜3年生。特に<b>文系学生</b>（2040年に76万人が余剰と推計される層）。学歴フィルターではなく、実行力で選抜する。</p>
+        </div>
+        <div class="card card--soft">
+          <h3>提供形態</h3>
+          <p>動画講義＋週次のオンライン演習＋メンターレビュー。成果物はすべてGitHub／ポートフォリオに蓄積。</p>
+        </div>
+        <div class="card card--accent">
+          <h3>価格</h3>
+          <p><b>受講料 300,000円</b>（3か月コース）。就活塾の相場（30万〜120万円）のど真ん中でありながら、提供範囲は数倍。</p>
+        </div>
+      </div>
+      <p class="src">※ 期間・価格は初版の設計案であり、パイロット実施を経て確定する。就活塾相場の出典：内定塾（99,000〜439,780円）、キャリアアカデミー（382,800円）公式サイト（2026年8月7日確認）</p>
+    </div>
+  </section>
+
+  <!-- ============ 11 CURRICULUM ============ -->
+  <section class="slide slide--soft slide--tight" data-title="カリキュラム全体像">
+    <p class="eyebrow">Curriculum</p>
+    <h2>「AIツールの使い方」は教えない。<br>「業務の壊し方」を教える。</h2>
+    <p class="lead">企業に入って本当に効くのは、何をAIに任せ、何を任せないかを判断できる力である。</p>
+    <div class="body">
+      <div class="grid g4" style="margin-top:8px">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></div>
+          <h3>業務の言語化</h3>
+          <p>目の前の作業を、手順・入力・出力・判断基準に分解して記述できるようにする。</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+          <h3>棚卸しとROI試算</h3>
+          <p>工数・頻度・エラー率を測り、自動化の投資対効果を数字で出す。</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/><path d="M9 21h6"/></svg></div>
+          <h3>置き換えない判断</h3>
+          <p>精度が命の領域、責任が伴う領域を見極める。AIに渡さない選択も設計のうち。</p>
+        </div>
+        <div class="card card--accent">
+          <div class="ico" style="background:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg></div>
+          <h3>実装まで持っていく</h3>
+          <p>提案で終わらせず、Claude Code等で動くツールを作り、現場で回す。</p>
+        </div>
+      </div>
+      <div class="grid g2" style="margin-top:24px">
+        <div class="card">
+          <h3 style="margin-bottom:12px">習得の順序</h3>
+          <div class="kv"><span class="k">1. AIリテラシー</span><span class="v" style="font-weight:500;color:var(--ink-3);font-size:12.5px">LLMの仕組み・限界・ハルシネーション</span></div>
+          <div class="kv"><span class="k">2. プロンプト設計</span><span class="v" style="font-weight:500;color:var(--ink-3);font-size:12.5px">再現性のある指示、評価と改善</span></div>
+          <div class="kv"><span class="k">3. 業務適用</span><span class="v" style="font-weight:500;color:var(--ink-3);font-size:12.5px">5職種30本のケーススタディ</span></div>
+          <div class="kv"><span class="k">4. 開発</span><span class="v" style="font-weight:500;color:var(--ink-3);font-size:12.5px">Vibe Codingで週1本のアプリ</span></div>
+          <div class="kv"><span class="k">5. 実務</span><span class="v" style="font-weight:500;color:var(--ink-3);font-size:12.5px">提携企業でのインターン</span></div>
+        </div>
+        <div class="card card--ink">
+          <h3 style="margin-bottom:12px">なぜ「思考力」まで踏み込むのか</h3>
+          <p style="font-size:13.5px;margin-bottom:14px">経団連の調査で企業が大卒者に期待する資質の上位は、<b>主体性・課題設定解決能力・論理的思考力</b>。知識ではない。</p>
+          <p style="font-size:13.5px">AIツールの操作は3か月で陳腐化する。しかし<b>「業務を分解して再設計する力」は陳腐化しない</b>。だから我々はここを中心に据える。</p>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：日本経済団体連合会「採用と大学改革への期待に関するアンケート結果」（2021年度調査／2022年1月公表, n=381社）</p>
+    </div>
+  </section>
+
+  <!-- ============ 12 CASE STUDY LIST ============ -->
+  <section class="slide" data-title="ケーススタディ例（5職種）">
+    <p class="eyebrow">Case Studies</p>
+    <h2>5職種 × 約30本。実在する業務だけを扱う。</h2>
+    <p class="lead">「AIで何ができるか」ではなく、「その会社の誰が、毎週何時間使っている作業か」から逆算して設計する。</p>
+    <div class="body">
+      <div class="grid g5" style="margin-top:8px">
+        <div class="card">
+          <h3 style="color:var(--accent);font-size:15px">バックオフィス</h3>
+          <div class="tags" style="flex-direction:column;align-items:flex-start;gap:5px;margin-top:10px">
+            <span class="tag">請求書照合</span><span class="tag">契約書レビュー</span><span class="tag">議事録作成</span>
+            <span class="tag">マニュアル作成</span><span class="tag">経費精算</span><span class="tag">データ集計</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="color:var(--accent);font-size:15px">営業</h3>
+          <div class="tags" style="flex-direction:column;align-items:flex-start;gap:5px;margin-top:10px">
+            <span class="tag">営業リスト作成</span><span class="tag">企業リサーチ</span><span class="tag">営業メール</span>
+            <span class="tag">提案資料作成</span><span class="tag">CRM入力</span><span class="tag">見積作成</span><span class="tag">日報</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="color:var(--accent);font-size:15px">マーケティング</h3>
+          <div class="tags" style="flex-direction:column;align-items:flex-start;gap:5px;margin-top:10px">
+            <span class="tag">SEO記事</span><span class="tag">SNS分析</span><span class="tag">広告クリエイティブ</span>
+            <span class="tag">LP改善提案</span><span class="tag">競合分析</span><span class="tag">口コミ分析</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="color:var(--accent);font-size:15px">人事</h3>
+          <div class="tags" style="flex-direction:column;align-items:flex-start;gap:5px;margin-top:10px">
+            <span class="tag">求人票作成</span><span class="tag">面接質問設計</span><span class="tag">候補者評価</span>
+            <span class="tag">採用分析</span><span class="tag">研修設計</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="color:var(--accent);font-size:15px">カスタマーサポート</h3>
+          <div class="tags" style="flex-direction:column;align-items:flex-start;gap:5px;margin-top:10px">
+            <span class="tag">問い合わせ分類</span><span class="tag">FAQ作成</span><span class="tag">AIチャットボット</span>
+            <span class="tag">VOC分析</span><span class="tag">応対品質評価</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--accent" style="margin-top:24px;padding:20px 24px">
+        <div class="split" style="gap:26px;align-items:center">
+          <div>
+            <h3 style="color:var(--accent-ink)">評価は「動いたか」ではなく「何時間削れたか」</h3>
+            <p style="color:var(--accent-ink);font-size:13.5px;margin:0">
+              各ケースの提出物には必ず<b>Before/Afterの工数試算</b>を付ける。学生は卒業時点で、
+              自分が削減した時間の総量を数字で語れる状態になる。</p>
+          </div>
+          <div class="statrow" style="grid-template-columns:repeat(2,1fr)">
+            <div class="stat"><div class="stat-v is-accent" style="font-size:38px">30<span class="u">本</span></div><div class="stat-l">卒業時のケース実施本数</div></div>
+            <div class="stat"><div class="stat-v is-accent" style="font-size:38px">5<span class="u">職種</span></div><div class="stat-l">横断で経験する職種数</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="src">※ ケース本数・構成は初版の設計案。実施企業へのヒアリングを経て、実業務の工数実態に合わせて確定する。</p>
+    </div>
+  </section>
+
+  <!-- ============ 13 CASE STUDY DEEP DIVE ============ -->
+  <section class="slide slide--soft" data-title="ケーススタディの中身（営業提案資料）">
+    <p class="eyebrow">Case Study — Deep Dive</p>
+    <h2>ケース例：「営業提案資料の作成を自動化する」</h2>
+    <p class="lead">1本のケースは、必ずこの5ステップで進む。ツールの操作を覚えるのではなく、業務を再設計する訓練である。</p>
+    <div class="body">
+      <div class="grid g5" style="margin-top:6px;gap:12px">
+        <div class="card" style="padding:16px 18px">
+          <div class="num-badge" style="margin-bottom:10px">1</div>
+          <h3 style="font-size:14px">業務の観察</h3>
+          <p style="font-size:12px">営業担当が提案書1本に何時間使い、どこで詰まっているかを聞き取り、フローに落とす。</p>
+        </div>
+        <div class="card" style="padding:16px 18px">
+          <div class="num-badge" style="margin-bottom:10px">2</div>
+          <h3 style="font-size:14px">分解と判断</h3>
+          <p style="font-size:12px">「企業リサーチ」「構成案」「作図」「最終メッセージ」に分解。<b>最後の1つは人が持つ</b>と決める。</p>
+        </div>
+        <div class="card" style="padding:16px 18px">
+          <div class="num-badge" style="margin-bottom:10px">3</div>
+          <h3 style="font-size:14px">プロンプト設計</h3>
+          <p style="font-size:12px">IR・採用ページ・ニュースを入力に、業界別の課題仮説を出力する再現性あるプロンプトを作る。</p>
+        </div>
+        <div class="card card--accent" style="padding:16px 18px">
+          <div class="num-badge" style="margin-bottom:10px">4</div>
+          <h3 style="font-size:14px;color:var(--accent-ink)">実装</h3>
+          <p style="font-size:12px;color:var(--accent-ink)">Claude Codeで、企業名を入れると提案書のドラフトが出るツールを作る。</p>
+        </div>
+        <div class="card" style="padding:16px 18px">
+          <div class="num-badge" style="margin-bottom:10px">5</div>
+          <h3 style="font-size:14px">効果測定</h3>
+          <p style="font-size:12px">Before/Afterの工数を計測し、削減率とROIをレポートにする。<b>これが成果物になる。</b></p>
+        </div>
+      </div>
+      <div class="split" style="margin-top:26px;gap:28px">
+        <div class="card">
+          <h3 style="margin-bottom:14px">提出される成果物</h3>
+          <ul class="ul ul--check">
+            <li>業務フロー図（Before / After）</li>
+            <li>再現可能なプロンプト一式</li>
+            <li>動作するツール（GitHubリポジトリ）</li>
+            <li>工数削減レポート（時間・金額換算）</li>
+          </ul>
+        </div>
+        <div class="card card--ink">
+          <h3 style="margin-bottom:12px">就活でこう変わる</h3>
+          <p style="font-size:13.5px;margin-bottom:10px">
+            <b style="color:#7a7a88">従来：</b>「サークルで代表を務め、20人をまとめました」</p>
+          <p style="font-size:14px;color:#fff;font-weight:600;line-height:1.6">
+            <b style="color:#a5a0ff">本校生：</b>「営業提案書の作成を4時間→1時間に短縮するツールを作り、月32時間分の工数を削減しました。コードはこちらです」</p>
+        </div>
+      </div>
+      <p class="src">※ 数値は説明のための例示であり、実測値ではない。実際の削減率はパイロット実施時に計測して差し替える。</p>
+    </div>
+  </section>
+
+  <!-- ============ 14 VIBE CODING ============ -->
+  <section class="slide" data-title="Vibe Coding">
+    <p class="eyebrow">Vibe Coding</p>
+    <h2>コードが書けなくても、動くものを毎週1本出す。</h2>
+    <p class="lead">「作れる」という事実は、どんな資格より雄弁である。しかも自分の就活そのものが最初の題材になる。</p>
+    <div class="body">
+      <div class="split-52" style="margin-top:10px">
+        <div>
+          <h3 style="margin-bottom:14px">週次で作るアプリ（例）</h3>
+          <div class="grid g2" style="gap:10px">
+            <div class="card card--accent" style="padding:14px 16px">
+              <h3 style="font-size:14px;color:var(--accent-ink)">Week 1 就活CRM</h3>
+              <p style="font-size:12px;color:var(--accent-ink)">自分の選考状況・ES締切・面接記録を一元管理。最初の1本は「自分の課題」を解く。</p>
+            </div>
+            <div class="card" style="padding:14px 16px"><h3 style="font-size:14px">Week 2 タスク管理</h3><p style="font-size:12px">学業・バイト・就活の時間配分を可視化</p></div>
+            <div class="card" style="padding:14px 16px"><h3 style="font-size:14px">Week 3 AI議事録</h3><p style="font-size:12px">音声→要約→ToDo抽出まで自動化</p></div>
+            <div class="card" style="padding:14px 16px"><h3 style="font-size:14px">Week 4 請求書管理</h3><p style="font-size:12px">OCR＋照合の業務ツール</p></div>
+            <div class="card" style="padding:14px 16px"><h3 style="font-size:14px">Week 5 営業管理</h3><p style="font-size:12px">リード管理とメール下書き生成</p></div>
+            <div class="card" style="padding:14px 16px"><h3 style="font-size:14px">Week 6 Slack / LINE Bot</h3><p style="font-size:12px">社内問い合わせに自動応答</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="card card--ink" style="margin-bottom:16px">
+            <h3 style="margin-bottom:12px">最初の1本が「就活CRM」である理由</h3>
+            <p style="font-size:13.5px">
+              自分が今まさに困っている問題だから、要件定義が正確になる。
+              そして作ったツールを実際に自分の就活で使うので、<b>改善のフィードバックループが最短で回る</b>。<br><br>
+              「使われないツール」を作る学生は、企業でも使われないツールを作る。ここを最初に潰す。</p>
+          </div>
+          <h3 style="margin-bottom:10px">卒業時に手元に残るもの</h3>
+          <ul class="ul ul--check">
+            <li>GitHubリポジトリ <strong>5〜10本</strong></li>
+            <li>公開ポートフォリオサイト <strong>1式</strong></li>
+            <li>ケーススタディ実施レポート <strong>20〜30件</strong></li>
+            <li>AI業務改善提案書 <strong>複数本</strong></li>
+            <li>インターン成果レポート</li>
+          </ul>
+        </div>
+      </div>
+      <p class="src">※ 使用ツールはClaude Code等のAIコーディング環境を想定。カリキュラム構成は初版の設計案であり、実施を経て確定する。</p>
+    </div>
+  </section>
+
+  <!-- ============ 15 AI SHUKATSU ============ -->
+  <section class="slide slide--soft slide--tight" data-title="AI就活：6つの工程">
+    <p class="eyebrow">AI Job Hunting</p>
+    <h2>就活の全工程を、AIで作り替える。</h2>
+    <p class="lead">他の学生が「ESを推敲する」のに使っているAIを、我々は<strong>就活プロセス全体の設計</strong>に使う。</p>
+    <div class="body">
+      <div class="grid g3" style="margin-top:8px;gap:14px">
+        <div class="card">
+          <div class="num-badge" style="margin-bottom:10px">1</div>
+          <h3>自己分析</h3>
+          <p>対話型AIが過去の経験を掘り下げ、強みを抽出。ケーススタディでの成果物が、そのまま裏付けのあるエピソードになる。</p>
+        </div>
+        <div class="card">
+          <div class="num-badge" style="margin-bottom:10px">2</div>
+          <h3>業界・企業選定</h3>
+          <p>100社規模の比較をAIで並列処理。業界構造と自分の適性のマッチ度をスコアリングし、受ける企業を根拠を持って絞る。</p>
+        </div>
+        <div class="card">
+          <div class="num-badge" style="margin-bottom:10px">3</div>
+          <h3>企業研究</h3>
+          <p>IR・有価証券報告書・採用ページ・ニュース・口コミをAIで横断要約。1社2時間かかっていた作業を30分に。</p>
+        </div>
+        <div class="card">
+          <div class="num-badge" style="margin-bottom:10px">4</div>
+          <h3>ES・志望動機</h3>
+          <p>企業リサーチの結果を志望動機に接続。<b>ただし核となる体験は本人のもの</b>。AIは構成と推敲を担う。</p>
+        </div>
+        <div class="card">
+          <div class="num-badge" style="margin-bottom:10px">5</div>
+          <h3>面接練習</h3>
+          <p>企業別の想定質問を生成するAI面接官と対話。回答の型を事前に何十回も試せる。</p>
+        </div>
+        <div class="card card--accent">
+          <div class="num-badge" style="margin-bottom:10px">6</div>
+          <h3 style="color:var(--accent-ink)">録画分析とPDCA</h3>
+          <p style="color:var(--accent-ink)">面接の録画・録音をAIに読ませ、話速・論理構成・回答の一貫性を指摘。次の面接までに改善を回す。</p>
+        </div>
+      </div>
+      <div class="card card--ink" style="margin-top:22px;padding:20px 24px">
+        <div class="split" style="align-items:center;gap:28px">
+          <div>
+            <h3 style="margin-bottom:8px">重要な設計思想：AIに書かせない。AIに「詰めさせる」。</h3>
+            <p style="font-size:13.5px;margin:0">
+              企業側は「学生本来の思考プロセスが見えなくなること」を懸念している。ESに生成AIがそのまま使われていると実感している企業も既に<b>12.3%</b>。
+              AIで量産した文章は、遠からず見抜かれる。</p>
+          </div>
+          <div style="flex:none;width:280px">
+            <p style="font-size:15px;color:#fff;font-weight:700;line-height:1.6;margin:0">
+              差がつくのは<br><span style="color:#a5a0ff">「AIで作った文章」ではなく<br>「AIで作った実績」</span>である。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：マイナビ「就職活動における生成AIの利用」関連調査（2025年）。※各工程の所要時間は当社モデル試算であり外部調査値ではない</p>
+    </div>
+  </section>
+
+  <!-- ============ 16 TIME SAVING ============ -->
+  <section class="slide" data-title="なぜ就活時間が短縮されるのか">
+    <p class="eyebrow">Why — 時間短縮</p>
+    <h2>就活にかかる約130時間を、42時間に。</h2>
+    <div class="body">
+      <div class="split-52" style="margin-top:10px">
+        <div>
+          <div class="stack">
+            <div class="stk">
+              <div class="tot" style="color:var(--ink-3)">130<span style="font-size:15px">時間</span></div>
+              <div class="col" style="--h:100%">
+                <div class="seg" style="height:15.4%;background:#b9b9c2"><span>自己分析</span><span>20h</span></div>
+                <div class="seg" style="height:29.2%;background:#a8a8b3"><span>企業研究</span><span>38h</span></div>
+                <div class="seg" style="height:24.6%;background:#97979f"><span>ES作成</span><span>32h</span></div>
+                <div class="seg" style="height:30.8%;background:#86868b"><span>面接準備</span><span>40h</span></div>
+              </div>
+              <div class="k">従来の就活</div>
+            </div>
+            <div class="stk">
+              <div class="tot" style="color:var(--accent)">42<span style="font-size:15px">時間</span></div>
+              <div class="col" style="--h:32%">
+                <div class="seg" style="height:14.3%;background:#8b84f0"><span>自己分析</span><span>6h</span></div>
+                <div class="seg" style="height:23.8%;background:#6f66ea"><span>企業研究</span><span>10h</span></div>
+                <div class="seg" style="height:26.2%;background:#5b52e7"><span>ES作成</span><span>11h</span></div>
+                <div class="seg" style="height:35.7%;background:#4f46e5"><span>面接準備</span><span>15h</span></div>
+              </div>
+              <div class="k" style="color:var(--accent)">AI活用後</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table style="margin-bottom:16px">
+            <thead><tr><th>工程</th><th class="t-c">従来</th><th class="t-c">AI後</th><th class="t-c">削減</th></tr></thead>
+            <tbody>
+              <tr><td>自己分析</td><td class="t-c">20h</td><td class="t-c">6h</td><td class="t-c ok">−70%</td></tr>
+              <tr><td>業界・企業研究<br><small style="color:var(--muted)">19.2社 × 2h → 0.5h</small></td><td class="t-c">38h</td><td class="t-c">10h</td><td class="t-c ok">−74%</td></tr>
+              <tr><td>ES作成<br><small style="color:var(--muted)">10.7社 × 3h → 1h</small></td><td class="t-c">32h</td><td class="t-c">11h</td><td class="t-c ok">−66%</td></tr>
+              <tr><td>面接準備<br><small style="color:var(--muted)">10社 × 4h → 1.5h</small></td><td class="t-c">40h</td><td class="t-c">15h</td><td class="t-c ok">−63%</td></tr>
+              <tr class="is-us"><td>合計</td><td class="t-c">130h</td><td class="t-c">42h</td><td class="t-c">−88h（68%）</td></tr>
+            </tbody>
+          </table>
+          <div class="card card--accent" style="padding:16px 20px">
+            <p style="font-size:13.5px;color:var(--accent-ink);margin:0">
+              浮いた<b>88時間</b>を時給1,200円のアルバイトに充てれば<b>約10.6万円</b>。
+              学業や長期インターンに充てれば、就活そのものの質が上がる。<br>
+              <b>時間は、受講料を回収する最初の原資になる。</b></p>
+          </div>
+        </div>
+      </div>
+      <p class="src" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span class="note-warn">重要：これは当社モデル試算であり、外部調査値ではない</span>
+        <span>社数の前提（エントリー19.2社・ES提出10.7社）はキャリタス就活 学生モニター2027（2026年4月時点）に基づく実データ。1社あたりの所要時間については信頼できる一次調査が存在しないため当社仮置き。<b>パイロット受講生への実測アンケート（n=30〜50）で差し替える予定。</b></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 17 QUALITY OF OFFER ============ -->
+  <section class="slide slide--soft" data-title="なぜ“内定の質”が上がるのか">
+    <p class="eyebrow">Why — 内定の質</p>
+    <h2>内定率は、もう98.8%ある。<br>戦うべきは「どこから内定を取るか」だ。</h2>
+    <p class="lead">「内定率が上がります」は訴求にならない。我々が上げるのは<strong>内定先の質・選択肢の数・意思決定の確度</strong>である。</p>
+    <div class="body">
+      <div class="split-64" style="margin-top:8px">
+        <div>
+          <div class="grid g2" style="gap:14px">
+            <div class="card">
+              <h3>① 母集団の質が上がる</h3>
+              <p>AIで100社規模の比較を回せるため、知名度で選ばず、事業構造と自分の適性で選べる。<b>受ける会社が変わる。</b></p>
+            </div>
+            <div class="card">
+              <h3>② 語れる中身が変わる</h3>
+              <p>実務でAI改善を回した経験と、動く成果物がある。面接官が検証できる具体性を持つ唯一の学生になる。</p>
+            </div>
+            <div class="card">
+              <h3>③ 反復回数が増える</h3>
+              <p>AI面接官と録画分析で、本番前に何十回も練習できる。1社目で消耗しない。</p>
+            </div>
+            <div class="card card--accent">
+              <h3 style="color:var(--accent-ink)">④ 紹介経路がある</h3>
+              <p style="color:var(--accent-ink)">提携企業へは、成果物とインターン評価を添えて紹介する。<b>選考の入口が変わる。</b></p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card card--ink">
+            <h3 style="margin-bottom:14px">企業が新卒に期待するもの</h3>
+            <div class="hbars">
+              <div class="hbar is-a" style="grid-template-columns:110px 1fr 46px"><span class="k" style="color:#b8b8c4">主体性</span><div class="track" style="background:#26262c"><div class="fill" style="--w:84%"></div></div><span class="v" style="color:#fff">約8割</span></div>
+              <div class="hbar is-a" style="grid-template-columns:110px 1fr 46px"><span class="k" style="color:#b8b8c4">チームワーク</span><div class="track" style="background:#26262c"><div class="fill" style="--w:84%"></div></div><span class="v" style="color:#fff">約8割</span></div>
+              <div class="hbar" style="grid-template-columns:110px 1fr 46px"><span class="k" style="color:#b8b8c4">学び続ける力</span><div class="track" style="background:#26262c"><div class="fill" style="--w:42%"></div></div><span class="v" style="color:#fff">約4割</span></div>
+            </div>
+            <p style="font-size:12.5px;margin-top:14px">
+              上位は「課題設定・解決能力」「論理的思考力」「創造力」。<br>
+              <b style="color:#fff">これらは座学では証明できない。実務で回した記録だけが証明になる。</b></p>
+          </div>
+          <div class="card card--soft" style="margin-top:14px">
+            <p style="font-size:12.5px;margin:0">
+              新卒採用で「求める能力が変化した」と答えた企業は<b>84%</b>。うち重要度が上がった項目に
+              <b>生成AIツール活用スキル 40.4%</b>、<b>創造性・発想力 43.6%</b>。<br>
+              <span style="font-size:11px;color:var(--muted)">※アカリク調査 n=112 と小規模のため補強データ扱い</span></p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：リクルート就職みらい研究所「就職プロセス調査（2025年卒）」卒業時点内定率98.8%（2017年卒以降で最高）／経団連「採用と大学改革への期待に関するアンケート」／アカリク調査（2025年9月, n=112）</p>
+    </div>
+  </section>
+
+  <!-- ============ 18 PORTFOLIO ============ -->
+  <section class="slide slide--dark" data-title="卒業時に手元に残るもの">
+    <p class="eyebrow">Output</p>
+    <h2>卒業式の日、全員がこれを持っている。</h2>
+    <p class="lead">これが本事業の最大の武器である。教育の成果を、<strong>検証可能な物体</strong>として残す。</p>
+    <div class="body">
+      <div class="grid g5" style="margin-top:24px;gap:14px">
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="stat-v" style="font-size:40px;color:#a5a0ff">5-10<span class="u">本</span></div>
+          <div class="stat-l" style="margin-top:8px">Claude Code等で作った<br><b style="color:#fff">動くアプリ</b>（GitHub公開）</div>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="stat-v" style="font-size:40px;color:#a5a0ff">20-30<span class="u">件</span></div>
+          <div class="stat-l" style="margin-top:8px">実務<b style="color:#fff">ケーススタディ</b><br>実施レポート（工数削減試算付き）</div>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="stat-v" style="font-size:40px;color:#a5a0ff">1<span class="u">式</span></div>
+          <div class="stat-l" style="margin-top:8px">公開<b style="color:#fff">ポートフォリオ<br>サイト</b></div>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="stat-v" style="font-size:40px;color:#a5a0ff">3ヶ月<span class="u">+</span></div>
+          <div class="stat-l" style="margin-top:8px">提携企業での<br><b style="color:#fff">インターン実務経験</b></div>
+        </div>
+        <div class="card" style="background:var(--accent);border-color:var(--accent)">
+          <div class="stat-v" style="font-size:40px;color:#fff">1<span class="u">通</span></div>
+          <div class="stat-l" style="margin-top:8px;color:#d5d3ff">受入企業からの<br><b style="color:#fff">成果評価レポート</b></div>
+        </div>
+      </div>
+      <div style="margin-top:34px">
+        <div class="big-line" style="font-size:27px">
+          97%の大学生が実務経験ゼロで社会に出る市場で、<br>
+          <span style="color:#a5a0ff">この5点セットを持つ学生は、探しても他にいない。</span>
+        </div>
+      </div>
+      <p class="src">※ 本数・件数は初版の設計目標値。<b>出典</b>：3か月以上の長期インターン参加率3.0%（リクルート就職白書2023）</p>
+    </div>
+  </section>
+
+  <!-- ============ 19 STUDENT VALUE ============ -->
+  <section class="slide" data-title="学生メリット">
+    <p class="eyebrow">Value — 学生</p>
+    <h2>30万円を、在学中に回収させる。</h2>
+    <p class="lead">教育投資は「将来のため」で終わりがちだ。本事業は在学中から金銭的リターンが立つように設計する。</p>
+    <div class="body">
+      <div class="split" style="margin-top:8px;gap:30px">
+        <div>
+          <div class="grid g2" style="gap:14px">
+            <div class="card card--soft"><h3>就活時間の削減</h3><p>約130h → 42h（当社試算）。学業とバイトを犠牲にしない。</p></div>
+            <div class="card card--soft"><h3>市場価値の向上</h3><p>「AIを使える」ではなく「AIで業務を改善できる」水準へ。</p></div>
+            <div class="card card--soft"><h3>実務経験と成果物</h3><p>インターン経験＋GitHub＋改善レポート。検証可能な実績。</p></div>
+            <div class="card card--soft"><h3>内定先の選択肢</h3><p>紹介経路と実績により、受けられる企業の幅が変わる。</p></div>
+            <div class="card card--soft"><h3>在学中の副業</h3><p>身につけたAI業務改善スキルは、そのまま受託可能なスキル。</p></div>
+            <div class="card card--soft"><h3>入社後の立ち上がり</h3><p>入社時点で業務改善が回せる。昇進・評価の初速が変わる。</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="card card--accent" style="margin-bottom:16px">
+            <h3 style="color:var(--accent-ink);margin-bottom:14px">受講料30万円の回収シナリオ（当社試算）</h3>
+            <div class="kv" style="border-color:var(--accent-line)"><span class="k" style="color:var(--accent-ink)">就活時間の削減分（88h × 時給1,200円）</span><span class="v" style="color:var(--accent-ink)">約10.6万円</span></div>
+            <div class="kv" style="border-color:var(--accent-line)"><span class="k" style="color:var(--accent-ink)">長期インターン報酬（時給1,300円 × 週20h × 3か月）</span><span class="v" style="color:var(--accent-ink)">約31.2万円</span></div>
+            <div class="kv" style="border-color:var(--accent-line)"><span class="k" style="color:var(--accent-ink)">AI業務改善の副業（月3万円 × 6か月）</span><span class="v" style="color:var(--accent-ink)">約18.0万円</span></div>
+            <div class="kv is-total" style="border-color:var(--accent-ink)"><span class="k" style="color:var(--accent-ink);font-weight:700">在学中の想定リターン</span><span class="v">約59.8万円</span></div>
+          </div>
+          <div class="card">
+            <h3>入社後のリターン（定性）</h3>
+            <p>初任給・配属・評価の初速に効く。加えて、AI業務改善スキルは社外でも通用するため、<b>キャリアの選択肢そのものが増える</b>。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span class="note-warn">回収シナリオはすべて当社試算</span>
+        <span>インターン報酬・副業単価は市場の一般的な水準を仮置きしたものであり、保証するものではない。募集時の表示は景品表示法・特定商取引法に照らし、必ず「保証ではない」旨を明記する。</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 20 COMPANY VALUE ============ -->
+  <section class="slide slide--soft" data-title="企業メリット">
+    <p class="eyebrow">Value — 企業</p>
+    <h2>「入社後に育てる」が、もう成立しない。</h2>
+    <div class="body">
+      <div class="grid g3" style="margin-top:14px">
+        <div class="card">
+          <div class="stat-v" style="font-size:42px">93.6<span class="u">万円</span></div>
+          <div class="stat-l" style="margin-top:8px">新卒1人あたりの採用単価<br><span class="stat-s">2020年卒実績／中途は103.3万円</span></div>
+        </div>
+        <div class="card">
+          <div class="stat-v" style="font-size:42px">36,036<span class="u">円</span></div>
+          <div class="stat-l" style="margin-top:8px">従業員1人あたりの年間教育研修費<br><span class="stat-s">2024年度実績。育成予算は極めて限定的</span></div>
+        </div>
+        <div class="card card--accent">
+          <div class="stat-v is-accent" style="font-size:42px">69.7<span class="u">%</span></div>
+          <div class="stat-l" style="margin-top:8px">新卒採用の充足率<br><span class="stat-s">2026年卒。<b>4年連続低下・同時期比で過去最低</b></span></div>
+        </div>
+      </div>
+      <div class="split" style="margin-top:26px;gap:30px">
+        <div>
+          <h3 style="margin-bottom:12px">企業が本サービスから得るもの</h3>
+          <ul class="ul">
+            <li><strong>即戦力としてのAI人材</strong>：入社初月から業務改善の提案と実装ができる</li>
+            <li><strong>教育コストの前倒し削減</strong>：年3.6万円の研修予算では届かない領域を、入社前に済ませてある</li>
+            <li><strong>採用ミスマッチの低減</strong>：インターンでの実働と成果評価を見てから採用判断できる</li>
+            <li><strong>社内のAI活用の起点</strong>：「使い方がわからない」組織に、使い方を持ち込む人材が入る</li>
+            <li><strong>採用難への対応</strong>：充足率が下がり続ける市場で、質を落とさず母集団を確保できる</li>
+          </ul>
+        </div>
+        <div>
+          <div class="card card--ink">
+            <h3 style="margin-bottom:12px">企業側の課金メニュー</h3>
+            <div class="kv" style="border-color:#26262c"><span class="k" style="color:#9a9aa8">新卒紹介（成功報酬）</span><span class="v" style="color:#fff">50〜120万円/人</span></div>
+            <div class="kv" style="border-color:#26262c"><span class="k" style="color:#9a9aa8">インターン受入（送客）</span><span class="v" style="color:#fff">数万円/人〜</span></div>
+            <div class="kv" style="border-color:#26262c"><span class="k" style="color:#9a9aa8">社員向けAI研修</span><span class="v" style="color:#fff">受託</span></div>
+            <div class="kv" style="border-color:#26262c"><span class="k" style="color:#9a9aa8">AI導入コンサル</span><span class="v" style="color:#fff">受託</span></div>
+            <p style="font-size:12px;margin-top:12px">
+              紹介手数料の相場は<b style="color:#fff">固定額型 50〜120万円</b>、または<b style="color:#fff">理論年収の20〜25%</b>。
+              中途（30〜35%）より低いが、採用単価93.6万円と比較すれば妥当な水準。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：リクルート就職みらい研究所『就職白書2020』（新卒93.6万円／中途103.3万円、2020年卒実績。※就職白書2025・2026には採用単価の項目がなく、これが最新の一次確定値）／産労総合研究所「2025年度 教育研修費用の実態調査」／マイナビ「2026年卒 企業新卒内定状況調査」／Wantedly・リクルートエージェント（手数料相場）</p>
+    </div>
+  </section>
+
+  <!-- ============ 21 BUSINESS MODEL ============ -->
+  <section class="slide slide--tight" data-title="ビジネスモデル">
+    <p class="eyebrow">Business Model</p>
+    <h2>学生と企業、両側から課金する。</h2>
+    <p class="lead">学生から受け取るのは「教育の対価」。企業から受け取るのは「育成済み人材にアクセスする対価」。利益相反が起きない構造で設計する。</p>
+    <div class="body">
+      <div class="model" style="margin-top:14px">
+        <div>
+          <div class="card">
+            <h3>学生</h3>
+            <p style="margin-bottom:10px">AI実務教育・成果物・インターン・就活支援を受ける</p>
+            <div class="money">受講料 300,000円 ／ 人　→</div>
+            <p style="font-size:11.5px;color:var(--muted);margin:0">分割払い・成果連動型（後払い）も検討</p>
+          </div>
+        </div>
+        <div class="hub">
+          <div class="t">AI Career Academy</div>
+          <div class="s">育成 → 実務 → 成果物 →<br>評価 → 紹介</div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>企業</h3>
+            <p style="margin-bottom:10px">AI実務力が検証済みの新卒を、成果物とインターン評価付きで採用</p>
+            <div class="money">←　紹介手数料 500,000〜1,000,000円 ／ 人</div>
+            <p style="font-size:11.5px;color:var(--muted);margin:0">＋ 社員向けAI研修・AI導入コンサル</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid g4" style="margin-top:28px">
+        <div class="card card--soft">
+          <h3 style="font-size:15px">① 受講料（BtoC）</h3>
+          <p>300,000円／人。3か月コース。初期の主収益。</p>
+        </div>
+        <div class="card card--accent">
+          <h3 style="font-size:15px;color:var(--accent-ink)">② 新卒紹介（BtoB）</h3>
+          <p style="color:var(--accent-ink)">成功報酬 50〜100万円／人。<b>中長期の主収益。</b></p>
+        </div>
+        <div class="card card--soft">
+          <h3 style="font-size:15px">③ 法人研修（BtoB）</h3>
+          <p>受講生が作ったケース教材を、そのまま企業研修として販売。</p>
+        </div>
+        <div class="card card--soft">
+          <h3 style="font-size:15px">④ 卒業生コミュニティ</h3>
+          <p>継続課金・追加講座・副業案件の紹介。LTVを伸ばす。</p>
+        </div>
+      </div>
+      <div class="card card--ink" style="margin-top:22px;padding:18px 24px">
+        <div class="split" style="align-items:center;gap:26px">
+          <p style="font-size:13.5px;margin:0">
+            <b style="color:#fff">利益相反への設計上の配慮：</b>
+            紹介先は学生の希望を最優先とし、<b style="color:#a5a0ff">手数料の高さで紹介先を決めない</b>ことを運用ルールとして明文化する。
+            学生の信頼が崩れた瞬間に、企業側の価値も同時に消えるモデルだからである。</p>
+          <div style="flex:none;width:250px">
+            <div class="stat"><div class="stat-v" style="font-size:34px;color:#a5a0ff">約60<span class="u">万円</span></div><div class="stat-l" style="color:#9a9aa8">学生1人あたり想定売上<br>（受講料30万＋紹介手数料の期待値30万）</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：新卒紹介の成功報酬相場（固定額型50〜120万円／理論年収の20〜25%）＝Wantedly、ONE CAREER、digireka!HR ほか人材業界メディア。※個社の公式料金は非公開が大半のため相場情報。価格設計は初版の想定値</p>
+    </div>
+  </section>
+
+  <!-- ============ 22 UNIT ECONOMICS / SIM ============ -->
+  <section class="slide slide--soft slide--tight" data-title="収益シミュレーション（3年）">
+    <p class="eyebrow">Financial — 当社試算</p>
+    <h2>3年目に、年商3.6億円を目指す。</h2>
+    <p class="lead">前提を保守的に置いても成立する構造かを確認するためのラフ試算。精緻化は次版で行う。</p>
+    <div class="body">
+      <div class="split-52" style="margin-top:6px">
+        <div>
+          <div class="vbars" style="height:212px">
+            <div class="vbar">
+              <div class="col" style="--h:8%"><span class="v">0.3億</span></div>
+              <div class="k">1年目<br><span style="font-size:10.5px;color:var(--muted)">受講生 50名</span></div>
+            </div>
+            <div class="vbar">
+              <div class="col" style="--h:33%"><span class="v">1.2億</span></div>
+              <div class="k">2年目<br><span style="font-size:10.5px;color:var(--muted)">受講生 200名</span></div>
+            </div>
+            <div class="vbar">
+              <div class="col is-a" style="--h:100%"><span class="v">3.6億</span></div>
+              <div class="k">3年目<br><span style="font-size:10.5px;color:var(--muted)">受講生 600名</span></div>
+            </div>
+          </div>
+          <p style="margin-top:16px;font-size:12.5px;color:var(--ink-3)">年間売上高の推移（当社試算）</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom:12px">ユニットエコノミクス（学生1人あたり）</h3>
+          <div class="kv"><span class="k">受講料</span><span class="v">300,000円</span></div>
+          <div class="kv"><span class="k">紹介手数料（1件あたり）</span><span class="v">600,000円</span></div>
+          <div class="kv"><span class="k">紹介成立率（保守的前提）</span><span class="v">50%</span></div>
+          <div class="kv"><span class="k">企業側売上の期待値</span><span class="v">300,000円</span></div>
+          <div class="kv is-total"><span class="k">学生1人あたり売上</span><span class="v">600,000円</span></div>
+          <div class="card card--accent" style="margin-top:18px;padding:16px 20px">
+            <p style="font-size:13px;color:var(--accent-ink);margin:0">
+              紹介成立率を0%と置いても、<b>受講料だけで年商1.8億円（3年目）</b>。
+              紹介事業は<b>アップサイド</b>として設計しており、教育単体でも成立する構造にする。</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid g4" style="margin-top:24px">
+        <div class="card"><h3 style="font-size:14px">主なコスト</h3><p>教材制作・メンター人件費・提携企業開拓・マーケティング（広告／SNS／大学連携）</p></div>
+        <div class="card"><h3 style="font-size:14px">スケールの効き方</h3><p>教材は一度作れば再利用できる。<b>受講生数の増加に対してコストは線形に増えない。</b></p></div>
+        <div class="card"><h3 style="font-size:14px">ボトルネック</h3><p>メンターの供給と、インターン受入企業の数。<b>ここが成長の律速</b>になる。</p></div>
+        <div class="card card--ink"><h3 style="font-size:14px">検証すべきKPI</h3><p style="color:#a7a7b4">受講完了率／インターン移行率／紹介成立率／NPS。パイロットで全て計測する。</p></div>
+      </div>
+      <p class="src" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span class="note-warn">全て当社試算・初版の仮置き</span>
+        <span>受講生数、紹介成立率、手数料単価はいずれも未検証の前提値であり、実績に基づくものではない。原価・人件費を含む損益計算は本版には含めていない。次版で作成する。</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 23 MARKET SIZE ============ -->
+  <section class="slide" data-title="市場規模 TAM / SAM / SOM">
+    <p class="eyebrow">Market Size</p>
+    <h2>成長率の高いサブセグメントに、正面から張る。</h2>
+    <div class="body">
+      <div class="split-64" style="margin-top:12px">
+        <div>
+          <table>
+            <thead><tr><th>市場</th><th class="t-c">規模</th><th class="t-c">成長率</th></tr></thead>
+            <tbody>
+              <tr><td><b>新卒採用支援サービス市場</b><br><small style="color:var(--muted)">2026年度予測／7分野合計</small></td><td class="t-c"><b>1,602億円</b></td><td class="t-c mid">+4〜6%</td></tr>
+              <tr><td><b>人材紹介業</b>（ホワイトカラー）<br><small style="color:var(--muted)">2024年度</small></td><td class="t-c"><b>4,490億円</b></td><td class="t-c ok">+12.0%</td></tr>
+              <tr><td><b>ダイレクトリクルーティング</b><br><small style="color:var(--muted)">2024年度見込／新卒＋中途</small></td><td class="t-c"><b>1,275億円</b></td><td class="t-c ok">+18.7%</td></tr>
+              <tr><td>国内AIシステム市場<br><small style="color:var(--muted)">2029年予測（2024年 1兆3,412億円）</small></td><td class="t-c">4兆1,873億円</td><td class="t-c ok">CAGR 25.6%</td></tr>
+              <tr><td>企業向け研修サービス市場<br><small style="color:var(--muted)">2025年度予測。DX人材研修が好調</small></td><td class="t-c">6,130億円</td><td class="t-c mid">+4.6%</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:14px;font-size:12.5px;color:var(--ink-3)">
+            人材業界全体（+3.4%）の中で、<b>人材紹介は+12%、ダイレクトリクルーティングは+18.7%</b>と突出している。
+            求人媒体型からマッチング型へのシフトが、数字で起きている。</p>
+        </div>
+        <div>
+          <div class="card card--ink" style="margin-bottom:12px">
+            <div class="stat-l" style="color:#9a9aa8;margin-bottom:4px">TAM</div>
+            <div class="stat-v" style="font-size:36px;color:#fff">1,602<span class="u">億円</span></div>
+            <p style="font-size:11.5px;margin-top:8px">新卒採用支援サービス市場（2026年度予測）<br>＋ 人材紹介業4,490億円が上限の天井</p>
+          </div>
+          <div class="card" style="margin-bottom:12px">
+            <div class="stat-l" style="margin-bottom:4px">SAM</div>
+            <div class="stat-v" style="font-size:36px">約138<span class="u">億円</span></div>
+            <p style="font-size:11.5px;margin-top:8px;color:var(--ink-3)">
+              年間大卒就職者 約46万人 × キャリア投資意欲の高い上位5%（約2.3万人）× 学生1人あたり売上60万円<br>
+              <span style="color:var(--muted)">※当社推計</span></p>
+          </div>
+          <div class="card card--accent">
+            <div class="stat-l" style="color:var(--accent-ink);margin-bottom:4px">SOM（3年後）</div>
+            <div class="stat-v is-accent" style="font-size:36px">約3.6<span class="u">億円</span></div>
+            <p style="font-size:11.5px;margin-top:8px;color:var(--accent-ink)">
+              受講生600名 × 60万円＝SAMの約2.6%<br>
+              <span>※当社試算</span></p>
+          </div>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：矢野経済研究所「新卒採用支援サービス市場に関する調査（2026年）」「人材ビジネス市場に関する調査（2025年）」「ダイレクトリクルーティングサービス市場に関する調査（2024年）」「企業向け研修サービス市場に関する調査（2025年）」／IDC Japan「国内AIシステム市場予測 2025-2029」／文部科学省「令和7年度学校基本調査」（大学学部在学者264.6万人・就職者割合77.0%）。<b>SAM・SOMは当社推計であり、新卒紹介単独の市場規模は非公開のため按分していない。</b></p>
+    </div>
+  </section>
+
+  <!-- ============ 24 COMPETITION ============ -->
+  <section class="slide slide--soft slide--tight" data-title="競合比較">
+    <p class="eyebrow">Competition</p>
+    <h2>誰も、この4つを同時に提供していない。</h2>
+    <div class="body">
+      <table style="margin-top:12px">
+        <thead>
+          <tr>
+            <th style="width:20%">プレイヤー</th>
+            <th class="t-c">AI実務スキル</th>
+            <th class="t-c">成果物・実務経験</th>
+            <th class="t-c">就活支援</th>
+            <th class="t-c">企業紹介</th>
+            <th class="t-c" style="width:13%">学生向け</th>
+            <th style="width:17%">価格帯</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>就活塾</b><br><small style="color:var(--muted)">内定塾／キャリアアカデミー／我究館 等</small></td>
+            <td class="t-c no">✕</td><td class="t-c no">✕</td><td class="t-c ok">◎</td><td class="t-c mid">△</td><td class="t-c ok">◎</td>
+            <td>10万〜44万円<br><small style="color:var(--muted)">大手5社中3社が非公開</small></td>
+          </tr>
+          <tr>
+            <td><b>AIスクール</b><br><small style="color:var(--muted)">キカガク／テックキャンプ／侍 等</small></td>
+            <td class="t-c ok">◎</td><td class="t-c mid">△</td><td class="t-c no">✕</td><td class="t-c mid">△</td><td class="t-c no">✕</td>
+            <td>定価17万〜114万円<br><small style="color:var(--muted)">給付金後 実質5.6万〜32万円</small></td>
+          </tr>
+          <tr>
+            <td><b>長期インターン紹介</b><br><small style="color:var(--muted)">Infra／ゼロワンインターン 等</small></td>
+            <td class="t-c no">✕</td><td class="t-c ok">◯</td><td class="t-c no">✕</td><td class="t-c mid">△</td><td class="t-c ok">◎</td>
+            <td>学生無料<br><small style="color:var(--muted)">企業側課金・料金非公開</small></td>
+          </tr>
+          <tr>
+            <td><b>新卒エージェント</b><br><small style="color:var(--muted)">各社</small></td>
+            <td class="t-c no">✕</td><td class="t-c no">✕</td><td class="t-c ok">◯</td><td class="t-c ok">◎</td><td class="t-c ok">◎</td>
+            <td>学生無料<br><small style="color:var(--muted)">企業から50〜120万円/人</small></td>
+          </tr>
+          <tr class="is-us">
+            <td><b>AI Career Academy</b></td>
+            <td class="t-c">◎</td><td class="t-c">◎</td><td class="t-c">◎</td><td class="t-c">◎</td><td class="t-c">◎</td>
+            <td>受講料 30万円<br>＋ 企業から紹介手数料</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="grid g3" style="margin-top:22px">
+        <div class="card">
+          <h3 style="font-size:15px">市場に空席ができている</h3>
+          <p><b>Aidemy Premiumは2026年6月に事業終了</b>。<b>TechAcademyは現在申込停止中</b>。AI教育市場に明確な空白が2つ生まれている。</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:15px">学生セグメントは無風</h3>
+          <p>主要スクール8社のうち学生向けプランを明示しているのは<b>TechAcademyのみ</b>（25歳以下・約11,000円引き）。そのTechAcademyが停止中。</p>
+        </div>
+        <div class="card card--accent">
+          <h3 style="font-size:15px;color:var(--accent-ink)">「生成AI × 就活」に直接競合なし</h3>
+          <p style="color:var(--accent-ink)">侍エンジニアはClaude Codeコースまで持つが社会人向け。就活塾はAI実務を扱わない。<b>交点は空いている。</b></p>
+        </div>
+      </div>
+      <p class="src"><b>出典</b>：各社公式サイト（2026年8月7日確認）。※キカガク・TechAcademyの金額は公式非公開のためまとめサイト情報を参照した参考値。◎◯△✕は当社評価。<b>リスク</b>：既存AIスクールは教育訓練給付金で実質5.6万〜32万円まで下がる一方、<b>在学生は給付金の対象外</b>。価格の絶対値では不利であり、成果で比較させる訴求設計が必須。</p>
+    </div>
+  </section>
+
+  <!-- ============ 25 DIFFERENTIATION ============ -->
+  <section class="slide slide--tight" data-title="差別化：ポジショニング">
+    <p class="eyebrow">Differentiation</p>
+    <h2>AIスクールではない。AI人材育成会社である。</h2>
+    <p class="lead">「教えて終わり」か「就職まで責任を持つか」。「ツールの操作」か「実務で成果を出す力」か。この2軸で、右上は空いている。</p>
+    <div class="body">
+      <div class="split-64" style="margin-top:4px">
+        <div style="position:relative">
+          <div class="map">
+            <div class="qline-v"></div>
+            <div class="qline-h"></div>
+            <div class="pt" style="left:16%;bottom:64%"><span class="d"></span><span class="n">就活塾</span></div>
+            <div class="pt" style="left:14%;bottom:88%"><span class="d"></span><span class="n">新卒エージェント</span></div>
+            <div class="pt" style="left:38%;bottom:46%"><span class="d"></span><span class="n">長期インターン紹介</span></div>
+            <div class="pt" style="left:76%;bottom:22%"><span class="d"></span><span class="n">AIスクール（社会人向け）</span></div>
+            <div class="pt" style="left:47%;bottom:12%"><span class="d"></span><span class="n">大学のAI講座</span></div>
+            <div class="pt is-us" style="left:84%;bottom:84%"><span class="d"></span><span class="n">AI Career Academy</span></div>
+            <div class="ax-x" style="left:0">AI実務スキル：低</div>
+            <div class="ax-x" style="right:0">高</div>
+            <div class="ax-y" style="left:-14px;bottom:0">出口責任：教育のみ　→　就職・紹介まで</div>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:12px">我々が持つ、模倣しにくい資産</h3>
+          <div class="card card--soft" style="margin-bottom:10px;padding:14px 18px">
+            <h3 style="font-size:14px">① 実務ケースの蓄積</h3>
+            <p style="font-size:12.5px">受講生が実企業で回した改善事例が毎年数百件たまる。これは<b>そのまま法人研修の教材</b>になり、<b>次の受講生の教材</b>にもなる。</p>
+          </div>
+          <div class="card card--soft" style="margin-bottom:10px;padding:14px 18px">
+            <h3 style="font-size:14px">② 成果で検証済みの人材プール</h3>
+            <p style="font-size:12.5px">履歴書ではなく<b>成果物と受入企業の評価</b>で人材を説明できる。紹介事業者としての説得力が根本的に違う。</p>
+          </div>
+          <div class="card card--soft" style="margin-bottom:10px;padding:14px 18px">
+            <h3 style="font-size:14px">③ 企業との二重の接点</h3>
+            <p style="font-size:12.5px">インターン受入先＝紹介先＝研修販売先。<b>1社との関係が3つの収益源になる</b>。</p>
+          </div>
+          <div class="card card--accent" style="padding:14px 18px">
+            <h3 style="font-size:14px;color:var(--accent-ink)">④ 実績データの複利</h3>
+            <p style="font-size:12.5px;color:var(--accent-ink)">「本校生は業務工数を平均◯%削減した」という実測データが年々積み上がる。<b>後発が最も追いつきにくいのはここ。</b></p>
+          </div>
+        </div>
+      </div>
+      <p class="src">※ ポジショニングマップは当社の定性評価に基づく。各プレイヤーの位置は競合調査（2026年8月時点）を踏まえた相対配置であり、定量スコアではない。</p>
+    </div>
+  </section>
+
+  <!-- ============ 26 RISK ============ -->
+  <section class="slide slide--soft slide--tight" data-title="想定リスクと対応">
+    <p class="eyebrow">Risk</p>
+    <h2>この事業が失敗するとしたら、理由は5つある。</h2>
+    <p class="lead">初版の段階で、潰すべき論点を先に並べておく。</p>
+    <div class="body">
+      <div class="grid g2" style="margin-top:8px;gap:14px">
+        <div class="card">
+          <h3>① 学生が30万円を払わない</h3>
+          <p style="margin-bottom:8px">在学生は<b>教育訓練給付金の対象外</b>。既存AIスクールは給付金で実質5.6万〜32万円まで下がるため、価格の絶対値では負ける。</p>
+          <p style="color:var(--accent);font-weight:600;font-size:12.5px">→ 分割払い・成果連動の後払いを用意。訴求は価格ではなく「在学中の回収シナリオ」と「内定先の質」に置く。</p>
+        </div>
+        <div class="card">
+          <h3>② 企業がインターンを受け入れない</h3>
+          <p style="margin-bottom:8px">教育は自社で完結できるが、<b>実務フェーズは提携企業がいないと成立しない</b>。ここが最大の外部依存。</p>
+          <p style="color:var(--accent);font-weight:600;font-size:12.5px">→ まず自社および既存取引先の業務でケースを作り、実績を持って開拓する。初年度は受入10社の確保を最優先KPIに置く。</p>
+        </div>
+        <div class="card">
+          <h3>③ 教育の品質が保てない</h3>
+          <p style="margin-bottom:8px">メンターの供給が成長の律速。人が足りないまま人数を増やすと、成果物の質が落ちて紹介事業ごと崩れる。</p>
+          <p style="color:var(--accent);font-weight:600;font-size:12.5px">→ 卒業生をメンターに登用する循環を作る。成果物のレビュー基準を先に文書化する。</p>
+        </div>
+        <div class="card">
+          <h3>④ AIの進化でカリキュラムが陳腐化する</h3>
+          <p style="margin-bottom:8px">ツールの操作を教えていたら3か月で無価値になる。これはAI教育事業の構造的リスク。</p>
+          <p style="color:var(--accent);font-weight:600;font-size:12.5px">→ だから「業務の言語化・棚卸し・ROI試算・置き換えない判断」を中心に据える。ツールは差し替え可能な部品として扱う。</p>
+        </div>
+        <div class="card">
+          <h3>⑤ 利益相反を疑われる</h3>
+          <p style="margin-bottom:8px">受講料を取った学生を、手数料の高い企業に送り込んでいると見られた瞬間に、両側の信頼を同時に失う。</p>
+          <p style="color:var(--accent);font-weight:600;font-size:12.5px">→ 紹介先は学生の希望を最優先とし、手数料で紹介先を決めない運用ルールを明文化・公開する。</p>
+        </div>
+        <div class="card card--ink">
+          <h3>法規制・表示上の留意点</h3>
+          <p style="margin-bottom:8px">有料職業紹介事業には<b>厚生労働大臣の許可</b>が必要。また、内定率・年収・回収額を断定的に表示することは景品表示法上のリスクとなる。</p>
+          <p style="color:#a5a0ff;font-weight:600;font-size:12.5px">→ 事業開始前に許可取得のスケジュールを確定。募集表示は全て「保証ではない」旨を明記し、法務レビューを通す。</p>
+        </div>
+      </div>
+      <p class="src">※ 本スライドは初版時点で認識しているリスクの列挙であり、網羅性を主張するものではない。法規制については専門家の確認を要する。</p>
+    </div>
+  </section>
+
+  <!-- ============ 27 ROADMAP ============ -->
+  <section class="slide" data-title="将来展望・ロードマップ">
+    <p class="eyebrow">Roadmap</p>
+    <h2>教育から始めて、人材データベースで終わる。</h2>
+    <p class="lead">最終的に狙うのは、スクールではない。<strong>「AIで成果を出せる人材」が検証済みで並ぶ、国内唯一のデータベース</strong>である。</p>
+    <div class="body">
+      <div class="tl" style="margin-top:24px">
+        <div class="n is-a">
+          <div class="yr">PHASE 0 — 〜6か月</div>
+          <h3>パイロット</h3>
+          <ul class="ul"><li>受講生10〜20名で実証</li><li>ケース教材20本を制作</li><li>受入企業10社を開拓</li><li><b>時間削減の実測データを取得</b></li></ul>
+        </div>
+        <div class="n">
+          <div class="yr">PHASE 1 — 1年目</div>
+          <h3>事業化</h3>
+          <ul class="ul"><li>受講生50名</li><li>有料職業紹介の許可取得</li><li>初の紹介成立</li><li>卒業生の成果を公開実績化</li></ul>
+        </div>
+        <div class="n">
+          <div class="yr">PHASE 2 — 2〜3年目</div>
+          <h3>スケール</h3>
+          <ul class="ul"><li>受講生200→600名</li><li>大学・学生団体との連携</li><li>法人研修事業の開始</li><li>卒業生コミュニティの収益化</li></ul>
+        </div>
+        <div class="n">
+          <div class="yr">PHASE 3 — 4年目〜</div>
+          <h3>プラットフォーム化</h3>
+          <ul class="ul"><li>AI人材データベース</li><li>企業のAI導入コンサル</li><li>第二新卒・社会人への横展開</li><li>教材のSaaS提供</li></ul>
+        </div>
+      </div>
+      <div class="card card--ink" style="margin-top:30px;padding:22px 26px">
+        <div class="split" style="align-items:center;gap:30px">
+          <div>
+            <h3 style="margin-bottom:8px">なぜプラットフォームになれるのか</h3>
+            <p style="font-size:13.5px;margin:0">
+              受講生が実企業で回した改善事例が、毎年数百件たまる。それは<b>次の受講生の教材</b>であり、<b>企業に売る研修コンテンツ</b>であり、
+              <b>「この人材は何ができるか」を証明するデータ</b>でもある。同じ資産が3方向に効く。</p>
+          </div>
+          <div style="flex:none;width:280px">
+            <p style="font-size:16px;color:#fff;font-weight:700;line-height:1.55;margin:0">
+              人材の質を<br><span style="color:#a5a0ff">「学歴」でも「自己申告」でもなく<br>「成果物」で証明する</span>市場を作る。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src">※ ロードマップは初版の構想であり、各フェーズの時期・目標値はパイロットの結果を受けて見直す。</p>
+    </div>
+  </section>
+
+  <!-- ============ 28 SUMMARY ============ -->
+  <section class="slide slide--dark" data-title="まとめ">
+    <p class="eyebrow">Summary</p>
+    <h2>この事業が伸びると考える理由</h2>
+    <div class="body">
+      <div class="grid g3" style="margin-top:22px;gap:16px">
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="num-badge" style="background:#4f46e5;margin-bottom:12px">1</div>
+          <h3>需要構造が変わる</h3>
+          <p style="font-size:13px">2040年、AI人材は339万人不足し、事務職は437万人余る。文系大卒は76万人が余剰。<b style="color:#fff">労働市場の前提そのものが入れ替わる。</b></p>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="num-badge" style="background:#4f46e5;margin-bottom:12px">2</div>
+          <h3>企業の課題は「人」</h3>
+          <p style="font-size:13px">生成AI導入の懸念1位は「効果的な活用方法がわからない」。ツールは足りている。<b style="color:#fff">足りないのは使える人だけ。</b></p>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="num-badge" style="background:#4f46e5;margin-bottom:12px">3</div>
+          <h3>学生側の準備が整った</h3>
+          <p style="font-size:13px">就活でのAI利用は84.9%。心理的ハードルはもうない。<b style="color:#fff">深く使う方法を教えるだけで差がつく。</b></p>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="num-badge" style="background:#4f46e5;margin-bottom:12px">4</div>
+          <h3>競合の交点が空いている</h3>
+          <p style="font-size:13px">AIスクールは社会人向け、就活塾はAIを扱わない。主要8社中7社に学生プランがなく、うち2社は撤退・停止。<b style="color:#fff">今、席が空いている。</b></p>
+        </div>
+        <div class="card card--ink" style="border-color:#26262c;background:#141418">
+          <div class="num-badge" style="background:#4f46e5;margin-bottom:12px">5</div>
+          <h3>両面課金で単価が高い</h3>
+          <p style="font-size:13px">学生1人あたり売上 約60万円。教育単体でも成立し、紹介はアップサイド。<b style="color:#fff">片側が崩れても事業は死なない。</b></p>
+        </div>
+        <div class="card" style="background:#4f46e5;border-color:#4f46e5">
+          <div class="num-badge" style="background:#fff;color:#4f46e5;margin-bottom:12px">6</div>
+          <h3 style="color:#fff">資産が複利で効く</h3>
+          <p style="font-size:13px;color:#d5d3ff">実務ケースと成果データが毎年積み上がり、教材・研修商材・人材証明の3つに同時に効く。<b style="color:#fff">後発が追いつきにくい。</b></p>
+        </div>
+      </div>
+      <div style="margin-top:30px">
+        <div class="big-line" style="font-size:26px">
+          我々が作るのはAIスクールではない。<br>
+          <span style="color:#a5a0ff">「AIで成果を出せる」ことが証明された人材を、毎年輩出する会社である。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 29 NEXT ACTION ============ -->
+  <section class="slide" data-title="ネクストアクション">
+    <p class="eyebrow">Next Action</p>
+    <h2>この初版で、議論したい3つの論点。</h2>
+    <div class="body">
+      <div class="grid g3" style="margin-top:20px">
+        <div class="card card--accent">
+          <div class="num-badge" style="margin-bottom:12px">1</div>
+          <h3 style="color:var(--accent-ink)">価格と回収シナリオ</h3>
+          <p style="color:var(--accent-ink)">30万円は妥当か。給付金が使えない在学生に、どう「回収できる」と信じてもらうか。分割・後払いをどこまで許容するか。</p>
+        </div>
+        <div class="card card--accent">
+          <div class="num-badge" style="margin-bottom:12px">2</div>
+          <h3 style="color:var(--accent-ink)">インターン受入企業の開拓</h3>
+          <p style="color:var(--accent-ink)">最大のボトルネック。自社・既存取引先から始めるとして、初年度で何社まで持っていけるか。誰が動くか。</p>
+        </div>
+        <div class="card card--accent">
+          <div class="num-badge" style="margin-bottom:12px">3</div>
+          <h3 style="color:var(--accent-ink)">パイロットの設計</h3>
+          <p style="color:var(--accent-ink)">何名で、いつ、どのケース教材から始めるか。<b>時間削減の実測データを取ることが最優先。</b></p>
+        </div>
+      </div>
+      <div class="split" style="margin-top:28px;gap:32px">
+        <div>
+          <h3 style="margin-bottom:12px">初版時点で「数字がない」ことを明示しておく項目</h3>
+          <ul class="ul">
+            <li>就活の工程別所要時間（<b>信頼できる一次調査が存在しない</b>／自社アンケートで取得予定）</li>
+            <li>AI活用後の所要時間（パイロットでの前後比較で取得予定）</li>
+            <li>新卒紹介サービス単独の市場規模（矢野経済研究所は7分野合計のみ公開）</li>
+            <li>AIスキルの年収プレミアム（流通している数値は一次ソース不明のため<b>不採用</b>）</li>
+          </ul>
+        </div>
+        <div class="card card--ink">
+          <h3 style="margin-bottom:12px">本資料のデータ方針</h3>
+          <p style="font-size:13.5px;margin-bottom:10px">
+            出典が辿れない数値は、どれだけ都合が良くても<b style="color:#fff">載せていない</b>。
+            当社試算は<b style="color:#a5a0ff">すべて「当社試算」と明記</b>している。</p>
+          <p style="font-size:13.5px;margin:0">
+            社内議論の初版だからこそ、<b style="color:#fff">どこが事実で、どこが仮説かの線を引いておく</b>ことを優先した。
+            仮説の部分は、パイロットで潰す。</p>
+        </div>
+      </div>
+      <p class="src">リサーチの全データ・出典・信頼度の判定は <b>/research/research.md</b> に記載。数値を引用する際は必ず同ファイルの「やってはいけないチェックリスト」を確認すること。</p>
+    </div>
+  </section>
+
+  <!-- ============ 30 APPENDIX ============ -->
+  <section class="slide slide--soft" data-title="Appendix：出典一覧">
+    <p class="eyebrow">Appendix</p>
+    <h2>主要出典一覧</h2>
+    <div class="body">
+      <div class="grid g3" style="margin-top:16px;gap:20px">
+        <div>
+          <h3 style="font-size:14px;margin-bottom:10px">公的機関</h3>
+          <ul class="ul" style="font-size:12px">
+            <li style="font-size:12px">経済産業省「2040年の就業構造推計（改訂版）」2026年3月</li>
+            <li style="font-size:12px">経済産業省「IT人材需給に関する調査」2019年4月</li>
+            <li style="font-size:12px">総務省「令和7年版 情報通信白書」</li>
+            <li style="font-size:12px">文部科学省「令和7年度学校基本調査」</li>
+            <li style="font-size:12px">IPA「DX動向2025」2025年10月</li>
+          </ul>
+          <h3 style="font-size:14px;margin:18px 0 10px">調査会社・業界団体</h3>
+          <ul class="ul" style="font-size:12px">
+            <li style="font-size:12px">矢野経済研究所（新卒採用支援／人材ビジネス／ダイレクトリクルーティング／企業向け研修 各市場調査）</li>
+            <li style="font-size:12px">IDC Japan「国内AIシステム市場予測 2025-2029」</li>
+            <li style="font-size:12px">帝国データバンク「生成AIの活用状況に関する企業アンケート」</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:14px;margin-bottom:10px">調査会社（続）</h3>
+          <ul class="ul" style="font-size:12px">
+            <li style="font-size:12px">パーソル総合研究所「生成AIとはたらき方に関する実態調査」</li>
+            <li style="font-size:12px">産労総合研究所「2025年度 教育研修費用の実態調査」</li>
+            <li style="font-size:12px">経団連「採用と大学改革への期待に関するアンケート」</li>
+            <li style="font-size:12px">東京商工リサーチ「生成AIに関するアンケート」2025年</li>
+            <li style="font-size:12px">野村総合研究所「ユーザー企業のIT活用実態調査2025」</li>
+          </ul>
+          <h3 style="font-size:14px;margin:18px 0 10px">就活領域</h3>
+          <ul class="ul" style="font-size:12px">
+            <li style="font-size:12px">マイナビ「大学生キャリア意向調査」26卒・27卒</li>
+            <li style="font-size:12px">キャリタス就活 学生モニター2027（ディスコ）</li>
+            <li style="font-size:12px">リクルート就職みらい研究所「就職プロセス調査」「就職白書2020／2023」</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:14px;margin-bottom:10px">競合・人材紹介</h3>
+          <ul class="ul" style="font-size:12px">
+            <li style="font-size:12px">内定塾／キャリアアカデミー／我究館／Abuild就活 各公式サイト</li>
+            <li style="font-size:12px">キカガク／テックキャンプ／侍エンジニア／RUNTEQ／テラキャン／SHIFT AI 各公式サイト</li>
+            <li style="font-size:12px">リクルートエージェント「人材紹介手数料相場」</li>
+            <li style="font-size:12px">ネオキャリア「新卒紹介と各手法の料金比較」</li>
+          </ul>
+          <div class="card card--ink" style="margin-top:20px">
+            <h3 style="font-size:13.5px;margin-bottom:8px">信頼度の記法について</h3>
+            <p style="font-size:11.5px;margin:0">
+              本資料では、一次ソースで確認できた数値のみを断定的に記載し、
+              二次情報・小規模調査・事業会社PR発の数値には注記を付けている。
+              当社の試算・推計はすべてその旨を明記した。<br><br>
+              各数値の信頼度判定の詳細は <b style="color:#fff">/research/research.md</b> を参照。</p>
+          </div>
+        </div>
+      </div>
+      <p class="src">本資料は2026年8月7日時点の調査に基づく、社内ディスカッション用の初版である。数値は今後のパイロット実施により更新される。</p>
+    </div>
+  </section>
+
+  </div><!-- /stage -->
+</div><!-- /viewport -->
+
+<div class="hint" id="hint">
+  <kbd>←</kbd><kbd>→</kbd> ページ送り　<kbd>O</kbd> 一覧　<kbd>F</kbd> 全画面　<kbd>P</kbd> 印刷 / PDF
+</div>
+
+<div class="chrome">
+  <div class="ctrl">
+    <button class="btn btn--wide" id="btnOverview" title="スライド一覧 (O)">一覧</button>
+  </div>
+  <div class="ctrl">
+    <button class="btn" id="btnPrev" title="前へ (←)">‹</button>
+    <div class="counter"><b id="cur">1</b> / <span id="total">30</span></div>
+    <button class="btn" id="btnNext" title="次へ (→)">›</button>
+  </div>
+  <div class="ctrl">
+    <button class="btn" id="btnFull" title="全画面 (F)">⛶</button>
+  </div>
+</div>
+
+<div class="overview" id="overview">
+  <div class="ov-head">スライド一覧 <span>クリックで移動　/　Esc・O で閉じる</span></div>
+  <div class="ov-grid" id="ovGrid"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
