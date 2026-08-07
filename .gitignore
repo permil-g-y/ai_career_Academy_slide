@@ -1,4 +1,57 @@
+# --- OS ---
 .DS_Store
-.vercel
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# --- 依存関係 ---
 node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# --- 環境変数（絶対に上げない） ---
+.env
+.env.*
+!.env.example
+
+# --- ビルド生成物 ---
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+
+# --- Vercel ---
+.vercel
+
+# --- ログ・一時ファイル ---
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tmp
+*.temp
+tmp/
+
+# --- Claude Code / AIツール固有 ---
+.claude/
+.claude-*
+CLAUDE.local.md
+.aider*
+.cursor/
+scratchpad/
+
+# --- エディタ ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
