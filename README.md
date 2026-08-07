@@ -7,6 +7,12 @@
 - 作成：UNARI株式会社
 - 位置づけ：**完成版ではなく、議論の叩き台**
 
+## 公開URL
+
+**https://ai-career-academy-slide.vercel.app**
+
+`main` ブランチにpushすると、Vercelが自動でデプロイする。
+
 ---
 
 ## ファイル構成
@@ -19,8 +25,13 @@
 │   ├── index.html       スライド本体（全30枚）
 │   ├── style.css        デザイン
 │   └── script.js        ページ送り・一覧表示などの操作
+├── vercel.json          Vercelの公開ディレクトリ指定（slides/）
+├── .gitignore
 └── README.md            このファイル
 ```
+
+> `index.html` が `slides/` 配下にあるため、`vercel.json` で
+> `"outputDirectory": "slides"` を指定している。これがないとルートURLが404になる。
 
 ---
 
