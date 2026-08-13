@@ -1,0 +1,5 @@
+body{font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);letter-spacing:var(--tracking-jp-body);color:var(--text-body);background:var(--surface-page);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:var(--text-link);text-decoration:none;transition:var(--transition-control)}
+a:hover{color:var(--text-link-hover)}
+::selection{background:var(--mint-100);color:var(--ink-900)}
+:focus-visible{outline:2px solid var(--border-focus);outline-offset:2px}

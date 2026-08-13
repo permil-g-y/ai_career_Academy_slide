@@ -1,0 +1,8 @@
+:root{
+/* Nearly-square by default: the brand's geometry is rectilinear.
+   Full-round is reserved for circular affordances (arrow buttons, avatars). */
+--radius-none:0px;--radius-xs:2px;--radius-sm:4px;--radius-md:6px;--radius-lg:10px;--radius-xl:16px;--radius-pill:999px;
+--radius-card:var(--radius-sm);
+--radius-control:var(--radius-sm);
+--radius-media:var(--radius-none);
+}
