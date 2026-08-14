@@ -251,13 +251,6 @@
     padding-top: 56px !important;
     padding-bottom: 56px !important;
   }
-  section[data-screen-label="09 PHASE2 Vibe Coding"] {
-    padding-bottom: 32px !important;
-  }
-  section[data-screen-label="10 制作物"] {
-    padding-top: 40px !important;
-    padding-bottom: 64px !important;
-  }
   footer[data-screen-label="フッター"] {
     padding-top: 56px !important;
   }
@@ -472,84 +465,10 @@
     grid-template-columns: 26px 92px 1fr !important;
   }
 
-  /* ==========================================================
-     07 ケーススタディ詳細
-     ========================================================== */
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 92px 1.15fr"] {
-    grid-template-columns: 1fr !important;
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="writing-mode: vertical-rl"] {
-    writing-mode: horizontal-tb !important;
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] div[style*="border-left"][style*="border-right"] {
-    border-left: none !important;
-    border-right: none !important;
-    border-top: 1px solid var(--border-hairline) !important;
-    border-bottom: 1px solid var(--border-hairline) !important;
-    flex-direction: row !important;
-    padding: 12px 0 !important;
-    gap: 10px !important;
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] div[style*="border-left"][style*="border-right"] svg {
-    transform: rotate(90deg);
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="padding: 32px 36px"] {
-    padding: 22px 20px !important;
-  }
   /* 照合テーブル：列幅圧縮 */
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 110px 90px 92px"] {
-    grid-template-columns: 1fr 72px 38px 58px !important;
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 110px 90px 92px"] span {
-    font-size: 11px !important;
-  }
   /* AFTER帯 */
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 1.05fr"] {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
 
-  /* ==========================================================
-     09 PHASE2 Vibe Coding
-     ========================================================== */
-  section[data-screen-label="09 PHASE2 Vibe Coding"] [style*="grid-template-columns: 0.9fr 1.1fr"] {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-  }
-
-  /* ==========================================================
-     10 制作物
-     ========================================================== */
-  section[data-screen-label="10 制作物"] [style*="grid-template-columns: 1fr 1fr; gap: 16px"] {
-    grid-template-columns: 1fr !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="height: 505px"] {
-    height: auto !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="height: 505px"] img {
-    height: auto !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="padding: 28px 32px"] {
-    padding: 20px !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="padding: 32px; display: flex"] {
-    padding: 20px !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="min-height: 80px"] {
-    min-height: 0 !important;
-  }
   /* 最終制作カード（TOKIモック） */
-  section[data-screen-label="10 制作物"] [style*="grid-template-columns: 1fr 372px"] {
-    grid-template-columns: 1fr !important;
-    padding: 24px 20px !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="width: 372px"][style*="height: 287px"] {
-    justify-self: center !important;
-    margin-top: 4px;
-  }
 
   /* ==========================================================
      11 3ヶ月後の成果
@@ -687,18 +606,6 @@
   }
 }
 
-/* ============================================================
-   Small Mobile: 〜430px（TOKIモックの縮小表示）
-   ============================================================ */
-@media (max-width: 430px) {
-  section[data-screen-label="10 制作物"] [style*="width: 372px"][style*="height: 287px"] {
-    width: 300px !important;
-    height: 232px !important;
-  }
-  section[data-screen-label="10 制作物"] [style*="width: 372px"][style*="height: 287px"] > div[style*="scale(0.816)"] {
-    transform: scale(0.658) !important;
-  }
-}
 
 /* ============================================================
    Small Mobile: 〜390px（微調整）
@@ -713,8 +620,5 @@
   }
   [style*="font-size: 41px"] {
     font-size: 25px !important;
-  }
-  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 110px 90px 92px"] {
-    grid-template-columns: 1fr 66px 32px 52px !important;
   }
 }
