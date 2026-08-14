@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/colors.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/typography.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/radius.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/motion.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/tokens/base.css">
+<link rel="stylesheet" href="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/styles.css">
+<script src="_ds/ai-design-system-94418b32-d8fb-4d3d-8f2a-b92ce1df8b68/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<title>AI就活プロ｜AIを学ぶ。AIで作る。そして、AIで就活を攻略する。</title>
+<meta name="description" content="AI就活プロは、AI実務スキル × Vibe Coding × AI就活を一気通貫で学べる大学生向けキャリア教育サービス。3ヶ月でAI業務改善ケース約30本とWeb・AI制作物5本を作り、そのAIを自分の就活にも使います。大学1〜3年生対象／オンライン完結／プログラミング未経験OK。">
+<meta property="og:title" content="AI就活プロ｜AIを学ぶ。AIで作る。そして、AIで就活を攻略する。">
+<meta property="og:description" content="社会人になる前に、「AIを使って仕事ができる人」になろう。AI実務 × Vibe Coding × AI就活を一気通貫で学ぶ、大学生向けキャリア教育サービス。">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,span,li,summary,a{text-wrap:pretty;line-break:strict;overflow-wrap:normal}
+a{color:var(--text-link);text-decoration:none}
+a:hover{color:var(--text-link-hover)}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+details[open] span[data-plus]{transform:rotate(45deg)}
+details[open] ~ div[data-brief]{display:none}
+details[open] [data-label-open]{display:none}
+details:not([open]) [data-label-close]{display:none}
+@keyframes om-expand{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+details[data-cases][open] > div[data-full]{animation:om-expand 260ms cubic-bezier(.22,.61,.36,1)}
+@keyframes om-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+[data-marquee]:hover [data-marquee-track]{animation-play-state:paused}
+</style>
+<link rel="stylesheet" href="responsive.css">
+</helmet>
+
+<div style="font-family:var(--font-jp);color:var(--text-body);background:var(--surface-page);min-width:1280px;box-sizing:border-box;overflow-x:hidden">
+
+<header ref="{{ headerRef }}" style="position:fixed;top:0;left:0;right:0;z-index:80;color:#fff;transition:background 240ms cubic-bezier(.22,.61,.36,1),color 240ms cubic-bezier(.22,.61,.36,1),border-color 240ms cubic-bezier(.22,.61,.36,1);border-bottom:1px solid transparent">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;height:80px;display:flex;align-items:center;gap:48px">
+    <a href="#top" style="display:flex;flex-direction:column;gap:5px;color:inherit;text-decoration:none">
+      <span style="font-family:var(--font-jp);font-weight:900;font-size:19px;letter-spacing:.06em;line-height:1">AI就活プロ</span>
+      <span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.28em;opacity:.68;line-height:1">AI SKILL × CAREER</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:40px;margin:0 auto;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em">
+      <a href="#concept" style="color:inherit;text-decoration:none">サービスについて</a>
+      <a href="#overview" style="color:inherit;text-decoration:none">カリキュラム</a>
+      <a href="#phase3" style="color:inherit;text-decoration:none">AI就活</a>
+      <a href="#courses" style="color:inherit;text-decoration:none">コース</a>
+      <a href="#faq" style="color:inherit;text-decoration:none">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:18px">
+      <span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;opacity:.9;line-height:1.6;text-align:right;white-space:nowrap">大学1〜3年生対象／オンライン完結<br>プログラミング未経験OK</span>
+      <x-import component-from-global-scope="AIDesignSystem_94418b.Button" variant="primary" size="md" as="a" href="#apply" icon-right="arrow-right" hint-size="auto,46px">無料説明会に参加する</x-import>
+    </div>
+    <details data-mnav="true" style="display:none">
+      <summary aria-label="メニュー" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:10px;box-sizing:border-box">
+        <span data-mnav-line="true" style="display:block;height:2px;border-radius:1px;background:currentColor;transition:transform 240ms cubic-bezier(.22,.61,.36,1),opacity 240ms cubic-bezier(.22,.61,.36,1)"></span>
+        <span data-mnav-line="true" style="display:block;height:2px;border-radius:1px;background:currentColor;transition:transform 240ms cubic-bezier(.22,.61,.36,1),opacity 240ms cubic-bezier(.22,.61,.36,1)"></span>
+        <span data-mnav-line="true" style="display:block;height:2px;border-radius:1px;background:currentColor;transition:transform 240ms cubic-bezier(.22,.61,.36,1),opacity 240ms cubic-bezier(.22,.61,.36,1)"></span>
+      </summary>
+      <div data-mnav-panel="true">
+        <a href="#concept">サービスについて</a>
+        <a href="#overview">カリキュラム</a>
+        <a href="#phase3">AI就活</a>
+        <a href="#courses">コース</a>
+        <a href="#faq">FAQ</a>
+        <a href="#apply" data-mnav-cta="true">無料説明会に参加する</a>
+        <span data-mnav-note="true">大学1〜3年生対象／オンライン完結／プログラミング未経験OK</span>
+      </div>
+    </details>
+  </div>
+</header>
+
+<section id="top" data-screen-label="01 ファーストビュー" style="background:var(--ink-800);color:#fff;padding-top:80px;padding-bottom:110px;position:relative;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden">
+    <div style="position:absolute;left:-6%;top:-10%;width:760px;height:760px;border-radius:999px;background:radial-gradient(circle,rgba(44,91,232,.24) 0%,rgba(44,91,232,.09) 45%,rgba(44,91,232,0) 70%);filter:blur(30px)"></div>
+  </div>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr .92fr;gap:56px;align-items:center;min-height:600px;position:relative;z-index:1">
+    <div style="padding:56px 0 72px">
+      <span style="display:inline-flex;align-items:center;height:28px;padding:0 14px;border:1px solid rgba(255,255,255,.28);border-radius:2px;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.1em;color:rgba(255,255,255,.86)">大学生向け AIキャリア教育サービス</span>
+      <h1 style="margin:24px 0 0;font-family:var(--font-jp);font-size:41px;line-height:1.42;font-weight:700;letter-spacing:.02em;color:#fff">AIを学ぶ。AIで作る。<br>そして、AIで就活を攻略する。</h1>
+      <p style="margin:20px 0 0;font-family:var(--font-jp);font-size:22px;line-height:1.8;font-weight:500;letter-spacing:.04em;color:#fff">社会人になる前に、<br>「AIを使って仕事ができる人」になろう。</p>
+      <p style="margin:20px 0 0;max-width:52ch;font-family:var(--font-jp);font-size:16px;line-height:1.85;font-weight:400;letter-spacing:.04em;color:#E8EDF5">AI就活プロは、AI実務スキル × Vibe Coding × AI就活を一気通貫で学べる大学生向けキャリア教育サービスです。営業・マーケティング・バックオフィスなどの実務をAIで効率化する力を身につけ、WebサイトやAIアプリを自分で開発。そして、そのAIを実際の就活でも活用します。</p>
+      <div style="margin:32px 0 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Button" variant="primary" size="lg" as="a" href="#apply" icon-right="arrow-right" hint-size="auto,56px">無料説明会に参加する</x-import>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.82)">大学1〜3年生対象 ／ オンライン完結 ／ プログラミング未経験OK</span>
+      </div>
+    </div>
+    <div style="position:relative;align-self:stretch;padding:56px 0 72px;display:flex">
+      <div style="position:relative;flex:1;min-height:430px">
+        <div style="position:absolute;inset:0;overflow:hidden">
+          <image-slot id="hero-main" shape="rect" fit="cover" placeholder="縦位置の写真：ノートPCに向かう日本人の大学生。上半身・目線は手元、自然光、余白の多い構図"></image-slot>
+        </div>
+        <div style="position:absolute;inset:0;background:var(--blue-700);opacity:.26;mix-blend-mode:color;pointer-events:none"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,13,26,.26) 0%,rgba(10,23,48,.12) 40%,rgba(10,23,48,.72) 100%);mix-blend-mode:multiply;pointer-events:none"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,var(--ink-800) 0%,rgba(10,23,48,.92) 10%,rgba(10,23,48,.22) 42%,rgba(10,23,48,0) 72%);pointer-events:none"></div>
+        <div style="position:absolute;left:0;right:0;top:0;height:120px;background:linear-gradient(180deg,var(--ink-800) 0%,rgba(10,23,48,0) 100%);pointer-events:none"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(0deg,var(--ink-800) 0%,rgba(10,23,48,0) 100%);pointer-events:none"></div>
+
+        <span style="position:absolute;right:0;top:36px;display:flex;align-items:center;gap:12px;font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.85);pointer-events:none"><span style="display:block;width:44px;height:1px;background:var(--blue-400)"></span>DESIGN YOUR CAREER</span>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;left:40px;right:40px;bottom:-18px;z-index:0;font-family:var(--font-display);font-size:150px;font-weight:800;letter-spacing:-.02em;line-height:1;white-space:nowrap;color:rgba(255,255,255,.06);pointer-events:none;user-select:none">AI SKILL × CAREER</span>
+  </section>
+
+<section data-screen-label="内定・選考実績" data-marquee="true" style="background:var(--ink-900);color:#fff;padding:40px 0 44px;border-top:1px solid rgba(255,255,255,.14);overflow:hidden">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <div style="display:flex;align-items:baseline;gap:16px">
+      <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.72)">CAREER RESULTS</span>
+      <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.08em;color:rgba(255,255,255,.6)">内定・選考実績</span>
+    </div>
+  </div>
+  <div style="margin:24px 0 0;position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%)">
+    <div data-marquee-track="true" style="display:flex;width:max-content;animation:om-marquee 58s linear infinite"><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#7C9BD6;white-space:nowrap"><span style="font-family:var(--font-display);font-size:21px;font-weight:800;letter-spacing:.02em;color:#E7ECF3">NEXORIA<span style="color:currentColor">.</span></span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#C9A45E;white-space:nowrap"><span style="display:inline-flex;gap:2px;align-items:flex-end"><span style="width:5px;height:9px;background:currentColor;opacity:.7"></span><span style="width:5px;height:14px;background:currentColor;opacity:.85"></span><span style="width:5px;height:19px;background:currentColor"></span></span><span style="font-family:var(--font-ui);font-size:17px;font-weight:500;letter-spacing:.04em;color:#E7ECF3">LayerWorks</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6FBBA6;white-space:nowrap"><span style="width:18px;height:18px;border:2px solid currentColor;border-radius:999px"></span><span style="font-family:var(--font-ui);font-size:16px;font-weight:400;letter-spacing:.18em;color:#E7ECF3">ASTERIA LABS</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#D08A6C;white-space:nowrap"><span style="font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:.14em;color:#E7ECF3">MIRAI<span style="color:currentColor">Q</span></span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6C90CC;white-space:nowrap"><span style="display:grid;grid-template-columns:7px 7px;gap:2px"><span style="height:7px;background:currentColor"></span><span style="height:7px;background:currentColor;opacity:.5"></span><span style="height:7px;background:currentColor;opacity:.5"></span><span style="height:7px;background:currentColor"></span></span><span style="font-family:var(--font-ui);font-size:17px;font-weight:600;letter-spacing:.01em;color:#E7ECF3">NorthGrid</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#C4706B;white-space:nowrap"><span style="width:14px;height:14px;background:currentColor;border-radius:999px"></span><span style="font-family:var(--font-jp);font-size:19px;font-weight:700;letter-spacing:.16em;color:#E7ECF3">北斗商事</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#9B87C4;white-space:nowrap"><span style="font-family:var(--font-ui);font-size:15px;font-weight:400;letter-spacing:.34em;color:#E7ECF3">VELL<span style="color:currentColor">U</span>M</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6F9BE8;white-space:nowrap"><span style="width:22px;height:22px;background:currentColor;color:#0A1730;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:12px;font-weight:800">A</span><span style="font-family:var(--font-ui);font-size:16px;font-weight:500;letter-spacing:.06em;color:#E7ECF3">Axion Partners</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#D69A63;white-space:nowrap"><span style="width:20px;height:20px;background:currentColor;border-radius:999px 0 999px 999px"></span><span style="font-family:var(--font-ui);font-size:18px;font-weight:400;letter-spacing:.08em;color:#E7ECF3">Lunova</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6BAEC4;white-space:nowrap"><span style="position:relative;width:20px;height:16px"><span style="position:absolute;left:0;top:0;width:12px;height:12px;border:2px solid currentColor"></span><span style="position:absolute;left:6px;top:4px;width:12px;height:12px;border:2px solid currentColor;opacity:.55"></span></span><span style="font-family:var(--font-ui);font-size:17px;font-weight:600;letter-spacing:.02em;color:#E7ECF3">CoreShift</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#74AE87;white-space:nowrap"><span style="width:16px;height:16px;border:2px solid currentColor;transform:rotate(45deg)"></span><span style="font-family:var(--font-jp);font-size:18px;font-weight:500;letter-spacing:.14em;color:#E7ECF3">アオイ不動産</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#5FA9A6;white-space:nowrap"><span style="width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:16px solid currentColor"></span><span style="font-family:var(--font-ui);font-size:16px;font-weight:500;letter-spacing:.22em;color:#E7ECF3">CRESTA</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#7C9BD6;white-space:nowrap"><span style="font-family:var(--font-display);font-size:21px;font-weight:800;letter-spacing:.02em;color:#E7ECF3">NEXORIA<span style="color:currentColor">.</span></span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#C9A45E;white-space:nowrap"><span style="display:inline-flex;gap:2px;align-items:flex-end"><span style="width:5px;height:9px;background:currentColor;opacity:.7"></span><span style="width:5px;height:14px;background:currentColor;opacity:.85"></span><span style="width:5px;height:19px;background:currentColor"></span></span><span style="font-family:var(--font-ui);font-size:17px;font-weight:500;letter-spacing:.04em;color:#E7ECF3">LayerWorks</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6FBBA6;white-space:nowrap"><span style="width:18px;height:18px;border:2px solid currentColor;border-radius:999px"></span><span style="font-family:var(--font-ui);font-size:16px;font-weight:400;letter-spacing:.18em;color:#E7ECF3">ASTERIA LABS</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#D08A6C;white-space:nowrap"><span style="font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:.14em;color:#E7ECF3">MIRAI<span style="color:currentColor">Q</span></span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6C90CC;white-space:nowrap"><span style="display:grid;grid-template-columns:7px 7px;gap:2px"><span style="height:7px;background:currentColor"></span><span style="height:7px;background:currentColor;opacity:.5"></span><span style="height:7px;background:currentColor;opacity:.5"></span><span style="height:7px;background:currentColor"></span></span><span style="font-family:var(--font-ui);font-size:17px;font-weight:600;letter-spacing:.01em;color:#E7ECF3">NorthGrid</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#C4706B;white-space:nowrap"><span style="width:14px;height:14px;background:currentColor;border-radius:999px"></span><span style="font-family:var(--font-jp);font-size:19px;font-weight:700;letter-spacing:.16em;color:#E7ECF3">北斗商事</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#9B87C4;white-space:nowrap"><span style="font-family:var(--font-ui);font-size:15px;font-weight:400;letter-spacing:.34em;color:#E7ECF3">VELL<span style="color:currentColor">U</span>M</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6F9BE8;white-space:nowrap"><span style="width:22px;height:22px;background:currentColor;color:#0A1730;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:12px;font-weight:800">A</span><span style="font-family:var(--font-ui);font-size:16px;font-weight:500;letter-spacing:.06em;color:#E7ECF3">Axion Partners</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#D69A63;white-space:nowrap"><span style="width:20px;height:20px;background:currentColor;border-radius:999px 0 999px 999px"></span><span style="font-family:var(--font-ui);font-size:18px;font-weight:400;letter-spacing:.08em;color:#E7ECF3">Lunova</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#6BAEC4;white-space:nowrap"><span style="position:relative;width:20px;height:16px"><span style="position:absolute;left:0;top:0;width:12px;height:12px;border:2px solid currentColor"></span><span style="position:absolute;left:6px;top:4px;width:12px;height:12px;border:2px solid currentColor;opacity:.55"></span></span><span style="font-family:var(--font-ui);font-size:17px;font-weight:600;letter-spacing:.02em;color:#E7ECF3">CoreShift</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#74AE87;white-space:nowrap"><span style="width:16px;height:16px;border:2px solid currentColor;transform:rotate(45deg)"></span><span style="font-family:var(--font-jp);font-size:18px;font-weight:500;letter-spacing:.14em;color:#E7ECF3">アオイ不動産</span></span><span style="flex:none;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 44px;color:#5FA9A6;white-space:nowrap"><span style="width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:16px solid currentColor"></span><span style="font-family:var(--font-ui);font-size:16px;font-weight:500;letter-spacing:.22em;color:#E7ECF3">CRESTA</span></span></div>
+  </div>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <p style="margin:20px 0 0;font-family:var(--font-jp);font-size:11px;font-weight:400;line-height:1.8;letter-spacing:.02em;color:rgba(255,255,255,.55)">※掲載企業は、AI就活プロ受講生に限らず、運営会社のインターン経験者の内定・選考実績を含みます。</p>
+  </div>
+</section>
+
+<section data-screen-label="02 問題提起" style="background:var(--surface-page);padding:128px 0;position:relative;overflow:hidden">
+  <span style="position:absolute;top:88px;right:-30px;font-family:var(--font-display);font-size:150px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--neutral-50);pointer-events:none;user-select:none">PROBLEM</span>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;position:relative">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">THE PROBLEM</x-import>
+    <h2 style="margin:22px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">大学生の就活は、<br>あまりにも「時間がかかる」。</h2>
+    <p style="margin:26px 0 0;max-width:60ch;font-family:var(--font-jp);font-size:var(--size-body-lg);line-height:var(--lh-body-lg);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">自己分析、業界研究、企業探し、企業研究、ES、志望動機、面接対策。これらを何十社分も繰り返します。</p>
+
+    <div style="margin:56px 0 0;display:flex;flex-wrap:wrap;gap:12px">
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">自己分析</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">業界研究</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">企業探し</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">企業研究</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">ES</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">志望動機</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body);background:var(--surface-card)">面接対策</span>
+      <span style="display:inline-flex;align-items:center;height:44px;padding:0 18px;font-family:var(--font-jp);font-size:13px;font-weight:400;color:var(--neutral-600)">× 何十社分</span>
+    </div>
+
+    <div style="margin:72px 0 0;background:var(--surface-subtle);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:56px 56px 44px">
+      <div ref="{{ statsRef }}" style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">ENTRY</span>
+          <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:baseline;gap:4px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span data-count="19.2" style="font-size:46px;line-height:1;letter-spacing:-.03em">19.2</span><span style="font-size:15px;color:var(--neutral-600)">社</span></div><span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">エントリー社数（平均）</span></div>
+          <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.04em;color:var(--neutral-700)">1人の学生が実際に応募する企業数</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;padding-left:48px;border-left:1px solid var(--border-hairline)">
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">ENTRY SHEET</span>
+          <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:baseline;gap:4px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span data-count="10.7" style="font-size:46px;line-height:1;letter-spacing:-.03em">10.7</span><span style="font-size:15px;color:var(--neutral-600)">社</span></div><span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">ES提出社数（平均）</span></div>
+          <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.04em;color:var(--neutral-700)">1社ごとに設問はすべて書き分けが必要</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;padding-left:48px;border-left:1px solid var(--border-hairline)">
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">COST</span>
+          <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:baseline;gap:4px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span data-count="84,434" style="font-size:46px;line-height:1;letter-spacing:-.03em">84,434</span><span style="font-size:15px;color:var(--neutral-600)">円</span></div><span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">就職活動費用（平均）</span></div>
+          <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.04em;color:var(--neutral-700)">交通費・宿泊費・スーツ代などの合計</span>
+        </div>
+      </div>
+      <p style="margin:40px 0 0;padding-top:24px;border-top:1px solid var(--border-hairline);font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.9;letter-spacing:.02em;color:var(--neutral-600)">※エントリー社数・ES提出社数：ディスコ「キャリタス就活2027 学生モニター調査」（2026年4月1日時点／n=1,057）。就職活動費用：リクルート就職みらい研究所「就職プロセス調査（2025年卒）」（2024年6月時点の平均額）。</p>
+    </div>
+
+    <div style="margin:48px 0 0;display:grid;grid-template-columns:.95fr 1fr;gap:56px;align-items:center">
+      <div style="height:330px;position:relative">
+        <image-slot id="problem-photo" shape="rect" fit="cover" placeholder="写真：講義の合間にPCで就活準備をする大学生"></image-slot>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div>
+          <p style="margin:0;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--neutral-600)">その結果、</p>
+          <p style="margin:10px 0 0;font-family:var(--font-jp);font-size:30px;line-height:1.5;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">学業を削る。アルバイトを削る。<br>自分の時間を削る。</p>
+        </div>
+        <p style="margin:0;font-family:var(--font-jp);font-size:15px;line-height:1.8;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">企業研究、ES、面接対策。就活には、やるべきことがあまりにも多い。<br>でも、そのすべてを自分ひとりでやる必要はありません。</p>
+        <div>
+          <p style="margin:0;font-family:var(--font-jp);font-size:15px;line-height:1.8;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">AIを使えば、<br>就活はもっと速く、もっと深く、もっと強くなる。</p>
+          <p style="margin:12px 0 0;font-family:var(--font-jp);font-size:15px;line-height:1.8;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">これからの就活は、<br>「AIをどう使いこなすか」で変わっていく。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="03 Before / After" style="background:var(--surface-subtle);padding:128px 0;border-top:1px solid var(--border-hairline)">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">BEFORE / AFTER</x-import>
+    <h2 style="margin:22px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">就活の「大変」は、<br>AIでもっと小さくできる。</h2>
+    <p style="margin:26px 0 0;max-width:60ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">就活の各工程は、AIを前提にすると進め方そのものが変わります。6つの工程で、実際にどう変わるのかを見てください。</p>
+
+    <div ref="{{ tableRef }}" style="margin:32px 0 0;border-top:1px solid var(--border-hairline)">
+      <div style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:10px 0;border-bottom:1px solid var(--border-hairline)">
+        <span></span><span></span>
+        <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">BEFORE</span>
+        <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--blue-600)">AFTER — WITH AI</span>
+        <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600);text-align:right">TIME SAVED</span>
+      </div>
+
+      <div data-row="1" style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:13px 0;border-bottom:1px solid var(--neutral-100);align-items:center">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">01</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">自己分析</span>
+        <span style="display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline"><span style="white-space:nowrap;font-family:var(--font-mono);font-size:18px;letter-spacing:0;color:var(--neutral-700)">3時間</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-600);text-wrap:balance">自己分析シートを何時間も書く</span></span>
+        <span style="display:flex;align-items:baseline;gap:10px"><span data-count="45" data-suffix="分" style="flex:none;font-family:var(--font-mono);font-size:18px;color:var(--blue-600)">45分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-700);text-wrap:balance">AIとの対話で経験・価値観・強みを構造化</span></span>
+        <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-strong)">約75%削減</span><span style="width:100%;height:4px;background:var(--neutral-100);position:relative;display:block"><span data-bar="75" style="position:absolute;left:0;top:0;bottom:0;width:75%;background:var(--blue-500)"></span></span></span>
+      </div>
+
+      <div data-row="1" style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:13px 0;border-bottom:1px solid var(--neutral-100);align-items:center">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">02</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">企業研究</span>
+        <span style="display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline"><span style="white-space:nowrap;font-family:var(--font-mono);font-size:18px;letter-spacing:0;color:var(--neutral-700)">1社／60分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-600);text-wrap:balance">HP・IR・採用ページを何時間も読む</span></span>
+        <span style="display:flex;align-items:baseline;gap:10px"><span data-count="15" data-suffix="分" style="flex:none;font-family:var(--font-mono);font-size:18px;color:var(--blue-600)">15分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-700);text-wrap:balance">AIが複数情報を整理・要約</span></span>
+        <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-strong)">約75%削減</span><span style="width:100%;height:4px;background:var(--neutral-100);position:relative;display:block"><span data-bar="75" style="position:absolute;left:0;top:0;bottom:0;width:75%;background:var(--blue-500)"></span></span></span>
+      </div>
+
+      <div data-row="1" style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:13px 0;border-bottom:1px solid var(--neutral-100);align-items:center">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">03</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">ES</span>
+        <span style="display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline"><span style="white-space:nowrap;font-family:var(--font-mono);font-size:18px;letter-spacing:0;color:var(--neutral-700)">1社／90分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-600);text-wrap:balance">企業ごとにゼロから作成</span></span>
+        <span style="display:flex;align-items:baseline;gap:10px"><span data-count="30" data-suffix="分" style="flex:none;font-family:var(--font-mono);font-size:18px;color:var(--blue-600)">30分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-700);text-wrap:balance">自己分析×企業研究から初稿生成</span></span>
+        <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-strong)">約67%削減</span><span style="width:100%;height:4px;background:var(--neutral-100);position:relative;display:block"><span data-bar="67" style="position:absolute;left:0;top:0;bottom:0;width:67%;background:var(--blue-500)"></span></span></span>
+      </div>
+
+      <div data-row="1" style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:13px 0;border-bottom:1px solid var(--neutral-100);align-items:center">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">04</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">面接</span>
+        <span style="display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline"><span style="white-space:nowrap;font-family:var(--font-mono);font-size:18px;letter-spacing:0;color:var(--neutral-700)">60分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-600);text-wrap:balance">友達に頼んで練習</span></span>
+        <span style="display:flex;align-items:baseline;gap:10px"><span data-count="30" data-suffix="分" style="flex:none;font-family:var(--font-mono);font-size:18px;color:var(--blue-600)">30分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-700);text-wrap:balance">AIと何度でも模擬面接</span></span>
+        <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-strong)">約50%削減</span><span style="width:100%;height:4px;background:var(--neutral-100);position:relative;display:block"><span data-bar="50" style="position:absolute;left:0;top:0;bottom:0;width:50%;background:var(--blue-500)"></span></span></span>
+      </div>
+
+      <div data-row="1" style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:13px 0;border-bottom:1px solid var(--neutral-100);align-items:center">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">05</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">面接振り返り</span>
+        <span style="display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline"><span style="white-space:nowrap;font-family:var(--font-mono);font-size:18px;letter-spacing:0;color:var(--neutral-700)">30分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-600);text-wrap:balance">感覚で反省</span></span>
+        <span style="display:flex;align-items:baseline;gap:10px"><span data-count="10" data-suffix="分" style="flex:none;font-family:var(--font-mono);font-size:18px;color:var(--blue-600)">10分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-700);text-wrap:balance">録画・録音をAIで分析</span></span>
+        <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-strong)">約67%削減</span><span style="width:100%;height:4px;background:var(--neutral-100);position:relative;display:block"><span data-bar="67" style="position:absolute;left:0;top:0;bottom:0;width:67%;background:var(--blue-500)"></span></span></span>
+      </div>
+
+      <div data-row="1" style="display:grid;grid-template-columns:44px 150px 1.25fr 1.25fr 180px;gap:20px;padding:13px 0;border-bottom:1px solid var(--neutral-100);align-items:center">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">06</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">選考管理</span>
+        <span style="display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline"><span style="white-space:nowrap;font-family:var(--font-mono);font-size:18px;letter-spacing:0;color:var(--neutral-700)">週／60分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-600);text-wrap:balance">Excel・カレンダー・就活サイトを行き来</span></span>
+        <span style="display:flex;align-items:baseline;gap:10px"><span data-count="15" data-suffix="分" style="flex:none;font-family:var(--font-mono);font-size:18px;color:var(--blue-600)">15分</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.02em;color:var(--neutral-700);text-wrap:balance">就活CRMで一元管理</span></span>
+        <span style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span style="font-family:var(--font-mono);font-size:20px;color:var(--text-strong)">約75%削減</span><span style="width:100%;height:4px;background:var(--neutral-100);position:relative;display:block"><span data-bar="75" style="position:absolute;left:0;top:0;bottom:0;width:75%;background:var(--blue-500)"></span></span></span>
+      </div>
+    </div>
+
+    <div style="margin:44px 0 0;background:var(--ink-800);color:#fff;border-radius:var(--radius-sm);padding:44px 56px">
+      <div ref="{{ modelRef }}" style="display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start">
+        <div>
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.88)">MODEL CASE — 20 COMPANIES</span>
+          <p style="margin:16px 0 0;font-family:var(--font-jp);font-size:var(--size-h3);line-height:1.7;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:#fff">20社の選考を進める<br>モデルケース。</p>
+          <div style="margin:28px 0 0;display:flex;flex-direction:column;gap:14px">
+            <div style="display:grid;grid-template-columns:96px 1fr 108px;gap:16px;align-items:center">
+              <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.88)">BEFORE</span>
+              <span style="height:10px;background:rgba(255,255,255,.14);position:relative;display:block"><span ref="{{ barBeforeRef }}" style="position:absolute;left:0;top:0;bottom:0;width:100%;background:rgba(255,255,255,.42)"></span></span>
+              <span ref="{{ numBeforeRef }}" style="font-family:var(--font-mono);font-size:17px;color:#fff;text-align:right">約70時間</span>
+            </div>
+            <div style="display:grid;grid-template-columns:96px 1fr 108px;gap:16px;align-items:center">
+              <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;color:var(--blue-200)">WITH AI</span>
+              <span style="height:10px;background:rgba(255,255,255,.14);position:relative;display:block"><span ref="{{ barAfterRef }}" style="position:absolute;left:0;top:0;bottom:0;width:36%;background:var(--blue-500)"></span></span>
+              <span ref="{{ numAfterRef }}" style="font-family:var(--font-mono);font-size:17px;color:var(--blue-200);text-align:right">約25時間</span>
+            </div>
+          </div>
+        </div>
+        <div style="border-left:1px solid rgba(255,255,255,.18);padding-left:64px">
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.88)">TIME REINVESTED</span>
+          <p style="margin:14px 0 0;display:flex;align-items:baseline;gap:10px"><span ref="{{ bigNumRef }}" style="font-family:var(--font-mono);font-size:88px;line-height:1;font-weight:500;letter-spacing:-.03em;color:#fff">45</span><span style="font-family:var(--font-jp);font-size:24px;font-weight:700;letter-spacing:.05em;color:#fff">時間</span><span style="font-family:var(--font-jp);font-size:16px;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.85)">を、就活の武器に。</span></p>
+          <p style="margin:22px 0 0;font-family:var(--font-jp);font-size:15px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.86)">AIに任せられる作業はAIへ。<br>生まれた45時間を、面接対策や企業研究、自分自身と向き合う時間に使う。</p>
+          <div style="margin:24px 0 0;display:flex;flex-wrap:nowrap;gap:8px">
+            <span style="flex:1;text-align:center;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.02em;color:#fff;border:1px solid rgba(255,255,255,.28);border-radius:2px;padding:8px 6px;white-space:nowrap">面接対策を重ねる</span>
+            <span style="flex:1;text-align:center;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.02em;color:#fff;border:1px solid rgba(255,255,255,.28);border-radius:2px;padding:8px 6px;white-space:nowrap">志望企業の理解を深める</span>
+            <span style="flex:1;text-align:center;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.02em;color:#fff;border:1px solid rgba(255,255,255,.28);border-radius:2px;padding:8px 6px;white-space:nowrap">自分自身と向き合う</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin:36px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.9;letter-spacing:.02em;color:rgba(255,255,255,.85)">※当社想定のモデルケース。利用状況により異なります。</p>
+    </div>
+  </div>
+</section>
+
+<section id="concept" data-screen-label="04 最大のコンセプト" style="background:var(--ink-800);color:#fff;padding:128px 0;position:relative;overflow:hidden">
+  <span style="position:absolute;bottom:-18px;right:-20px;font-family:var(--font-display);font-size:150px;font-weight:800;letter-spacing:-.02em;line-height:1;color:rgba(255,255,255,.06);pointer-events:none;user-select:none">REAL VALUE</span>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;position:relative">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="inverse" hint-size="auto,16px">THE REAL VALUE</x-import>
+    <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:#fff">AIを使える学生から、<br>AIで成果を出せる学生へ。</h2>
+    <p style="margin:20px 0 0;max-width:68ch;font-family:var(--font-jp);font-size:var(--size-body-lg);line-height:1.9;font-weight:400;letter-spacing:var(--tracking-jp-body);color:rgba(255,255,255,.86)">AI就活プロで身につけるのは、ツールの使い方だけではありません。<br>実際の業務課題をAIで解決し、その経験そのものを就活の武器にします。</p>
+
+    <div style="margin:44px 0 0;display:grid;grid-template-columns:1fr 72px 1.1fr;align-items:stretch">
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:32px;display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.1em;color:rgba(255,255,255,.7)">一般的な学生</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.75;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.82)">「ChatGPTを使ったことがあります」</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.75;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.82)">「ES作成にAIを使っています」</p>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;color:var(--blue-300)">
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="26px" hint-size="26px,26px"></x-import>
+      </div>
+      <div style="border:1px solid var(--blue-400);border-radius:var(--radius-sm);padding:32px;display:flex;flex-direction:column;gap:16px;background:rgba(44,91,232,.14)">
+        <span style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.1em;color:var(--blue-200)">AI就活プロの受講生</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:19px;line-height:1.75;font-weight:500;letter-spacing:.04em;color:#fff">「営業業務を分析し、<br>AIを活用した業務改善を設計しました」</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:19px;line-height:1.75;font-weight:500;letter-spacing:.04em;color:#fff">「面接動画を解析する<br>Webアプリを開発しました」</p>
+      </div>
+    </div>
+
+    <p style="margin:56px 0 0;font-family:var(--font-jp);font-size:40px;line-height:1.55;font-weight:700;letter-spacing:.04em;color:#fff">「使えます」ではなく、<br>「作りました。変えました。」を自己PRに。</p>
+  </div>
+</section>
+
+<section id="overview" data-screen-label="05 サービス全体像" style="background:var(--surface-page);padding:128px 0">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">SERVICE OVERVIEW</x-import>
+    <div style="margin:18px 0 0">
+      <h2 style="margin:0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">AIを学び、実際に作り、就活で使う。<br>3つのPHASEで、内定獲得を目指す。</h2>
+      <p style="margin:20px 0 0;max-width:62ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">AI就活プロでは、AIの実務活用からWeb・AIアプリ開発、AIを活用した就活までを一気通貫で学びます。<br>学習して終わるのではなく、身につけたAIスキルと制作実績を武器に、実際の就職活動まで進める教育プログラムです。</p>
+    </div>
+
+    <div style="margin:48px 0 0;display:flex;align-items:center;gap:14px">
+      <span style="font-family:var(--font-jp);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--text-strong);white-space:nowrap">受講開始</span>
+      <span style="flex:1;height:1px;background:var(--border-strong)"></span>
+      <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.06em;color:var(--neutral-700);white-space:nowrap">3ヶ月でAIスキル習得・制作</span>
+      <span style="flex:1;height:1px;background:var(--border-strong)"></span>
+      <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.06em;color:var(--neutral-700);white-space:nowrap">AIを活用して就活</span>
+      <span style="flex:1;height:1px;background:linear-gradient(90deg,var(--border-strong) 0%,var(--blue-500) 100%)"></span>
+      <span style="font-family:var(--font-jp);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--blue-600);white-space:nowrap">内定獲得</span>
+    </div>
+
+    <div style="margin:20px 0 0;display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr 32px 1fr;gap:0;align-items:stretch">
+      <div style="border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-card);display:flex;flex-direction:column">
+        <div style="height:168px;position:relative;overflow:hidden">
+          <image-slot id="phase-1" shape="rect" fit="cover" placeholder="写真：PCで業務データを整理する学生"></image-slot>
+        </div>
+        <div style="padding:28px;display:flex;flex-direction:column;gap:14px;flex:1">
+          <div style="display:flex;align-items:baseline;gap:12px">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">01</span>
+            <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:var(--text-strong);font-weight:500">PHASE 1</span>
+          </div>
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;color:var(--neutral-600)">AI PRACTICAL SKILLS</span>
+          <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AI実務ケーススタディ</span>
+          <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">5職種・約30ケースの実務をAIで効率化する</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;color:var(--blue-300)">
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="18px" hint-size="18px,18px"></x-import>
+      </div>
+      <div style="border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-card);display:flex;flex-direction:column">
+        <div style="height:168px;position:relative;overflow:hidden">
+          <image-slot id="phase-2" shape="rect" fit="cover" placeholder="写真：コードエディタを開いて開発する学生"></image-slot>
+        </div>
+        <div style="padding:28px;display:flex;flex-direction:column;gap:14px;flex:1">
+          <div style="display:flex;align-items:baseline;gap:12px">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">02</span>
+            <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:var(--text-strong);font-weight:500">PHASE 2</span>
+          </div>
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;color:var(--neutral-600)">VIBE CODING</span>
+          <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">Web・AIアプリ開発</span>
+          <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">Webサイト・AIアプリを自分で作り、ポートフォリオにする</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;color:var(--blue-300)">
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="18px" hint-size="18px,18px"></x-import>
+      </div>
+      <div style="border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-card);display:flex;flex-direction:column">
+        <div style="height:168px;position:relative;overflow:hidden">
+          <image-slot id="phase-3" shape="rect" fit="cover" placeholder="写真：オンラインで面接練習をする学生"></image-slot>
+        </div>
+        <div style="padding:28px;display:flex;flex-direction:column;gap:14px;flex:1">
+          <div style="display:flex;align-items:baseline;gap:12px">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">03</span>
+            <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:var(--text-strong);font-weight:500">PHASE 3</span>
+          </div>
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;color:var(--neutral-600)">AI JOB HUNTING</span>
+          <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AIを活用した就活</span>
+          <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">自己分析から面接改善まで、AIで就活を進める</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;color:var(--blue-500)">
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="18px" hint-size="18px,18px"></x-import>
+      </div>
+      <div style="border:1px solid var(--ink-800);border-top:3px solid var(--blue-500);border-radius:var(--radius-sm);background:var(--ink-800);color:#fff;display:flex;flex-direction:column">
+        <div style="height:168px;position:relative;overflow:hidden">
+          <image-slot id="phase-goal" shape="rect" fit="cover" placeholder="写真：内定後、オフィスで働きはじめた若手社会人"></image-slot>
+        </div>
+        <div style="padding:28px;display:flex;flex-direction:column;gap:14px;flex:1">
+          <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:var(--blue-200);font-weight:500">GOAL</span>
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">OFFER</span>
+          <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:#fff">内定</span>
+          <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.84)">AIを前提に働ける人材として評価される</p>
+          <span style="margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.18);font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.06em;color:var(--blue-200)">内定までの期間は学年・志望業界によって異なります。</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin:40px 0 0;font-family:var(--font-jp);font-size:var(--size-h3);font-weight:400;letter-spacing:.06em;color:var(--text-strong)">その後、AIを使って働ける社会人へ。</p>
+  </div>
+</section>
+
+<section data-screen-label="06 PHASE1 AI実務ケーススタディ" style="background:var(--surface-subtle);padding:128px 0;border-top:1px solid var(--border-hairline)">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <div>
+      <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">PHASE 01 — AI PRACTICAL SKILLS</x-import>
+      <h2 style="margin:16px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">社会人の仕事を体験する。<br>さらに、AIでその仕事を変えてみる。</h2>
+      <p style="margin:16px 0 0;max-width:62ch;font-family:var(--font-jp);font-size:var(--size-body-lg);line-height:1.85;font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--text-body)">バックオフィス、営業、マーケティングなど、実際のビジネスで行われている業務をケーススタディとして体験。<br>「この仕事は、こうやって進むんだ。」で終わるのではなく、その業務をAIでどう効率化・自動化できるかまで実践します。</p>
+      <p style="margin:12px 0 0;max-width:62ch;font-family:var(--font-jp);font-size:var(--size-body-lg);line-height:1.85;font-weight:500;letter-spacing:var(--tracking-jp-body);color:var(--text-strong)">仕事を知る。AIで、仕事を変える。<br>就活前に、その両方を経験します。</p>
+
+      <div style="margin:20px 0 0;display:flex;align-items:flex-end;gap:32px;padding-top:20px;border-top:1px solid var(--border-hairline)">
+        <div style="display:flex;align-items:baseline;gap:4px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span style="font-size:46px;line-height:1;letter-spacing:-.03em">5</span><span style="font-size:15px;color:var(--neutral-600)">職種</span></div>
+        <span style="width:1px;height:40px;background:var(--border-hairline)"></span>
+        <div style="display:flex;align-items:baseline;gap:4px;font-family:var(--font-mono);font-weight:500;color:var(--blue-600)"><span style="font-size:56px;line-height:1;letter-spacing:-.03em">30</span><span style="font-size:17px">ケース以上</span></div>
+        <span style="padding-bottom:6px;font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">社会人のリアルな業務をケーススタディ</span>
+      </div>
+    </div>
+
+    <div style="margin:32px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:24px 28px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--border-hairline)">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">バックオフィス</span><span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.2em;color:var(--neutral-600)">BACK OFFICE</span></div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">04 CASES</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+        <details data-cases="1" style="order:2;margin:6px 0 0">
+          <summary style="display:flex;align-items:center;gap:10px;padding:10px 0"><span data-plus="true" style="font-family:var(--font-ui);font-size:15px;font-weight:400;color:var(--blue-500);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span><span data-label-open="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">すべて見る（＋2 CASES）</span><span data-label-close="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">閉じる</span></summary>
+          <div data-full="1" style="padding:4px 0 8px">
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">請求書照合</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">請求書PDFから金額と件数を抽出し、管理データと自動で突き合わせる。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">契約書レビュー</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">契約書を読み込ませ、リスク条項と修正候補をAIに洗い出させる。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">03</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">議事録</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">会議の録音を文字起こしし、決定事項とToDoまで自動で整理する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">04</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">経費処理</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">領収書画像を読み取り、勘定科目の仕分けと規程違反チェックを行う。</span></div>
+          </div>
+        </details>
+        <div data-brief="1" style="order:1">
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">請求書照合</span></div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">契約書レビュー</span></div>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:24px 28px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--border-hairline)">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">営業</span><span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.2em;color:var(--neutral-600)">SALES</span></div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">05 CASES</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+        <details data-cases="1" style="order:2;margin:6px 0 0">
+          <summary style="display:flex;align-items:center;gap:10px;padding:10px 0"><span data-plus="true" style="font-family:var(--font-ui);font-size:15px;font-weight:400;color:var(--blue-500);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span><span data-label-open="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">すべて見る（＋3 CASES）</span><span data-label-close="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">閉じる</span></summary>
+          <div data-full="1" style="padding:4px 0 8px">
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">営業リスト</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">条件を指定して見込み企業を抽出し、優先順位までAIで整理する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">企業リサーチ</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">HP・IR・ニュースを横断で要約し、商談前の企業カルテを作る。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">03</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">営業メール</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">相手の状況に合わせた初回メールを複数パターン生成し、比較する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">04</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">提案資料</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">ヒアリング内容から提案の骨子とスライド構成をAIで組み立てる。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">05</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">CRM入力</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">商談メモから顧客情報と次のアクションを抽出し、CRM用に整形する。</span></div>
+          </div>
+        </details>
+        <div data-brief="1" style="order:1">
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">営業リスト</span></div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">企業リサーチ</span></div>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:24px 28px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--border-hairline)">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">マーケティング</span><span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.2em;color:var(--neutral-600)">MARKETING</span></div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">05 CASES</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+        <details data-cases="1" style="order:2;margin:6px 0 0">
+          <summary style="display:flex;align-items:center;gap:10px;padding:10px 0"><span data-plus="true" style="font-family:var(--font-ui);font-size:15px;font-weight:400;color:var(--blue-500);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span><span data-label-open="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">すべて見る（＋3 CASES）</span><span data-label-close="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">閉じる</span></summary>
+          <div data-full="1" style="padding:4px 0 8px">
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">SEO</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">検索意図を分析し、記事構成案と見出しをAIでまとめて設計する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">SNS分析</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">投稿の反応データを集計し、伸びた要因を仮説まで言語化する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">03</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">広告分析</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">配信結果を読み込み、改善すべきクリエイティブと訴求を特定する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">04</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">競合分析</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">競合のサービス・価格・訴求を並べ、自社の勝ち筋を整理する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">05</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">口コミ分析</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">レビューを感情と論点で分類し、改善の優先度を可視化する。</span></div>
+          </div>
+        </details>
+        <div data-brief="1" style="order:1">
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">SEO</span></div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">SNS分析</span></div>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:24px 28px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--border-hairline)">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">人事</span><span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.2em;color:var(--neutral-600)">HR</span></div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">04 CASES</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+        <details data-cases="1" style="order:2;margin:6px 0 0">
+          <summary style="display:flex;align-items:center;gap:10px;padding:10px 0"><span data-plus="true" style="font-family:var(--font-ui);font-size:15px;font-weight:400;color:var(--blue-500);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span><span data-label-open="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">すべて見る（＋2 CASES）</span><span data-label-close="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">閉じる</span></summary>
+          <div data-full="1" style="padding:4px 0 8px">
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">求人票</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">職務内容のヒアリングメモから、魅力が伝わる求人票を作成する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">面接質問</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">求める人物像から、見極めたい観点ごとに面接質問を設計する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">03</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">候補者評価</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">面接メモを評価基準に沿って構造化し、横並びで比較できる形にする。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">04</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">採用分析</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">選考の通過率データを分析し、候補者が離脱する工程を特定する。</span></div>
+          </div>
+        </details>
+        <div data-brief="1" style="order:1">
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">求人票</span></div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">面接質問</span></div>
+        </div>
+      </div>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:24px 28px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--border-hairline)">
+          <div style="display:flex;align-items:baseline;gap:12px"><span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">CS</span><span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.2em;color:var(--neutral-600)">CUSTOMER SUCCESS</span></div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">04 CASES</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+        <details data-cases="1" style="order:2;margin:6px 0 0">
+          <summary style="display:flex;align-items:center;gap:10px;padding:10px 0"><span data-plus="true" style="font-family:var(--font-ui);font-size:15px;font-weight:400;color:var(--blue-500);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span><span data-label-open="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">すべて見る（＋2 CASES）</span><span data-label-close="1" style="font-family:var(--font-jp);font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--blue-600)">閉じる</span></summary>
+          <div data-full="1" style="padding:4px 0 8px">
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">問い合わせ分類</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">受信した問い合わせを、内容と緊急度で自動的に振り分ける。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">FAQ</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">過去の対応履歴から、よくある質問と回答文をAIで整備する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">03</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">AI Bot</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">自社FAQを読み込ませ、一次対応を行うチャットボットを構築する。</span></div>
+            <div style="display:grid;grid-template-columns:30px 120px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">04</span><span style="font-family:var(--font-jp);font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">VOC分析</span><span style="font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.7;letter-spacing:.04em;color:var(--neutral-700)">顧客の声を分類・要約し、プロダクト改善の示唆を抽出する。</span></div>
+          </div>
+        </details>
+        <div data-brief="1" style="order:1">
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">問い合わせ分類</span></div>
+          <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--neutral-100);align-items:baseline"><span style="font-family:var(--font-mono);font-size:10px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">FAQ</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="07 ケーススタディ詳細" style="background:var(--surface-page);padding:128px 0">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">PHASE 01 — CASE STUDY</x-import>
+    <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">実務ケーススタディでは、<br>何を学ぶのか。</h2>
+    <p style="margin:16px 0 0;max-width:58ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">AI就活プロでは、実際の社会人の仕事を題材に、業務を理解・分解し、AIで効率化・自動化するところまでを実践します。<br>30ケース以上の中から、バックオフィス業務「請求書照合」を例に、実際の学習内容を見てみましょう。</p>
+    <div style="margin:32px 0 0;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-card)">
+      <div style="padding:32px 36px;border-bottom:1px solid var(--border-hairline)">
+        <div style="display:flex;align-items:baseline;gap:16px">
+          <span style="font-family:var(--font-jp);font-size:var(--size-h3);font-weight:700;letter-spacing:.06em;color:var(--text-strong)">請求書照合</span>
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">INVOICE RECONCILIATION</span>
+        </div>
+        <p style="margin:14px 0 0;max-width:70ch;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">企業には取引先から多くの請求書が届きます。バックオフィスでは、請求された「金額・件数・取引内容」が社内の管理データと一致しているかを確認します。</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 92px 1.15fr">
+        <div style="padding:32px 36px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">BEFORE</span>
+            <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">人が確認する</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body)">請求書PDFを開く</span></div>
+            <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body)">管理シートを開く</span></div>
+            <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">03</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body)">金額・件数・取引内容を目視確認</span></div>
+            <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">04</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.04em;color:var(--text-body)">差分を探す</span></div>
+          </div>
+          <p style="margin:auto 0 0;padding-top:18px;border-top:1px solid var(--neutral-100);font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--neutral-700)">件数が増えるほど、確認に時間がかかり、ミスも起こりやすくなる。</p>
+        </div>
+
+        <div style="border-left:1px solid var(--border-hairline);border-right:1px solid var(--border-hairline);background:var(--surface-subtle);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+          <span style="color:var(--blue-500);display:flex"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="20px" hint-size="20px,20px"></x-import></span>
+          <span style="font-family:var(--font-jp);font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--blue-600);writing-mode:vertical-rl">AIで変える</span>
+        </div>
+
+        <div style="padding:32px 36px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--blue-600)">WITH AI</span>
+              <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AIに任せる</span>
+            </div>
+            <x-import component-from-global-scope="AIDesignSystem_94418b.AiTag" label="AI PROCESSING" hint-size="auto,24px"></x-import>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-600)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">PDFから情報を抽出</span></div>
+            <div style="background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-600)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">管理データと自動照合</span></div>
+            <div style="background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:14px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-600)">03</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-strong)">不一致だけを抽出</span></div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);overflow:hidden">
+          <div style="display:grid;grid-template-columns:1fr 110px 90px 92px;gap:0;padding:12px 16px;border-bottom:1px solid var(--neutral-100);background:var(--surface-subtle)">
+            <span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.18em;color:var(--neutral-600)">INVOICE</span>
+            <span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.18em;color:var(--neutral-600)">請求額</span>
+            <span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.18em;color:var(--neutral-600)">件数</span>
+            <span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.18em;color:var(--neutral-600)">照合</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 110px 90px 92px;padding:13px 16px;border-bottom:1px solid var(--neutral-100);align-items:center">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">INV-2041</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">¥184,000</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">12</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-ui);font-size:10px;letter-spacing:.1em;color:var(--green-500)"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="12px" hint-size="12px,12px"></x-import>一致</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 110px 90px 92px;padding:13px 16px;border-bottom:1px solid var(--neutral-100);align-items:center">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">INV-2042</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">¥96,500</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">7</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-ui);font-size:10px;letter-spacing:.1em;color:var(--green-500)"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="12px" hint-size="12px,12px"></x-import>一致</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 110px 90px 92px;padding:13px 16px;border-bottom:1px solid var(--neutral-100);align-items:center;background:var(--status-danger-soft)">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-strong)">INV-2043</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-strong)">¥212,300</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-strong)">15</span>
+            <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.1em;color:var(--status-danger)">要確認</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 110px 90px 92px;padding:13px 16px;align-items:center">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">INV-2044</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">¥58,000</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-body)">4</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-ui);font-size:10px;letter-spacing:.1em;color:var(--green-500)"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="12px" hint-size="12px,12px"></x-import>一致</span>
+          </div>
+        </div>
+          <p style="margin:0;font-family:var(--font-jp);font-size:11px;font-weight:400;line-height:1.8;color:var(--neutral-600)">画面はイメージです。</p>
+        </div>
+      </div>
+
+      <div style="padding:32px 36px 24px;border-top:1px solid var(--border-hairline);background:var(--ink-800);color:#fff">
+        <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:start">
+          <div>
+            <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--blue-200)">AFTER — 身につく力</span>
+            <p style="margin:14px 0 0;font-family:var(--font-jp);font-size:26px;line-height:1.6;font-weight:700;letter-spacing:.05em;color:#fff">「AIが使える学生」ではなく、<br>「AIで仕事を変えられる学生」へ。</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px;padding-top:4px">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+              <div style="border:1px solid rgba(255,255,255,.22);border-radius:var(--radius-sm);padding:14px 16px;display:flex;flex-direction:column;gap:8px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-200)">01</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff">仕事を知る</span></div>
+              <div style="border:1px solid rgba(255,255,255,.22);border-radius:var(--radius-sm);padding:14px 16px;display:flex;flex-direction:column;gap:8px"><span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-200)">02</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff">仕組みを理解する</span></div>
+              <div style="border:1px solid var(--blue-400);border-radius:var(--radius-sm);padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:rgba(44,91,232,.16)"><span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-200)">03</span><span style="font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff">AIで変えてみる</span></div>
+            </div>
+            <p style="margin:0;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.86)">実際の仕事を理解し、業務を分解し、どこをAIに任せ、どう効率化するかまで設計する。AI就活プロでは、この一連の思考と実践を社会人になる前から身につけます。</p>
+          </div>
+        </div>
+        <p style="margin:22px 0 0;font-family:var(--font-jp);font-size:11px;line-height:1.8;font-weight:400;letter-spacing:.02em;color:rgba(255,255,255,.6)">※画面・業務フローは学習内容をイメージした一例です。</p>
+      </div>
+    </div>
+
+
+      </div>
+</section>
+
+<section id="apply" data-screen-label="08 中間CTA 1" style="background:var(--ink-900);color:#fff;padding:72px 0;position:relative;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none">
+    <div style="position:absolute;left:50%;top:-40%;width:1200px;height:900px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(44,91,232,.20) 0%,rgba(44,91,232,.08) 40%,rgba(44,91,232,0) 72%);filter:blur(30px)"></div>
+    <div style="position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:160px 100%;opacity:.5"></div>
+  </div>
+  <div style="position:relative;z-index:1">  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0">
+    <h2 style="margin:0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.55;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:#fff">就活が始まってからではなく、<br>就活が始まる前に、武器をつくる。</h2>
+    <p style="margin:18px 0 0;max-width:78ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:1.9;font-weight:400;letter-spacing:var(--tracking-jp-body);color:rgba(255,255,255,.86)">AI実務スキルとVibe Codingをどう学び、就活でどう活かすのか。<br>無料説明会で、AI就活プロの学び方をご紹介します。</p>
+    <div style="margin:30px 0 0">
+      <x-import component-from-global-scope="AIDesignSystem_94418b.Button" variant="primary" size="lg" as="a" href="#apply" icon-right="arrow-right" hint-size="auto,56px">無料説明会に参加する</x-import>
+    </div>
+    <span style="margin:16px 0 0;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.78)">オンライン開催 ／ 所要60分 ／ 保護者様の同席も可能です</span>
+  </div>
+  </div>
+</section>
+
+<section data-screen-label="09 PHASE2 Vibe Coding" style="background:var(--surface-page);padding:128px 0 56px;position:relative;overflow:hidden">
+  <span style="position:absolute;top:110px;right:-24px;font-family:var(--font-display);font-size:150px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--neutral-50);pointer-events:none;user-select:none">CODING</span>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;position:relative">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">PHASE 02 — VIBE CODING</x-import>
+    <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">非エンジニアの学生でも、<br>WebサイトやAIアプリを自分で作れる。</h2>
+    <p style="margin:20px 0 0;max-width:62ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">プログラミング経験は必要ありません。Claude CodeなどのAIコーディングツールを使い、作りたいものを言葉で伝えながら、WebサイトやAIアプリを実際に開発します。<br>ただ作るだけではなく、課題を見つけ、要件を整理し、AIに指示して形にする。就活では<span style="font-weight:700;color:var(--text-strong)">「AIが使えます」ではなく、「AIでこれを作りました」</span>と言える状態を目指します。</p>
+
+    <div style="margin:40px 0 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start">
+      <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-hairline)">
+        <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid var(--border-hairline);align-items:baseline">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">01</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">課題を発見する</span>
+            <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--neutral-700)">現場で困っていることを見つける。</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid var(--border-hairline);align-items:baseline">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">02</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">要件を整理する</span>
+            <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--neutral-700)">誰が何をできる状態かを言葉にする。</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid var(--border-hairline);align-items:baseline">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">03</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AIへ指示する</span>
+            <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--neutral-700)">意図が伝わる粒度まで分解して渡す。</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid var(--border-hairline);align-items:baseline">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">04</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:var(--font-jp);font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">動くものを完成させる</span>
+            <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--neutral-700)">検証と修正を重ね、公開できる形へ。</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--ink-900);padding:26px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:9px;height:9px;border-radius:999px;background:var(--blue-500)"></span>
+            <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.88)">AI CODING SESSION</span>
+          </div>
+          <div style="display:flex;justify-content:flex-end">
+            <p style="margin:0;max-width:80%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-sm);padding:16px 18px;font-family:var(--font-jp);font-size:14px;line-height:1.85;font-weight:400;letter-spacing:.04em;color:#fff">面接動画をアップロードすると、文字起こしと評価が出るページを作って</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <x-import component-from-global-scope="AIDesignSystem_94418b.AiTag" label="AI" tone="soft" hint-size="auto,24px"></x-import>
+            <p style="margin:0;max-width:84%;background:rgba(44,91,232,.16);border:1px solid rgba(90,124,242,.5);border-radius:var(--radius-sm);padding:16px 18px;font-family:var(--font-jp);font-size:14px;line-height:1.85;font-weight:400;letter-spacing:.04em;color:var(--blue-100)">構成を3ファイルに分けて実装します。まず解析処理から作成します。</p>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.45)">› analyzer.js — created</span>
+            <span style="font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.45)">› upload.js — created</span>
+            <span style="font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.45)">› report.jsx — created</span>
+          </div>
+        </div>
+        <p style="margin:0;font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.9;color:var(--neutral-600)">画面はイメージです。実際の講座ではご自身の課題に合わせて開発を進めます。</p>
+      </div>
+    </div>
+
+    <div style="margin:36px 0 0">
+      <p style="margin:0;font-family:var(--font-jp);font-size:var(--size-h2);line-height:1.6;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">理解するだけでは、身につかない。<br>だから、実際につくる。</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="10 制作物" style="background:var(--surface-subtle);padding:64px 0 112px">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">DELIVERABLES</x-import>
+    <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">3ヶ月で、5つの制作物を。<br>そのまま、就活の武器に。</h2>
+    <p style="margin:20px 0 0;max-width:66ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">会社ホームページから、就活CRM、AI面接改善アプリまで。<br>3ヶ月で実際に手を動かして5つの制作物をつくります。</p>
+    <p style="margin:14px 0 0;max-width:66ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">完成したものは、あなたのAIスキルを<br>「言葉ではなく、実物で示す」ポートフォリオになります。</p>
+
+    <div style="margin:40px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px 32px;display:flex;align-items:center;gap:24px">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">01</span>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">会社ホームページ</span>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">Web構造</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">AIへの開発指示</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">公開</span></div>
+        </div>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px 32px;display:flex;align-items:center;gap:24px">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">02</span>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">LP</span>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">UI/UX</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">コピー</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">CTA</span></div>
+        </div>
+      </div>
+    </div>
+    <p style="margin:12px 0 0;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.04em;color:var(--neutral-600)">01・02 は、Web制作の基礎を身につける制作物です。</p>
+
+    <p style="margin:48px 0 0;font-family:var(--font-jp);font-size:var(--size-h3);line-height:1.7;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">そして、自分の就活でそのまま使う2本。</p>
+    <div style="margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:32px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:baseline;gap:14px">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">03</span>
+          <span style="font-family:var(--font-jp);font-size:20px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">就活CRM</span><span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">CRM</span>
+        </div>
+        <p style="margin:0;min-height:80px;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">企業／ES締切／説明会／面接／選考状況／ToDo／就活時間／面接記録 を一元管理。散らばりがちな就活の情報を、ひとつの画面にまとめます。つくったその日から、自分の選考管理に使えます。</p>
+        <div style="height:505px;overflow:hidden;background:#fff"><img src="assets/product-crm.png" alt="就活CRM ダッシュボード画面" style="display:block;width:100%;height:100%;object-fit:contain;object-position:top"></div>
+        <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px"><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">企業管理</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">ES締切</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">面接予定</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">タスク</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">時間管理</span></div>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:32px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:baseline;gap:14px">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">04</span>
+          <span style="font-family:var(--font-jp);font-size:20px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AI面接改善アプリ</span><span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">INTERVIEW AI</span>
+        </div>
+        <p style="margin:0;min-height:80px;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">動画をアップロードすれば、文字起こしから評価・改善案までを自動で。面接の振り返りを、感覚ではなく記録で行えます。</p>
+        <div style="height:505px;overflow:hidden;background:#fff"><img src="assets/product-interview.png" alt="AI面接改善 分析結果画面" style="display:block;width:100%;height:100%;object-fit:contain;object-position:top"></div>
+        <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px"><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">動画</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">音声</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">文字起こし</span><span style="font-family:var(--font-jp);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700);border:1px solid var(--border-hairline);border-radius:2px;padding:3px 8px">AI分析</span></div>
+      </div>
+    </div>
+    <p style="margin:12px 0 0;font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.9;color:var(--neutral-600)">掲載の画面はイメージです。仕様は改善のため変更する場合があります。</p>
+
+    <p style="margin:48px 0 0;font-family:var(--font-jp);font-size:var(--size-h3);line-height:1.7;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">最後は、課題発見から公開まで自分だけで。</p>
+    <div style="margin:20px 0 0;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:36px;display:grid;grid-template-columns:1fr 372px;gap:32px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:baseline;gap:14px">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--blue-500)">05</span>
+          <span style="font-family:var(--font-jp);font-size:20px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">オリジナルWebアプリ</span>
+        </div>
+        <p style="margin:0;max-width:44ch;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">自分で見つけた課題を、自分で要件に落とし、AIへ指示して開発する最終制作。ここまで来ると、面接で語れるのは「使えます」ではなく「つくりました」になります。</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--text-body);border:1px solid var(--border-hairline);background:#fff;border-radius:2px;padding:9px 10px"><span style="font-family:var(--font-mono);font-size:10px;color:var(--blue-500)">01</span>課題発見</span><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">→</span><span style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--text-body);border:1px solid var(--border-hairline);background:#fff;border-radius:2px;padding:9px 10px"><span style="font-family:var(--font-mono);font-size:10px;color:var(--blue-500)">02</span>要件定義</span><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">→</span><span style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--text-body);border:1px solid var(--border-hairline);background:#fff;border-radius:2px;padding:9px 10px"><span style="font-family:var(--font-mono);font-size:10px;color:var(--blue-500)">03</span>AIへの指示</span><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">→</span><span style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--text-body);border:1px solid var(--border-hairline);background:#fff;border-radius:2px;padding:9px 10px"><span style="font-family:var(--font-mono);font-size:10px;color:var(--blue-500)">04</span>開発</span><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">→</span><span style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--text-body);border:1px solid var(--border-hairline);background:#fff;border-radius:2px;padding:9px 10px"><span style="font-family:var(--font-mono);font-size:10px;color:var(--blue-500)">05</span>改善</span><span style="font-family:var(--font-mono);font-size:11px;color:var(--neutral-600)">→</span><span style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:var(--text-body);border:1px solid var(--border-hairline);background:#fff;border-radius:2px;padding:9px 10px"><span style="font-family:var(--font-mono);font-size:10px;color:var(--blue-500)">06</span>公開</span></div>
+      </div>
+      <div style="justify-self:end;border:1px solid var(--border-hairline);overflow:hidden;width:372px;height:287px"><div style="width:456px;height:352px;box-sizing:border-box;transform:scale(.816);transform-origin:top left;background:#fff;font-family:var(--font-jp);padding:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="display:flex;align-items:baseline;gap:8px">
+                <span style="font-family:var(--font-jp);font-weight:900;font-size:13px;letter-spacing:.1em;color:var(--ink-800)">TOKI</span>
+                <span style="font-size:8px;letter-spacing:.06em;color:var(--neutral-500)">大学生の時間割 × タスク管理</span>
+              </div>
+              <span style="display:inline-flex;align-items:center;height:20px;padding:0 10px;border:1px solid var(--neutral-200);border-radius:999px;font-size:8px;color:var(--neutral-600)">今週</span>
+            </div>
+            <div style="margin:12px 0 0;display:flex;gap:10px">
+              <div style="flex:1.25;border:1px solid var(--neutral-200);padding:10px">
+                <span style="font-size:8px;letter-spacing:.14em;color:var(--neutral-500)">WEEK</span>
+                <div style="margin:8px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:5px;align-items:end;height:96px">
+                  <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%"><span style="height:38%;background:var(--blue-200)"></span><span style="height:22%;background:var(--mint-200)"></span><span style="font-size:8px;text-align:center;color:var(--neutral-500)">月</span></div>
+                  <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%"><span style="height:52%;background:var(--blue-300)"></span><span style="height:14%;background:var(--mint-200)"></span><span style="font-size:8px;text-align:center;color:var(--neutral-500)">火</span></div>
+                  <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%"><span style="height:30%;background:var(--blue-200)"></span><span style="height:34%;background:var(--mint-300)"></span><span style="font-size:8px;text-align:center;color:var(--neutral-500)">水</span></div>
+                  <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%"><span style="height:60%;background:var(--blue-400)"></span><span style="height:10%;background:var(--mint-200)"></span><span style="font-size:8px;text-align:center;color:var(--neutral-500)">木</span></div>
+                  <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%"><span style="height:24%;background:var(--blue-200)"></span><span style="height:40%;background:var(--mint-300)"></span><span style="font-size:8px;text-align:center;color:var(--neutral-500)">金</span></div>
+                </div>
+                <div style="margin:8px 0 0;display:flex;gap:12px">
+                  <span style="display:inline-flex;align-items:center;gap:5px;font-size:8px;color:var(--neutral-600)"><span style="width:8px;height:8px;background:var(--blue-300)"></span>授業・課題</span>
+                  <span style="display:inline-flex;align-items:center;gap:5px;font-size:8px;color:var(--neutral-600)"><span style="width:8px;height:8px;background:var(--mint-300)"></span>バイト</span>
+                </div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+                <div style="border:1px solid var(--neutral-200);padding:10px">
+                  <span style="font-size:8px;letter-spacing:.14em;color:var(--neutral-500)">締切が近い課題</span>
+                  <div style="margin:7px 0 0;display:flex;flex-direction:column;gap:6px">
+                    <div style="display:flex;justify-content:space-between"><span style="font-size:9px;color:var(--ink-800)">統計学 レポート</span><span style="font-family:var(--font-mono);font-size:8px;color:var(--red-500)">あと2日</span></div>
+                    <div style="display:flex;justify-content:space-between"><span style="font-size:9px;color:var(--ink-800)">英語 プレゼン準備</span><span style="font-family:var(--font-mono);font-size:8px;color:var(--amber-500)">あと5日</span></div>
+                    <div style="display:flex;justify-content:space-between"><span style="font-size:9px;color:var(--ink-800)">ゼミ 文献まとめ</span><span style="font-family:var(--font-mono);font-size:8px;color:var(--neutral-500)">あと9日</span></div>
+                  </div>
+                </div>
+                <div style="border:1px solid var(--neutral-200);padding:10px;display:flex;gap:14px">
+                  <div><p style="margin:0;font-family:var(--font-mono);font-size:16px;color:var(--ink-800)">18.5h</p><p style="margin:3px 0 0;font-size:8px;color:var(--neutral-500)">今週の学習時間</p></div>
+                  <div><p style="margin:0;font-family:var(--font-mono);font-size:16px;color:var(--ink-800)">7</p><p style="margin:3px 0 0;font-size:8px;color:var(--neutral-500)">完了タスク</p></div>
+                </div>
+              </div>
+            </div>
+          </div></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="11 3ヶ月後の成果" style="background:var(--surface-page);padding:128px 0">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">WHAT YOU GET</x-import>
+    <div style="margin:18px 0 0">
+      <h2 style="margin:0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">3ヶ月後、<br>就活で語れる「実績」が残る。</h2>
+      <p style="margin:20px 0 0;max-width:66ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">AIを学んだという知識ではなく、実際に改善した業務、作ったWebサイトやAIアプリ、開発の記録まで残ります。<br>ESや面接では、「AIが使えます」ではなく、「AIでこれを作りました。こう改善しました。」と具体的な成果で語れる状態を目指します。</p>
+    </div>
+
+    <div style="margin:36px 0 0;border-top:1px solid var(--border-hairline);display:grid;grid-template-columns:repeat(5,1fr)">
+      <div style="padding:36px 26px 32px 0;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:baseline;gap:5px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span style="font-size:50px;line-height:1;letter-spacing:-.03em">約30</span><span style="font-size:15px;color:var(--neutral-600)">ケース</span></div>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AI実務ケース</span>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.03em;color:var(--neutral-700)">営業・マーケ・バックオフィスなど、実際の仕事をAIでどう改善するかを経験。</span>
+      </div>
+      <div style="padding:36px 26px 32px 26px;border-left:1px solid var(--border-hairline);display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:baseline;gap:5px;font-family:var(--font-mono);font-weight:500;color:var(--blue-600)"><span style="font-size:50px;line-height:1;letter-spacing:-.03em">5</span><span style="font-size:15px;color:var(--neutral-600)">つ</span></div>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">Web・AI制作物</span>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.03em;color:var(--neutral-700)">Webサイト、LP、就活CRM、AI面接改善アプリ、オリジナルWebアプリなど。</span>
+      </div>
+      <div style="padding:36px 26px 32px 26px;border-left:1px solid var(--border-hairline);display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:baseline;gap:5px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span style="font-size:50px;line-height:1;letter-spacing:-.03em">1</span><span style="font-size:15px;color:var(--neutral-600)">式</span></div>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">公開ポートフォリオ</span>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.03em;color:var(--neutral-700)">制作物をURLでそのまま企業に見せられる状態に。</span>
+      </div>
+      <div style="padding:36px 26px 32px 26px;border-left:1px solid var(--border-hairline);display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:baseline;gap:5px;font-family:var(--font-mono);font-weight:500;color:var(--blue-600)"><span style="font-size:34px;line-height:1;letter-spacing:-.03em">GitHub</span></div>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">開発プロセス</span>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.03em;color:var(--neutral-700)">完成品だけでなく、実際に作ったプロセスや改善履歴まで残る。</span>
+      </div>
+      <div style="padding:36px 0 32px 26px;border-left:1px solid var(--border-hairline);display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:baseline;gap:5px;font-family:var(--font-mono);font-weight:500;color:var(--text-strong)"><span style="font-size:50px;line-height:1;letter-spacing:-.03em">複数</span><span style="font-size:15px;color:var(--neutral-600)">本</span></div>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">AI業務改善実績</span>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.85;letter-spacing:.03em;color:var(--neutral-700)">課題・打ち手・成果を、ESや面接で具体的に語れる形に整理。</span>
+      </div>
+    </div>
+
+    <p style="margin:36px 0 0;font-family:var(--font-jp);font-size:var(--size-h2);line-height:1.65;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">「AIが使えます」ではなく、<br>「AIで作りました。改善しました。」を自己PRに。</p>
+  </div>
+</section>
+
+<section data-screen-label="12 就活での差別化" style="background:var(--surface-subtle);padding:128px 0;border-top:1px solid var(--border-hairline)">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">DIFFERENTIATION</x-import>
+    <h2 style="margin:22px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">同じ就活生でも、<br>語れることはここまで変わる。</h2>
+
+    <div style="margin:40px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:40px;display:flex;flex-direction:column;gap:20px">
+        <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--neutral-600)">BEFORE — これまでのガクチカ</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--text-body)">「アルバイトでリーダーを頑張りました。」</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--text-body)">「サークル運営を頑張りました。」</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--text-body)">「留学しました。」</p>
+        <p style="margin:auto 0 0;padding-top:24px;border-top:1px solid var(--neutral-100);font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--neutral-700)">経験そのものは価値があっても、他の学生と差がつきにくい。</p>
+      </div>
+      <div style="background:var(--ink-800);border:1px solid var(--ink-800);border-radius:var(--radius-sm);padding:40px;display:flex;flex-direction:column;gap:20px;color:#fff">
+        <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:var(--blue-200)">AFTER — AI就活プロ受講後</span>
+        <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.88)">上記に加えて —</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.9;font-weight:500;letter-spacing:.04em;color:#fff">「AIで営業業務を効率化しました。」</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.9;font-weight:500;letter-spacing:.04em;color:#fff">「Webアプリを5本開発しました。」</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:17px;line-height:1.9;font-weight:500;letter-spacing:.04em;color:#fff">「業務を分析し、人間とAIの役割分担を設計しました。」</p>
+        <p style="margin:auto 0 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--font-jp);font-size:13px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:rgba(255,255,255,.84)">成果物とプロセスがあるから、深掘りされるほど強くなる。</p>
+      </div>
+    </div>
+
+    <p style="margin:48px 0 0;font-family:var(--font-jp);font-size:var(--size-h2);line-height:1.65;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">AIを使えることではなく、<br>AIを使って課題を解決した経験を作る。</p>
+  </div>
+</section>
+
+<section id="phase3" data-screen-label="13 PHASE3 AI就活" style="background:var(--ink-800);color:#fff;padding:128px 0;position:relative;overflow:hidden">
+  <span style="position:absolute;top:96px;right:-30px;font-family:var(--font-display);font-size:150px;font-weight:800;letter-spacing:-.02em;line-height:1;color:rgba(255,255,255,.06);pointer-events:none;user-select:none">JOB HUNTING</span>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;position:relative">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="inverse" hint-size="auto,16px">PHASE 03 — AI JOB HUNTING</x-import>
+    <h2 style="margin:22px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:#fff">そして、身につけたAIを<br>今度は「自分の就活」に使う。</h2>
+    <p style="margin:26px 0 0;max-width:56ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:rgba(255,255,255,.85)">自己分析から内定までの9ステップ。すべての工程でAIを使い、手戻りの少ない就活を設計します。</p>
+
+    <div style="margin:36px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 01</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">AI自己分析</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">AIとの対話から経験・価値観・強みを整理する。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 02</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">職種・業界選定</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">適性と市場性の両面から、受ける職種・業界の仮説を立てる。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 03</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">企業探索</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">条件と価値観に合う企業をAIで幅広く洗い出す。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 04</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">企業研究</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">採用ページ・IR・ニュースをAIで要約し、比較できる形に。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 05</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">ES・志望動機</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">自己分析×企業研究から初稿を生成し、自分の言葉に磨く。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 06</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">AI模擬面接</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">志望企業の想定質問で、何度でも面接練習を行う。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 07</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">面接分析</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">録画・録音をAIが文字起こしし、回答を項目別に評価する。</span>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(255,255,255,.03)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 08</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">PDCA</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">弱い項目を特定して改善し、もう一度模擬面接に戻る。</span>
+      </div>
+      <div style="border:1px solid var(--blue-400);border-radius:var(--radius-sm);padding:18px 20px;display:flex;flex-direction:column;gap:7px;background:rgba(44,91,232,.18)">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-200)">STEP 09</span><span style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5)">/ 09</span></div>
+        <span style="font-family:var(--font-jp);font-size:17px;font-weight:700;letter-spacing:.05em;color:#fff">内定</span>
+        <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.8)">選考状況を就活CRMで一元管理し、納得して意思決定する。</span>
+      </div>
+    </div>
+    <div style="margin:14px 0 0;display:flex;align-items:center;gap:10px;color:var(--blue-200)">
+      <x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-left" size="14px" hint-size="14px,14px"></x-import>
+      <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.8)">STEP 08 PDCA は STEP 06 AI模擬面接へ戻り、改善を繰り返します。</span>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="17 大学生活との両立" style="background:var(--surface-page);padding:112px 0">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center">
+      <div>
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">YOUR CAMPUS LIFE</x-import>
+        <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:34px;line-height:1.45;font-weight:700;letter-spacing:.04em;color:var(--text-strong)">大学生活を、就活だけで終わらせない。<br>やりたいことも、理想の内定も。</h2>
+        <p style="margin:18px 0 0;max-width:52ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">学業、アルバイト、インターン、友人との時間。大学生の今しかできないことを大切にしながら、AIで就活を効率よく進める。<br>大学生活を謳歌することも、理想のキャリアを目指すことも、諦めない。</p>
+        <p style="margin:24px 0 0;font-family:var(--font-jp);font-size:var(--size-h3);line-height:1.7;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">大学生活を楽しむ。<br>そして、行きたい会社の内定も勝ち取る。</p>
+      </div>
+      <div style="height:380px;position:relative">
+        <image-slot id="campus-photo" shape="rect" fit="cover" placeholder="写真：キャンパスで笑顔で過ごす大学生たち"></image-slot>
+      </div>
+    </div>
+
+    <div style="margin:40px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">学業</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">ゼミや研究に打ち込める。学びを犠牲にせず、選考準備も進められる。</p>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">アルバイト</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">シフトを削らずに済む。学生生活を保ちながら、選考も進められる。</p>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">インターン</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">長期インターンに挑戦できる。その経験が、そのまま選考で語れる強みに。</p>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">友人</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">旅行も、遊ぶ約束も。学生のうちにしかできない時間を手放さない。</p>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.06em;color:var(--text-strong)">AI学習</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">浮いた時間をさらにAIへ。作れるものが増えるほど、語れることも増える。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="18 サポート体制" style="background:var(--surface-subtle);padding:112px 0;border-top:1px solid var(--border-hairline)">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">SUPPORT</x-import>
+    <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">学んで終わりにしない。<br>できるようになるまで、進む。</h2>
+    <p style="margin:20px 0 0;max-width:66ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">動画・テキストで学び、実際に手を動かして課題に挑戦。<br>フィードバックを受けて改善し、合格したら次のステップへ進みます。</p>
+
+    <div style="margin:40px 0 0;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);overflow:hidden">
+      <div style="display:grid;grid-template-columns:repeat(6,1fr)">
+        <div style="padding:22px 20px 24px;border-left:1px solid var(--border-hairline);background:transparent;display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--blue-500)">01</span>
+          <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">学ぶ</span>
+          <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:var(--neutral-700)">動画・テキストでインプット</span>
+        </div>
+        <div style="padding:22px 20px 24px;border-left:1px solid var(--border-hairline);background:transparent;display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--blue-500)">02</span>
+          <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">つくる</span>
+          <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:var(--neutral-700)">実践課題に挑戦</span>
+        </div>
+        <div style="padding:22px 20px 24px;border-left:1px solid var(--border-hairline);background:transparent;display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--blue-500)">03</span>
+          <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">提出する</span>
+          <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:var(--neutral-700)">完成した課題を提出</span>
+        </div>
+        <div style="padding:22px 20px 24px;border-left:1px solid var(--border-hairline);background:transparent;display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--blue-500)">04</span>
+          <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">フィードバック</span>
+          <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:var(--neutral-700)">改善点を確認</span>
+        </div>
+        <div style="padding:22px 20px 24px;border-left:1px solid var(--border-hairline);background:transparent;display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--blue-500)">05</span>
+          <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.05em;color:var(--text-strong)">改善する</span>
+          <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:var(--neutral-700)">フィードバックをもとに修正</span>
+        </div>
+        <div style="padding:22px 20px 24px;border-left:1px solid var(--blue-500);background:var(--ink-800);display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--blue-200)">06</span>
+          <span style="font-family:var(--font-jp);font-size:16px;font-weight:700;letter-spacing:.05em;color:#fff">合格 → 次へ</span>
+          <span style="font-family:var(--font-jp);font-size:12px;line-height:1.75;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.84)">できるようになったら次の学習へ</span>
+        </div>
+      </div>
+      <div style="padding:14px 20px;border-top:1px solid var(--border-hairline);display:flex;align-items:center;gap:10px;color:var(--blue-600)">
+        <x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-left" size="14px" hint-size="14px,14px"></x-import>
+        <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.05em;color:var(--neutral-700)">基準に届かない場合は 04 → 05 を繰り返し、合格するまで再提出できます。</span>
+      </div>
+    </div>
+
+    <div style="margin:32px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:32px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-500)">01</span>
+        <span style="font-family:var(--font-jp);font-size:var(--size-h3);font-weight:700;letter-spacing:.05em;color:var(--text-strong)">分からないことは、<br>いつでも質問。</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">教材の内容や課題、AIツールの使い方など、学習中に分からないことはいつでも質問できます。</p>
+      </div>
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:32px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--blue-500)">02</span>
+        <span style="font-family:var(--font-jp);font-size:var(--size-h3);font-weight:700;letter-spacing:.05em;color:var(--text-strong)">一人で進めない。<br>専任担当が伴走。</span>
+        <p style="margin:0;font-family:var(--font-jp);font-size:14px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">対象コースでは専任担当者が、学習の進捗から就職活動まで継続してサポートします。</p>
+        <span style="margin-top:auto;font-family:var(--font-jp);font-size:12px;font-weight:400;letter-spacing:.04em;color:var(--neutral-600)">※対象コースのみ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="courses" data-screen-label="19 コース" style="background:var(--surface-page);padding:112px 0 72px;border-top:1px solid var(--border-hairline);position:relative;overflow:hidden">
+  <span style="position:absolute;top:96px;right:-24px;font-family:var(--font-display);font-size:150px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--neutral-50);pointer-events:none;user-select:none">COURSES</span>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">COURSES</x-import>
+    <div style="margin:18px 0 0">
+      <h2 style="margin:0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">目的に合わせて選べる<br>3つのコース。</h2>
+      <p style="margin:20px 0 0;max-width:62ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">どのコースもPHASE1・PHASE2は共通です。違いは「就活をどこまで一緒に走るか」です。</p>
+    </div>
+
+    <div style="margin:40px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch">
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:36px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:var(--neutral-600)">COURSE 01</span>
+          <span style="font-family:var(--font-display);font-size:30px;font-weight:800;letter-spacing:-.01em;line-height:1.1;color:var(--text-strong)">AI SKILL</span>
+          <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--neutral-700)">大学1〜2年生</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px;padding:20px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
+          <span style="font-family:var(--font-mono);font-size:32px;font-weight:500;letter-spacing:-.02em;color:var(--text-strong)">¥330,000</span>
+          <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;color:var(--neutral-700)">（税込）</span>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;flex:1">
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 1 AI実務ケーススタディ</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 2 Vibe Coding</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>AI実務スキル</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>Vibe Coding</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>ポートフォリオ制作</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>インターン紹介</li>
+        </ul>
+              </div>
+
+      <div style="background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:36px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:var(--neutral-600)">COURSE 02</span>
+          <span style="font-family:var(--font-display);font-size:30px;font-weight:800;letter-spacing:-.01em;line-height:1.1;color:var(--text-strong)">AI CAREER</span>
+          <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--neutral-700)">大学3年生</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px;padding:20px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
+          <span style="font-family:var(--font-mono);font-size:32px;font-weight:500;letter-spacing:-.02em;color:var(--text-strong)">¥440,000</span>
+          <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;color:var(--neutral-700)">（税込）</span>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;flex:1">
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 1 AI実務ケーススタディ</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 2 Vibe Coding</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 3 AI就活</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>AI就活カリキュラム</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:var(--text-body)"><span style="color:var(--blue-500);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>キャリア1on1 最大4回</li>
+        </ul>
+        <div style="background:var(--surface-subtle);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);padding:18px 20px">
+          <p style="margin:0;font-family:var(--font-jp);font-size:13px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--text-body)">AI CAREERは、AI就活カリキュラムを使って自分自身で就活を進めるコースです。専任担当や継続的なES添削、進捗管理、内定までの伴走はありません。重要なタイミングで4回だけプロへ相談できる、という位置付けです。</p>
+        </div>
+              </div>
+
+      <div style="background:var(--ink-800);border:1px solid var(--ink-800);border-radius:var(--radius-sm);padding:36px;display:flex;flex-direction:column;gap:22px;color:#fff;position:relative">
+        <span style="position:absolute;top:0;right:36px;transform:translateY(-50%);display:inline-flex;align-items:center;height:26px;padding:0 14px;border-radius:2px;background:var(--blue-500);color:var(--ink-900);font-family:var(--font-jp);font-size:11px;font-weight:500;letter-spacing:.1em">おすすめ</span>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.85)">COURSE 03</span>
+          <span style="font-family:var(--font-display);font-size:30px;font-weight:800;letter-spacing:-.01em;line-height:1.1;color:#fff">AI CAREER PRO</span>
+          <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.84)">大学3年生</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px;padding:20px 0;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)">
+          <span style="font-family:var(--font-mono);font-size:32px;font-weight:500;letter-spacing:-.02em;color:#fff">¥550,000</span>
+          <span style="font-family:var(--font-jp);font-size:12px;font-weight:400;color:rgba(255,255,255,.84)">（税込）</span>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;flex:1">
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 1 AI実務ケーススタディ</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 2 Vibe Coding</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>PHASE 3 AI就活</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>専任キャリア担当</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>最大20回の1on1</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>ES・自己PR等の個別添削</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>就活進捗管理</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>企業別選考対策</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>面接PDCA</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>内定比較</li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-family:var(--font-jp);font-size:14px;font-weight:400;line-height:1.8;letter-spacing:.04em;color:rgba(255,255,255,.88)"><span style="color:var(--blue-300);padding-top:4px"><x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="check" size="14px" hint-size="14px,14px"></x-import></span>内定まで伴走</li>
+        </ul>
+              </div>
+    </div>
+
+    <p style="margin:28px 0 0;font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.9;letter-spacing:.02em;color:var(--neutral-600)">※価格はすべて税込です。表示内容は2026年8月時点のものです。</p>
+  </div>
+</section>
+
+<section data-screen-label="20 向いている人" style="background:var(--surface-subtle);padding:88px 0;border-top:1px solid var(--border-hairline)">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">WHICH COURSE</x-import>
+    <div style="margin:18px 0 0">
+      <h2 style="margin:0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">あなたに向いているのは、<br>どれか。</h2>
+      <p style="margin:20px 0 0;max-width:62ch;font-family:var(--font-jp);font-size:var(--size-body);line-height:var(--lh-body);font-weight:400;letter-spacing:var(--tracking-jp-body);color:var(--neutral-700)">学年と、就活をどう進めたいか。この2つで選べます。迷う場合は無料説明会でご相談ください。</p>
+    </div>
+
+    <div style="margin:32px 0 0;border-top:1px solid var(--border-hairline)">
+      <div style="display:grid;grid-template-columns:56px 220px 160px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--border-strong);align-items:center;background:transparent">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">01</span>
+        <span style="font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--text-strong)">AI SKILL</span>
+        <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.05em;color:var(--neutral-700)">大学1〜2年生</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--text-body)">早い時期からAIを武器にしたい。／実務経験・インターンにつなげたい。</span>
+      </div>
+      <div style="display:grid;grid-template-columns:56px 220px 160px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--border-strong);align-items:center;background:transparent">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">02</span>
+        <span style="font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--text-strong)">AI CAREER</span>
+        <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.05em;color:var(--neutral-700)">大学3年生</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--text-body)">基本は自分で就活を進めたい。／重要なポイントだけプロに相談したい。</span>
+      </div>
+      <div style="display:grid;grid-template-columns:56px 220px 160px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--border-strong);align-items:center;background:transparent">
+        <span style="font-family:var(--font-mono);font-size:13px;color:var(--neutral-600)">03</span>
+        <span style="font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--text-strong)">AI CAREER PRO</span>
+        <span style="font-family:var(--font-jp);font-size:14px;font-weight:400;letter-spacing:.05em;color:var(--neutral-700)">大学3年生</span>
+        <span style="font-family:var(--font-jp);font-size:15px;font-weight:400;line-height:1.9;letter-spacing:.04em;color:var(--text-body)">一人で就活を進めるのが不安。／戦略から内定まで伴走してほしい。</span>
+      </div>
+    </div>
+    <p style="margin:24px 0 0;font-family:var(--font-jp);font-size:12px;font-weight:400;line-height:1.9;letter-spacing:.02em;color:var(--neutral-600)">※上記はあくまで目安です。学年やご状況によって最適なコースは変わりますので、無料説明会でお話をうかがったうえでご提案します。</p>
+  </div>
+</section>
+
+<section data-screen-label="22 思想・ブランドメッセージ" style="background:var(--ink-900);color:#fff;padding:104px 0;position:relative;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none">
+    <div style="position:absolute;left:-10%;top:-30%;width:900px;height:900px;border-radius:999px;background:radial-gradient(circle,rgba(44,91,232,.22) 0%,rgba(44,91,232,.08) 45%,rgba(44,91,232,0) 72%);filter:blur(30px)"></div>
+  </div>
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px;position:relative;z-index:1">
+    <div style="max-width:960px">
+      <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="inverse" hint-size="auto,16px">OUR BELIEF</x-import>
+      <h2 style="margin:18px 0 0;font-family:var(--font-jp);font-size:44px;line-height:1.45;font-weight:700;letter-spacing:.04em;color:#fff">内定は、<br>ゴールじゃない。</h2>
+      <div style="margin:24px 0 0;display:flex;flex-direction:column;gap:12px;max-width:60ch">
+        <p style="margin:0;font-family:var(--font-jp);font-size:15px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.86)">就活は数ヶ月。でも、その先の社会人生活は何十年も続く。</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:15px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.86)">だからAI就活プロが目指すのは、「内定を取れる学生」をつくることだけではありません。</p>
+        <p style="margin:0;font-family:var(--font-jp);font-size:15px;line-height:1.9;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.86)">実際の仕事を知り、AIで業務を変え、自分でWebサイトやアプリまでつくれる。</p>
+      </div>
+      <p style="margin:36px 0 0;font-family:var(--font-jp);font-size:28px;line-height:1.6;font-weight:700;letter-spacing:.05em;color:#fff">社会に出たその日から、<br>同期とは違うスタートラインに立つ。</p>
+      <div style="margin:36px 0 0;padding-top:32px;border-top:1px solid rgba(255,255,255,.18)">
+        <p style="margin:0;font-family:var(--font-jp);font-size:44px;line-height:1.5;font-weight:700;letter-spacing:.04em;color:#fff">内定を勝ち取る。<br><span style="color:var(--blue-300)">そして、入社後も圧倒する。</span></p>
+        <a href="#apply" style="margin:36px 0 0;width:264px;height:58px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid rgba(255,255,255,.55);border-radius:3px;background:transparent;color:#fff;text-decoration:none;font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.06em;transition:background 240ms cubic-bezier(.22,.61,.36,1),color 240ms cubic-bezier(.22,.61,.36,1),border-color 240ms cubic-bezier(.22,.61,.36,1)" style-hover="background:#fff;color:var(--ink-900);border-color:#fff">無料説明会に参加する<x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="16px" hint-size="16px,16px"></x-import></a>      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="23 FAQ" style="background:var(--surface-page);padding:128px 0">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <x-import component-from-global-scope="AIDesignSystem_94418b.Eyebrow" tone="ink" hint-size="auto,16px">FAQ</x-import>
+    <h2 style="margin:22px 0 0;font-family:var(--font-jp);font-size:var(--size-h1);line-height:1.5;font-weight:700;letter-spacing:var(--tracking-jp-heading);color:var(--text-strong)">よくあるご質問。</h2>
+
+    <div style="margin:48px 0 0;border-top:1px solid var(--border-hairline)">
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q01</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">プログラミング未経験でも大丈夫ですか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">はい、未経験の方を前提にカリキュラムを設計しています。AIコーディングツールを使って開発を進めるため、文法の暗記から始める必要はありません。そのかわり「何を、なぜ作りたいのか」を言葉にする力は繰り返し鍛えます。AIに正しく指示を出せることが、そのまま制作物の質につながるためです。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q02</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">ChatGPTを触ったことがなくても大丈夫ですか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">問題ありません。初回の基礎パートで、アカウントの準備から基本的な使い方、指示の出し方までを順番に扱います。これまで一度も触れたことがない状態からスタートする受講生を想定した内容です。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q03</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">大学の授業やアルバイトと両立できますか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">オンライン完結で、動画とテキストを使って自分で進める形式のため、学習する時間帯は自由です。授業の空きコマ、バイト終わり、休日など、ご自身のペースに合わせて調整できます。ただし課題の提出とフィードバックのサイクルがあるので、まったく手をつけない週が続くと進みにくくなります。無理のない進め方は無料説明会でご相談ください。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q04</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">Windowsでも受講できますか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">Windows・Macどちらでも受講いただけます。必要なのはPCとインターネット環境だけで、高性能なマシンや特別な機材は不要です。推奨環境の詳細は無料説明会でお伝えします。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q05</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">いつから始めるのがいいですか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">早く始めるほど、身につけたAIスキルを使える期間が長くなります。大学1〜2年生の方はAI SKILL、大学3年生の方はAI CAREERまたはAI CAREER PROと、学年に合わせてコースが分かれています。3年生の場合は志望業界の選考開始時期から逆算して、いつまでにPHASE3へ入るべきかを一緒に決めていきます。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q06</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">AI CAREERとAI CAREER PROの違いは？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">AI CAREERは、AI就活カリキュラムを使って自分自身で就活を進めるコースです。プロへの1on1相談は最大4回で、専任担当・継続的なES添削・進捗管理・内定までの伴走は含まれません。一方AI CAREER PROは専任のキャリア担当がつき、最大20回の1on1、ES・自己PR等の個別添削、就活進捗管理、企業別の選考対策を通して内定まで伴走します。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q07</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">質問はどうやってしますか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">AI TA（AIティーチングアシスタント）にいつでも質問できます。エラー画面のスクリーンショットをそのまま貼って、どこが原因かを聞くことも可能です。AIで解決できない内容は運営へエスカレーションされ、担当者が対応します。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q08</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">課題の添削はありますか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">あります。課題ごとに評価基準が定められていて、それに基づいたフィードバックが返ります。提出 → フィードバック → 改善 → 合格というサイクルで進めるため、わからないまま次に進むことがありません。基準に届かなかった場合は、指摘をもとに再提出していただきます。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q09</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">インターン紹介は誰でも受けられますか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">カリキュラムの進捗状況と、制作した成果物の内容をふまえてご案内しています。企業へお渡しする以上、一定の水準に達していることが前提になるためです。受講いただいた全員に必ず紹介を保証するものではない点は、あらかじめご了承ください。</p>
+      </details>
+      <details open="{{ faqAllOpen }}" style="border-bottom:1px solid var(--border-hairline)">
+        <summary style="display:flex;align-items:center;gap:24px;padding:28px 0"><span style="font-family:var(--font-mono);font-size:12px;color:var(--neutral-600)">Q10</span><span style="font-family:var(--font-jp);font-size:17px;font-weight:500;letter-spacing:.04em;color:var(--text-strong);flex:1">サポート期間はどのくらいですか？</span><span data-plus="true" style="font-family:var(--font-ui);font-size:20px;font-weight:400;color:var(--neutral-700);transition:transform 240ms cubic-bezier(.22,.61,.36,1);display:inline-block">＋</span></summary>
+        <p style="margin:0 0 32px;padding-left:52px;max-width:76ch;font-family:var(--font-jp);font-size:15px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">ご受講いただくコースによって異なります。AI SKILLはスキル習得が中心、AI CAREER・AI CAREER PROは就活のフェーズまで含むため、期間の考え方も変わります。ご検討中のコースと学年に合わせて、無料説明会で具体的にご説明します。</p>
+      </details>
+    </div>
+
+    <div style="margin:40px 0 0;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <p style="margin:0;font-family:var(--font-jp);font-size:15px;font-weight:400;letter-spacing:.04em;color:var(--neutral-700)">その他のご質問は、無料説明会でお気軽にお聞きください。</p>
+      <x-import component-from-global-scope="AIDesignSystem_94418b.ArrowLink" href="#apply" tone="ink" hint-size="auto,20px">無料説明会について見る</x-import>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="フッター" style="background:var(--ink-900);color:#fff;padding:80px 0 140px;border-top:1px solid rgba(255,255,255,.12)">
+  <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:0 40px">
+    <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:var(--font-jp);font-weight:900;font-size:20px;letter-spacing:.06em">AI就活プロ</span>
+          <span style="font-family:var(--font-ui);font-size:9px;letter-spacing:.28em;color:rgba(255,255,255,.88)">AI SKILL × CAREER</span>
+        </div>
+        <p style="margin:0;max-width:46ch;font-family:var(--font-jp);font-size:13px;line-height:1.95;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.82)">AI実務スキル × Vibe Coding × AI就活を一気通貫で学ぶ、大学生向けキャリア教育サービス。</p>
+      </div>
+      <nav style="display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-top:4px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.5)">SERVICE</span>
+          <a href="#concept" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">サービスについて</a>
+          <a href="#overview" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">カリキュラム</a>
+          <a href="#phase3" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">AI就活</a>
+          <a href="#courses" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">コース</a>
+          <a href="#faq" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">FAQ</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:var(--font-ui);font-size:10px;letter-spacing:.22em;color:rgba(255,255,255,.5)">INFORMATION</span>
+          <a href="#" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">運営会社</a>
+          <a href="#" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">特定商取引法に基づく表記</a>
+          <a href="#" style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:rgba(255,255,255,.72);text-decoration:none;cursor:pointer;transition:color 200ms cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;text-decoration:underline;text-underline-offset:4px">プライバシーポリシー</a>
+        </div>
+      </nav>
+    </div>
+    <div style="margin:72px 0 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)">
+      <span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.62)">© 2026 UNARI Inc. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showStickyBar }}" hint-placeholder-val="{{ true }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:70;background:#17191D;border-top:1px solid rgba(255,255,255,.14)">
+    <div style="width:1280px;box-sizing:border-box;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+      <span style="font-family:var(--font-jp);font-size:13px;font-weight:400;letter-spacing:.04em;color:#fff">AIを武器に、就活も、その先のキャリアも勝ちにいく。</span>
+      <a href="#apply" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;height:46px;padding:0 30px;border:1px solid rgba(255,255,255,.5);border-radius:3px;background:transparent;color:#fff;text-decoration:none;font-family:var(--font-jp);font-size:14px;font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:background 240ms cubic-bezier(.22,.61,.36,1),color 240ms cubic-bezier(.22,.61,.36,1),border-color 240ms cubic-bezier(.22,.61,.36,1)" style-hover="background:#fff;color:#17191D;border-color:#fff">無料説明会に参加する<x-import component-from-global-scope="AIDesignSystem_94418b.Icon" name="arrow-right" size="16px" hint-size="16px,16px"></x-import></a>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;applyUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#apply-form&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;CTA&quot;},&quot;showStickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;CTA&quot;},&quot;faqAllOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQ&quot;}}">
+class Component extends DCLogic {
+  observers = [];
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = this.header;
+      if (!h) return;
+      const on = window.scrollY > 40;
+      if (on === this.scrolled) return;
+      this.scrolled = on;
+      h.style.background = on ? "var(--glass-light)" : "transparent";
+      h.style.backdropFilter = on ? "var(--blur-glass)" : "none";
+      h.style.webkitBackdropFilter = on ? "var(--blur-glass)" : "none";
+      h.style.color = on ? "var(--text-strong)" : "#fff";
+      h.style.borderBottomColor = on ? "var(--border-hairline)" : "transparent";
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  reduced() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+  countTo(node, target, dur, suffix, decimals) {
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / dur);
+      const e = 1 - Math.pow(1 - t, 3);
+      const v = target * e;
+      node.textContent = (decimals ? v.toFixed(decimals) : Math.round(v).toLocaleString("en-US")) + (suffix || "");
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+  observeOnce(el, cb, threshold) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        io.disconnect();
+        cb();
+      });
+    }, { threshold: threshold == null ? 0.3 : threshold, rootMargin: "0px 0px -10% 0px" });
+    io.observe(el);
+    this.observers.push(io);
+  }
+  setupStatsAnim() {
+    const root = this.statsEl;
+    if (!root || this.statsBound || this.reduced()) return;
+    this.statsBound = true;
+    const nodes = Array.prototype.slice.call(root.querySelectorAll("[data-count]"));
+    nodes.forEach((n) => { n.textContent = n.getAttribute("data-count").indexOf(".") > -1 ? "0.0" : "0"; });
+    this.observeOnce(root, () => {
+      nodes.forEach((n, i) => {
+        const raw = n.getAttribute("data-count");
+        const dec = raw.indexOf(".") > -1 ? 1 : 0;
+        const val = parseFloat(raw.replace(/,/g, ""));
+        setTimeout(() => this.countTo(n, val, 1000, "", dec), i * 130);
+      });
+    });
+  }
+  setupTableAnim() {
+    const root = this.tableEl;
+    if (!root || this.tableBound || this.reduced()) return;
+    this.tableBound = true;
+    const rows = Array.prototype.slice.call(root.querySelectorAll("[data-row]"));
+    rows.forEach((r) => {
+      r.style.opacity = "0";
+      r.style.transform = "translateY(8px)";
+      r.style.transition = "opacity 520ms cubic-bezier(.22,.61,.36,1), transform 520ms cubic-bezier(.22,.61,.36,1)";
+      const bar = r.querySelector("[data-bar]");
+      if (bar) { bar.style.width = "0%"; bar.style.transition = "width 760ms cubic-bezier(.22,.61,.36,1)"; }
+      const num = r.querySelector("[data-count]");
+      if (num) num.textContent = "0" + (num.getAttribute("data-suffix") || "");
+    });
+    this.observeOnce(root, () => {
+      rows.forEach((r, i) => {
+        setTimeout(() => {
+          r.style.opacity = "1";
+          r.style.transform = "translateY(0)";
+          const bar = r.querySelector("[data-bar]");
+          if (bar) bar.style.width = bar.getAttribute("data-bar") + "%";
+          const num = r.querySelector("[data-count]");
+          if (num) this.countTo(num, parseFloat(num.getAttribute("data-count")), 700, num.getAttribute("data-suffix") || "", 0);
+        }, 260 + i * 80);
+      });
+    }, 0.05);
+  }
+  setupModelAnim() {
+    const el = this.modelEl;
+    if (!el || this.modelObserver) return;
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    const barB = this.barBefore, barA = this.barAfter, numB = this.numBefore, numA = this.numAfter, big = this.bigNum;
+    if (barB) { barB.style.width = "0%"; barB.style.transition = "width 1000ms cubic-bezier(.22,.61,.36,1)"; }
+    if (barA) { barA.style.width = "0%"; barA.style.transition = "width 1000ms cubic-bezier(.22,.61,.36,1)"; }
+    if (numB) numB.textContent = "約0時間";
+    if (numA) numA.textContent = "約0時間";
+    if (big) { big.textContent = "0"; big.style.opacity = ".82"; big.style.transition = "opacity 400ms ease-out"; }
+    const count = (node, to, dur, fmt, delay) => {
+      if (!node) return;
+      const start = performance.now() + (delay || 0);
+      const tick = (now) => {
+        const t = Math.min(1, Math.max(0, (now - start) / dur));
+        const e = 1 - Math.pow(1 - t, 3);
+        node.textContent = fmt(Math.round(to * e));
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    this.modelObserver = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting || this.modelPlayed) return;
+        this.modelPlayed = true;
+        this.modelObserver.disconnect();
+        requestAnimationFrame(() => {
+          if (barB) barB.style.width = "100%";
+          count(numB, 70, 1000, (v) => "約" + v + "時間", 0);
+          setTimeout(() => {
+            if (barA) barA.style.width = "36%";
+            count(numA, 25, 1000, (v) => "約" + v + "時間", 0);
+          }, 180);
+          setTimeout(() => {
+            count(big, 45, 1200, (v) => String(v), 0);
+            if (big) big.style.opacity = "1";
+          }, 260);
+        });
+      });
+    }, { threshold: 0.35 });
+    this.modelObserver.observe(el);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+    if (this.modelObserver) this.modelObserver.disconnect();
+    this.observers.forEach((o) => o.disconnect());
+  }
+  renderVals() {
+    return {
+      headerRef: (el) => { this.header = el; },
+      modelRef: (el) => { this.modelEl = el; if (el) setTimeout(() => this.setupModelAnim(), 0); },
+      statsRef: (el) => { this.statsEl = el; if (el) setTimeout(() => this.setupStatsAnim(), 0); },
+      tableRef: (el) => { this.tableEl = el; if (el) setTimeout(() => this.setupTableAnim(), 0); },
+      barBeforeRef: (el) => { this.barBefore = el; },
+      barAfterRef: (el) => { this.barAfter = el; },
+      numBeforeRef: (el) => { this.numBefore = el; },
+      numAfterRef: (el) => { this.numAfter = el; },
+      bigNumRef: (el) => { this.bigNum = el; },
+      applyUrl: this.props.applyUrl ?? "#apply-form",
+      showStickyBar: this.props.showStickyBar ?? true,
+      faqAllOpen: this.props.faqAllOpen ?? false,
+    };
+  }
+}
+</script>
+<script>
+// モバイルメニュー：リンク選択後に閉じる（レスポンシブ対応用・デザインには影響しない）
+document.addEventListener("click", function (e) {
+  var link = e.target.closest && e.target.closest("[data-mnav-panel] a");
+  if (!link) return;
+  var menu = link.closest("details[data-mnav]");
+  if (menu) menu.removeAttribute("open");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+:root{
+--font-display:"Archivo","Zen Kaku Gothic New",system-ui,sans-serif;
+--font-jp:"Zen Kaku Gothic New","Archivo",system-ui,sans-serif;
+--font-ui:"Archivo","Zen Kaku Gothic New",system-ui,sans-serif;
+--font-mono:"JetBrains Mono",ui-monospace,monospace;
+
+--weight-light:300;/* @kind font */--weight-regular:400;/* @kind font */--weight-medium:500;/* @kind font */--weight-bold:700;/* @kind font */--weight-black:900;/* @kind font */
+
+/* Display — Latin, uppercase, tight. Used for hero words and section marks. */
+--size-display-1:112px;--lh-display-1:.92;/* @kind other */
+--size-display-2:72px;--lh-display-2:.96;/* @kind other */
+--size-display-3:48px;--lh-display-3:1.02;/* @kind other */
+--tracking-display:-.02em;/* @kind other */
+
+/* Headings — mostly Japanese, set light with open leading */
+--size-h1:38px;--lh-h1:1.5;/* @kind other */
+--size-h2:28px;--lh-h2:1.55;/* @kind other */
+--size-h3:21px;--lh-h3:1.6;/* @kind other */
+--size-h4:17px;--lh-h4:1.65;/* @kind other */
+
+/* Body */
+--size-body-lg:16px;--lh-body-lg:2;/* @kind other */
+--size-body:15px;--lh-body:1.95;/* @kind other */
+--size-body-sm:13px;--lh-body-sm:1.85;/* @kind other */
+--size-caption:11px;--lh-caption:1.7;/* @kind other */
+
+/* Eyebrow / label — Latin, uppercase, wide-tracked. A core brand signature. */
+--size-eyebrow:11px;--tracking-eyebrow:.22em;/* @kind other */
+--size-label:12px;--tracking-label:.08em;/* @kind other */
+
+--tracking-jp-body:.04em;/* @kind other */
+--tracking-jp-heading:.06em;/* @kind other */
+}

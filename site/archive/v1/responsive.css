@@ -1,0 +1,720 @@
+/* ============================================================
+   AI就活プロ LP — レスポンシブ対応
+   PCデザイン（1280px固定レイアウト）は一切変更しない。
+   すべてのルールは max-width メディアクエリ内にあり、
+   1280px 以上のビューポートでは何も適用されない。
+
+   注意: このページは dc-runtime (React) で描画されるため、
+   style属性はCSSOM正規化済みの形式（"padding: 128px 0px" 等、
+   コロン後スペース・0px表記・rgb()表記）でDOMに現れる。
+   [style*="..."] セレクタはこの正規化後の文字列に合わせている。
+   ============================================================ */
+
+/* ============================================================
+   Laptop: 〜1279px — 固定1280pxコンテナを流体化
+   ============================================================ */
+@media (max-width: 1279px) {
+  [style*="min-width: 1280px"] {
+    min-width: 0 !important;
+  }
+  [style*="width: 1280px"][style*="margin: 0px auto"] {
+    width: 100% !important;
+    /* 背景の装飾英字より本文を上に描画する（PC同様の見え方を維持） */
+    position: relative;
+  }
+  /* 装飾の巨大英字（150px）は画面幅に比例して縮小 */
+  [style*="font-size: 150px"] {
+    font-size: 11.7vw !important;
+  }
+  /* ヒーローの2カラム間隔を少し詰める */
+  section[data-screen-label="01 ファーストビュー"] [style*="grid-template-columns: 1fr 0.92fr"] {
+    gap: 40px !important;
+  }
+
+  /* ヘッダー：右上タグラインを隠し、ナビの折り返しを防ぐ */
+  header [style*="white-space: nowrap"][style*="text-align: right"] {
+    display: none !important;
+  }
+  header nav {
+    gap: 24px !important;
+  }
+  header nav a {
+    white-space: nowrap !important;
+  }
+  header a[href="#top"] span {
+    white-space: nowrap !important;
+  }
+  header [style*="height: 80px"] {
+    gap: 32px !important;
+  }
+}
+
+/* ============================================================
+   Tablet: 〜1023px
+   ============================================================ */
+@media (max-width: 1023px) {
+  /* ヘッダー：右上の2行キャッチコピーを非表示、ナビはハンバーガーへ */
+  header [style*="white-space: nowrap"][style*="text-align: right"] {
+    display: none !important;
+  }
+  header nav {
+    display: none !important;
+  }
+  header a[href="#top"] span {
+    white-space: nowrap !important;
+  }
+  header [style*="height: 80px"] {
+    gap: 20px !important;
+  }
+  header [style*="height: 80px"] > div[style*="gap: 18px"] {
+    margin-left: auto;
+  }
+  /* ハンバーガーメニュー（1023px以下で出現） */
+  details[data-mnav] {
+    display: block !important;
+  }
+  [data-mnav] summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  [data-mnav] summary::-webkit-details-marker {
+    display: none;
+  }
+  [data-mnav][open] [data-mnav-line]:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  [data-mnav][open] [data-mnav-line]:nth-child(2) {
+    opacity: 0;
+  }
+  [data-mnav][open] [data-mnav-line]:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  [data-mnav-panel] {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--ink-800);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 16px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 90;
+  }
+  [data-mnav-panel] a {
+    display: block;
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: var(--font-jp);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #fff !important;
+    text-decoration: none;
+  }
+  [data-mnav-panel] a[data-mnav-cta] {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  [data-mnav-panel] [data-mnav-note] {
+    margin-top: 14px;
+    font-family: var(--font-jp);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.72);
+    text-align: center;
+  }
+
+  /* ヒーロー見出し：タブレットでは少し縮小（フレーズ単位で折り返せる幅） */
+  section[data-screen-label="01 ファーストビュー"] [style*="font-size: 41px"] {
+    font-size: 30px !important;
+  }
+
+  /* Before/After 表：列幅を圧縮 */
+  section[data-screen-label="03 Before / After"] [style*="grid-template-columns: 44px 150px"] {
+    grid-template-columns: 36px 104px 1.25fr 1.25fr 132px !important;
+    gap: 14px !important;
+  }
+
+  /* サービス全体像：PHASEカードは2列、矢印セルは非表示 */
+  section[data-screen-label="05 サービス全体像"] [style*="grid-template-columns: 1fr 32px"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  section[data-screen-label="05 サービス全体像"] [style*="grid-template-columns: 1fr 32px"] > div[style*="justify-content: center; color"] {
+    display: none !important;
+  }
+
+  /* 3ヶ月後の成果：5列 → 2列 */
+  section[data-screen-label="11 3ヶ月後の成果"] [style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  section[data-screen-label="11 3ヶ月後の成果"] [style*="grid-template-columns: repeat(5, 1fr)"] > div {
+    border-left: none !important;
+    padding: 26px 16px 26px 0 !important;
+  }
+  section[data-screen-label="11 3ヶ月後の成果"] [style*="grid-template-columns: repeat(5, 1fr)"] > div:nth-child(n+3) {
+    border-top: 1px solid var(--border-hairline) !important;
+  }
+
+  /* PHASE3 9ステップ：3列 → 2列 */
+  section[data-screen-label="13 PHASE3 AI就活"] [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* 大学生活との両立：5枚カード → 2列 */
+  section[data-screen-label="17 大学生活との両立"] [style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* サポート体制：6ステップ → 3列 */
+  section[data-screen-label="18 サポート体制"] [style*="grid-template-columns: repeat(6, 1fr)"] {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+  section[data-screen-label="18 サポート体制"] [style*="grid-template-columns: repeat(6, 1fr)"] > div:nth-child(n+4) {
+    border-top: 1px solid var(--border-hairline) !important;
+  }
+
+  /* コース：3枚 → 1列 */
+  section[data-screen-label="19 コース"] [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 向いている人：列幅を圧縮 */
+  section[data-screen-label="20 向いている人"] [style*="grid-template-columns: 56px 220px 160px 1fr"] {
+    grid-template-columns: 40px 168px 118px 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* ============================================================
+   Mobile: 〜767px
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    --size-h1: 26px;
+    --size-h2: 22px;
+    --size-h3: 19px;
+  }
+
+  html {
+    scroll-padding-top: 96px !important;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  /* 見出し内のPC用改行はスマホでは解除（自然な折り返しに任せる） */
+  h1 br,
+  h2 br {
+    display: none !important;
+  }
+
+  /* コンテナ左右余白：40px → 20px */
+  [style*="width: 1280px"][style*="margin: 0px auto"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* --- セクション上下余白の圧縮 --- */
+  [style*="padding: 128px 0px"] {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  [style*="padding: 112px 0px"] {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  [style*="padding: 104px 0px"] {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  [style*="padding: 88px 0px"] {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+  [style*="padding: 72px 0px"] {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+  section[data-screen-label="09 PHASE2 Vibe Coding"] {
+    padding-bottom: 32px !important;
+  }
+  section[data-screen-label="10 制作物"] {
+    padding-top: 40px !important;
+    padding-bottom: 64px !important;
+  }
+  footer[data-screen-label="フッター"] {
+    padding-top: 56px !important;
+  }
+
+  /* --- 固定フォントサイズの段階的縮小（情報階層は維持） --- */
+  [style*="font-size: 150px"] { font-size: 15vw !important; }
+  [style*="font-size: 88px"]  { font-size: 56px !important; }
+  [style*="font-size: 56px"]  { font-size: 38px !important; }
+  [style*="font-size: 50px"]  { font-size: 34px !important; }
+  [style*="font-size: 46px"]  { font-size: 32px !important; }
+  [style*="font-size: 44px"]  { font-size: 28px !important; }
+  [style*="font-size: 41px"]  { font-size: 28px !important; }
+  [style*="font-size: 40px"]  { font-size: 26px !important; }
+  [style*="font-size: 34px"]  { font-size: 25px !important; }
+  [style*="font-size: 32px"]  { font-size: 26px !important; }
+  [style*="font-size: 30px"]  { font-size: 22px !important; }
+  [style*="font-size: 28px"]  { font-size: 22px !important; }
+  [style*="font-size: 26px"]  { font-size: 21px !important; }
+  [style*="font-size: 22px"]  { font-size: 18px !important; }
+  [style*="font-size: 17px"]  { font-size: 15px !important; }
+
+  /* ==========================================================
+     ヘッダー（バーガー本体の定義は 1023px ブロック側にある）
+     ========================================================== */
+  header [style*="height: 80px"] {
+    padding: 0 20px !important;
+    gap: 16px !important;
+  }
+  /* ヘッダー右のCTAブロックは非表示（CTAはメニュー内と固定バーに残る） */
+  header [style*="height: 80px"] > div[style*="gap: 18px"] {
+    display: none !important;
+  }
+  details[data-mnav] {
+    margin-left: auto;
+  }
+
+  /* ==========================================================
+     01 ファーストビュー
+     ========================================================== */
+  section[data-screen-label="01 ファーストビュー"] {
+    padding-bottom: 72px !important;
+  }
+  section[data-screen-label="01 ファーストビュー"] [style*="grid-template-columns: 1fr 0.92fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    min-height: 0 !important;
+  }
+  section[data-screen-label="01 ファーストビュー"] [style*="padding: 56px 0px 72px"] {
+    padding: 40px 0 16px !important;
+  }
+  section[data-screen-label="01 ファーストビュー"] [style*="align-self: stretch"] {
+    padding: 0 !important;
+  }
+  section[data-screen-label="01 ファーストビュー"] [style*="min-height: 430px"] {
+    min-height: 0 !important;
+    height: 72vw !important;
+    max-height: 430px !important;
+  }
+
+  /* ==========================================================
+     02 問題提起
+     ========================================================== */
+  section[data-screen-label="02 問題提起"] [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  section[data-screen-label="02 問題提起"] [style*="padding-left: 48px"][style*="border-left"] {
+    padding-left: 0 !important;
+    border-left: none !important;
+    border-top: 1px solid var(--border-hairline) !important;
+    padding-top: 22px !important;
+  }
+  section[data-screen-label="02 問題提起"] [style*="padding: 56px 56px 44px"] {
+    padding: 28px 22px 24px !important;
+  }
+  section[data-screen-label="02 問題提起"] [style*="grid-template-columns: 0.95fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  /* 写真はコピーの後ろへ */
+  section[data-screen-label="02 問題提起"] [style*="grid-template-columns: 0.95fr 1fr"] > div[style*="height: 330px"] {
+    order: 2;
+    height: 58vw !important;
+    max-height: 330px !important;
+  }
+
+  /* ==========================================================
+     03 Before / After
+     ========================================================== */
+  /* 表ヘッダー行（列ラベル）は非表示 → 各行に ::before ラベルを付与 */
+  section[data-screen-label="03 Before / After"] [style*="grid-template-columns: 44px 150px"]:not([data-row]) {
+    display: none !important;
+  }
+  section[data-screen-label="03 Before / After"] [data-row] {
+    grid-template-columns: 34px 1fr !important;
+    gap: 10px 12px !important;
+    padding: 18px 0 !important;
+  }
+  section[data-screen-label="03 Before / After"] [data-row] > span:nth-child(n+3) {
+    grid-column: 2 / -1 !important;
+  }
+  section[data-screen-label="03 Before / After"] [data-row] > span:nth-child(3)::before {
+    content: "BEFORE";
+    grid-column: 1 / -1;
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--neutral-600);
+  }
+  section[data-screen-label="03 Before / After"] [data-row] > span:nth-child(4) {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 4px 10px !important;
+    align-items: baseline !important;
+  }
+  section[data-screen-label="03 Before / After"] [data-row] > span:nth-child(4)::before {
+    content: "AFTER — WITH AI";
+    grid-column: 1 / -1;
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--blue-600);
+  }
+  section[data-screen-label="03 Before / After"] [data-row] [style*="96px 1fr"] {
+    grid-template-columns: auto 1fr !important;
+  }
+  section[data-screen-label="03 Before / After"] [data-row] > span:nth-child(5) {
+    margin-top: 2px;
+  }
+  /* モデルケース（ダークカード） */
+  section[data-screen-label="03 Before / After"] [style*="padding: 44px 56px"] {
+    padding: 28px 22px !important;
+  }
+  section[data-screen-label="03 Before / After"] [style*="grid-template-columns: 1fr 1.15fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  section[data-screen-label="03 Before / After"] [style*="border-left"][style*="padding-left: 64px"] {
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+    padding-top: 26px !important;
+  }
+  section[data-screen-label="03 Before / After"] [style*="grid-template-columns: 96px 1fr 108px"] {
+    grid-template-columns: 64px 1fr 76px !important;
+    gap: 10px !important;
+  }
+  section[data-screen-label="03 Before / After"] [style*="flex-wrap: nowrap"] {
+    flex-wrap: wrap !important;
+  }
+  section[data-screen-label="03 Before / After"] [style*="flex-wrap: nowrap"] > span {
+    flex: 1 1 100% !important;
+    white-space: normal !important;
+  }
+
+  /* ==========================================================
+     04 最大のコンセプト
+     ========================================================== */
+  section[data-screen-label="04 最大のコンセプト"] [style*="grid-template-columns: 1fr 72px 1.1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  section[data-screen-label="04 最大のコンセプト"] div[style*="justify-content: center; color"] {
+    padding: 12px 0 !important;
+  }
+  section[data-screen-label="04 最大のコンセプト"] div[style*="justify-content: center; color"] svg {
+    transform: rotate(90deg);
+  }
+
+  /* ==========================================================
+     05 サービス全体像
+     ========================================================== */
+  /* タイムライン（受講開始→内定獲得）：縦積みに */
+  section[data-screen-label="05 サービス全体像"] div[style*="align-items: center; gap: 14px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  section[data-screen-label="05 サービス全体像"] [style*="flex: 1 1 0%"][style*="height: 1px"] {
+    flex: none !important;
+    width: 1px !important;
+    height: 18px !important;
+    margin-left: 8px;
+  }
+  /* PHASEカード：1列、矢印は縦向きで復活 */
+  section[data-screen-label="05 サービス全体像"] [style*="grid-template-columns: 1fr 32px"] {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  section[data-screen-label="05 サービス全体像"] [style*="grid-template-columns: 1fr 32px"] > div[style*="justify-content: center; color"] {
+    display: flex !important;
+    height: 36px;
+  }
+  section[data-screen-label="05 サービス全体像"] [style*="grid-template-columns: 1fr 32px"] > div[style*="justify-content: center; color"] svg {
+    transform: rotate(90deg);
+  }
+
+  /* ==========================================================
+     06 PHASE1 AI実務ケーススタディ
+     ========================================================== */
+  section[data-screen-label="06 PHASE1 AI実務ケーススタディ"] [style*="align-items: flex-end"][style*="gap: 32px"] {
+    flex-wrap: wrap !important;
+    gap: 16px 24px !important;
+  }
+  section[data-screen-label="06 PHASE1 AI実務ケーススタディ"] [style*="grid-template-columns: repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="06 PHASE1 AI実務ケーススタディ"] [style*="padding: 24px 28px"] {
+    padding: 20px !important;
+  }
+  section[data-screen-label="06 PHASE1 AI実務ケーススタディ"] [style*="grid-template-columns: 30px 120px 1fr"] {
+    grid-template-columns: 26px 92px 1fr !important;
+  }
+
+  /* ==========================================================
+     07 ケーススタディ詳細
+     ========================================================== */
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 92px 1.15fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="writing-mode: vertical-rl"] {
+    writing-mode: horizontal-tb !important;
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] div[style*="border-left"][style*="border-right"] {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid var(--border-hairline) !important;
+    border-bottom: 1px solid var(--border-hairline) !important;
+    flex-direction: row !important;
+    padding: 12px 0 !important;
+    gap: 10px !important;
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] div[style*="border-left"][style*="border-right"] svg {
+    transform: rotate(90deg);
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="padding: 32px 36px"] {
+    padding: 22px 20px !important;
+  }
+  /* 照合テーブル：列幅圧縮 */
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 110px 90px 92px"] {
+    grid-template-columns: 1fr 72px 38px 58px !important;
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 110px 90px 92px"] span {
+    font-size: 11px !important;
+  }
+  /* AFTER帯 */
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 1.05fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ==========================================================
+     09 PHASE2 Vibe Coding
+     ========================================================== */
+  section[data-screen-label="09 PHASE2 Vibe Coding"] [style*="grid-template-columns: 0.9fr 1.1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ==========================================================
+     10 制作物
+     ========================================================== */
+  section[data-screen-label="10 制作物"] [style*="grid-template-columns: 1fr 1fr; gap: 16px"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="height: 505px"] {
+    height: auto !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="height: 505px"] img {
+    height: auto !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="padding: 28px 32px"] {
+    padding: 20px !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="padding: 32px; display: flex"] {
+    padding: 20px !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="min-height: 80px"] {
+    min-height: 0 !important;
+  }
+  /* 最終制作カード（TOKIモック） */
+  section[data-screen-label="10 制作物"] [style*="grid-template-columns: 1fr 372px"] {
+    grid-template-columns: 1fr !important;
+    padding: 24px 20px !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="width: 372px"][style*="height: 287px"] {
+    justify-self: center !important;
+    margin-top: 4px;
+  }
+
+  /* ==========================================================
+     11 3ヶ月後の成果
+     ========================================================== */
+  section[data-screen-label="11 3ヶ月後の成果"] [style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="11 3ヶ月後の成果"] [style*="grid-template-columns: repeat(5, 1fr)"] > div {
+    border-left: none !important;
+    padding: 22px 0 !important;
+  }
+  section[data-screen-label="11 3ヶ月後の成果"] [style*="grid-template-columns: repeat(5, 1fr)"] > div:nth-child(n+2) {
+    border-top: 1px solid var(--border-hairline) !important;
+  }
+
+  /* ==========================================================
+     12 就活での差別化
+     ========================================================== */
+  section[data-screen-label="12 就活での差別化"] [style*="grid-template-columns: 1fr 1fr; gap: 16px"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="12 就活での差別化"] [style*="padding: 40px"] {
+    padding: 24px 20px !important;
+  }
+
+  /* ==========================================================
+     13 PHASE3 AI就活
+     ========================================================== */
+  section[data-screen-label="13 PHASE3 AI就活"] [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ==========================================================
+     17 大学生活との両立
+     ========================================================== */
+  section[data-screen-label="17 大学生活との両立"] [style*="grid-template-columns: 1.12fr 0.88fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  section[data-screen-label="17 大学生活との両立"] [style*="height: 380px"] {
+    height: 58vw !important;
+    max-height: 380px !important;
+  }
+  section[data-screen-label="17 大学生活との両立"] [style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="17 大学生活との両立"] [style*="padding: 28px; display: flex"] {
+    padding: 20px !important;
+  }
+
+  /* ==========================================================
+     18 サポート体制
+     ========================================================== */
+  section[data-screen-label="18 サポート体制"] [style*="grid-template-columns: repeat(6, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  section[data-screen-label="18 サポート体制"] [style*="grid-template-columns: repeat(6, 1fr)"] > div:nth-child(n+2) {
+    border-top: 1px solid var(--border-hairline) !important;
+  }
+  section[data-screen-label="18 サポート体制"] [style*="grid-template-columns: 1fr 1fr; gap: 16px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ==========================================================
+     19 コース
+     ========================================================== */
+  section[data-screen-label="19 コース"] [style*="padding: 36px; display: flex"] {
+    padding: 26px 22px !important;
+  }
+
+  /* ==========================================================
+     20 向いている人
+     ========================================================== */
+  section[data-screen-label="20 向いている人"] [style*="grid-template-columns: 56px 220px 160px 1fr"] {
+    grid-template-columns: 34px 1fr !important;
+    gap: 6px 12px !important;
+    padding: 20px 0 !important;
+  }
+  section[data-screen-label="20 向いている人"] [style*="grid-template-columns: 56px 220px 160px 1fr"] > span:nth-child(n+3) {
+    grid-column: 2 / -1 !important;
+  }
+
+  /* ==========================================================
+     22 思想・ブランドメッセージ
+     ========================================================== */
+  section[data-screen-label="22 思想・ブランドメッセージ"] a[style*="width: 264px"] {
+    width: 100% !important;
+    max-width: 320px;
+  }
+
+  /* ==========================================================
+     23 FAQ
+     ========================================================== */
+  section[data-screen-label="23 FAQ"] summary {
+    gap: 14px !important;
+    padding: 22px 0 !important;
+  }
+  section[data-screen-label="23 FAQ"] [style*="padding-left: 52px"] {
+    padding-left: 0 !important;
+  }
+
+  /* ==========================================================
+     フッター
+     ========================================================== */
+  footer[data-screen-label="フッター"] [style*="grid-template-columns: 1.25fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  footer[data-screen-label="フッター"] [style*="margin: 72px 0px 0px"] {
+    margin-top: 48px !important;
+  }
+
+  /* ==========================================================
+     固定CTAバー（ダーク背景＋白文字＋白線CTAは維持）
+     ========================================================== */
+  [style*="z-index: 70"] [style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 12px 16px 14px !important;
+  }
+  [style*="z-index: 70"] [style*="justify-content: space-between"] > span {
+    font-size: 12px !important;
+    text-align: center !important;
+    line-height: 1.6 !important;
+  }
+  [style*="z-index: 70"] [style*="justify-content: space-between"] > a {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    height: 44px !important;
+    justify-content: center !important;
+  }
+  /* 固定バーの高さ分、フッター下部に余白を確保 */
+  footer[data-screen-label="フッター"] {
+    padding-bottom: 160px !important;
+  }
+}
+
+/* ============================================================
+   Small Mobile: 〜430px（TOKIモックの縮小表示）
+   ============================================================ */
+@media (max-width: 430px) {
+  section[data-screen-label="10 制作物"] [style*="width: 372px"][style*="height: 287px"] {
+    width: 300px !important;
+    height: 232px !important;
+  }
+  section[data-screen-label="10 制作物"] [style*="width: 372px"][style*="height: 287px"] > div[style*="scale(0.816)"] {
+    transform: scale(0.658) !important;
+  }
+}
+
+/* ============================================================
+   Small Mobile: 〜390px（微調整）
+   ============================================================ */
+@media (max-width: 390px) {
+  :root {
+    --size-h1: 24px;
+  }
+  [style*="width: 1280px"][style*="margin: 0px auto"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  [style*="font-size: 41px"] {
+    font-size: 25px !important;
+  }
+  section[data-screen-label="07 ケーススタディ詳細"] [style*="grid-template-columns: 1fr 110px 90px 92px"] {
+    grid-template-columns: 1fr 66px 32px 52px !important;
+  }
+}
